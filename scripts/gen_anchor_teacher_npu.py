@@ -113,31 +113,22 @@ def main():
             json.dump({"records": results}, f, ensure_ascii=False)
 
     # 清洗（与数学线同纪律）+ 格式统一（100% 以 Answer: X 收尾）
-    kept, drop = [], {"wrong": 0, "think_unclosed": 0, "truncated": 0, "no_letter": 0}
+    # P17 教训：drop 明细用非互斥计数——"think 未闭合"与"撞 max_tokens 截断"是
+    # 重叠类别（撞墙的必然没闭合），顺序归因会把截断吞成 0，误导排查方向
+    kept = []
     for r in results:
-        if not r["think_closed"]:
-            drop["think_unclosed"] += 1
-            continue
-        if r["truncated"]:
-            drop["truncated"] += 1
-            continue
-        if r["pred"] is None:
-            drop["no_letter"] += 1
-            continue
-        if not r["correct"]:
-            drop["wrong"] += 1
-            continue
-        out = r["visible"].rstrip()
-        if not re.search(r"(?:Answer|答案)\s*[:：]\s*[A-D]\s*$", out):
-            out += f"\nAnswer: {r['gold']}"
-        a = [x for x in next(it for it in items if it["id"] == r["id"])["choices"]] + ["", "", "", ""]
-        kept.append({
-            "instruction": PROMPT_EN.format(subject=r["subject"],
-                                            q=next(it for it in items if it["id"] == r["id"])["question"],
-                                            a=a[0], b=a[1], c=a[2], d=a[3]),
-            "input": "",
-            "output": out,
-        })
+        if r["think_closed"] and not r["truncated"] and r["pred"] is not None and r["correct"]:
+            out = r["visible"].rstrip()
+            if not re.search(r"(?:Answer|答案)\s*[:：]\s*[A-D]\s*$", out):
+                out += f"\nAnswer: {r['gold']}"
+            seed = next(it for it in items if it["id"] == r["id"])
+            a = (seed["choices"] + ["", "", "", ""])[:4]
+            kept.append({
+                "instruction": PROMPT_EN.format(subject=r["subject"], q=seed["question"],
+                                                a=a[0], b=a[1], c=a[2], d=a[3]),
+                "input": "",
+                "output": out,
+            })
 
     with open(RAW_OUT, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=1)
@@ -149,7 +140,12 @@ def main():
     summary = {
         "seeds": n, "clean": len(kept),
         "teacher_accuracy": round(sum(r["correct"] for r in results) / n, 4),
-        "drop": drop,
+        "drop_nonexclusive": {
+            "wrong": sum(1 for r in results if not r["correct"]),
+            "think_unclosed": sum(1 for r in results if not r["think_closed"]),
+            "truncated": sum(1 for r in results if r["truncated"]),
+            "no_letter": sum(1 for r in results if r["pred"] is None),
+        },
         "runtime_sec": round(time.time() - t0, 1),
     }
     print("=== SUMMARY ===")
