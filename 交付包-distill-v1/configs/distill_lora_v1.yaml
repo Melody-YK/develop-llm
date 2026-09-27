@@ -1,0 +1,39 @@
+### 蒸馏训练 v1：B 层（学推理链）正式训练 ###
+### 学生 = Qwen3-1.7B（与前测同权重），数据 = 460 条 #### 规范化推理链 ###
+### 跑法: cd ~/distill/LLaMA-Factory && ~/distill/venv/bin/llamafactory-cli train ~/distill/configs/distill_lora_v1.yaml ###
+
+model_name_or_path: /home/melody/distill/models/Qwen3-1.7B
+trust_remote_code: true
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+dataset: distill_train_v1
+dataset_dir: /home/melody/distill/data
+template: qwen3
+cutoff_len: 1024
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+logging_steps: 10
+
+val_size: 0.05
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 50
+
+save_strategy: epoch
+gradient_checkpointing: true
+
+output_dir: /home/melody/distill/models/distill-v1
+overwrite_output_dir: true
+report_to: none

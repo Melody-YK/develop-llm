@@ -1,0 +1,18 @@
+{
+  "smoke_200": {
+    "file_name": "smoke_200.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "distill_train_v1": {
+    "file_name": "distill_train_v1.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}
