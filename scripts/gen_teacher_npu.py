@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
-"""老师模型 Qwen3-8B 批量生成推理链（910B · vllm-ascend）——蒸馏数据流水线第 5 步。
+"""老师模型批量生成推理链（910B · vllm-ascend）——蒸馏数据流水线第 5 步。
 
-输入  /root/.cache/develop-llm/data/seeds_500.jsonl（分层采样的 500 道种子题）
-输出  /root/.cache/develop-llm/data/teacher_raw_500.jsonl（老师原始输出 + 判卷字段）
+默认 = Qwen3-8B 数学线；A 线换老师示例（换老师必须换 --out，勿覆盖 8B 数据）：
+    nohup python3 -u scripts/gen_teacher_npu.py \
+        --model-dir /root/.cache/qwen3-4b --model-tag Qwen3-4B \
+        --out /root/.cache/develop-llm/data/teacher4b_raw_500.jsonl > gen4b.log 2>&1 &
+
+输入  data/seeds_500.jsonl（分层采样的 500 道种子题，与 v1 完全同题——换老师不变量）
+输出  data/teacher_raw_500.jsonl（老师原始输出 + 判卷字段）
 协议  temperature=0（贪心，与前测协议同风格）、思考模式默认开、max_tokens 4096
 
 运行（容器内，nohup 脱离会话 + python -u 实时日志，P15/P16 教训）：
@@ -10,6 +15,7 @@
     nohup python3 -u scripts/gen_teacher_npu.py > gen.log 2>&1 &
 断点：每 50 题落盘 .partial.json，重启自动跳过已完成题。
 """
+import argparse
 import glob
 import json
 import os
@@ -19,9 +25,6 @@ import time
 from vllm import LLM, SamplingParams
 
 BASE = "/root/.cache/develop-llm"
-SEEDS = os.path.join(BASE, "data", "seeds_500.jsonl")
-OUT = os.path.join(BASE, "data", "teacher_raw_500.jsonl")
-PARTIAL = OUT + ".partial.json"
 CHUNK = 50            # 每 50 题存一次盘：中断最多损失一个 chunk
 MAX_NEW_TOKENS = 4096
 MAX_MODEL_LEN = 6144  # prompt(~300) + 生成(4096) 要装得下
@@ -31,16 +34,15 @@ PROMPT_TMPL = (
 )
 
 
-def find_model_dir() -> str:
-    """模型目录：优先 modelscope 本地目录，其次 hf 缓存 snapshot。"""
-    ms = "/root/.cache/qwen3-8b"
-    if os.path.exists(os.path.join(ms, "config.json")):
-        return ms
-    hits = glob.glob("/root/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/*/")
-    if hits:
-        return hits[0].rstrip("/")
-    raise SystemExit("找不到 Qwen3-8B：确认 modelscope 下载完成"
-                     "（/root/.cache/qwen3-8b 下有 config.json，总体积约 17G）")
+def find_model_dir(model_dir: str) -> str:
+    """模型目录：优先显式指定的 modelscope 目录（含 config.json）；8B 保留 hf 缓存兜底。"""
+    if os.path.exists(os.path.join(model_dir, "config.json")):
+        return model_dir
+    if "qwen3-8b" in model_dir:
+        hits = glob.glob("/root/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/*/")
+        if hits:
+            return hits[0].rstrip("/")
+    raise SystemExit(f"找不到老师模型：{model_dir} 下应有 config.json（modelscope 下载是否完成？）")
 
 
 def norm_num(s):
@@ -71,7 +73,17 @@ def extract(text: str):
 
 
 def main():
-    items = [json.loads(l) for l in open(SEEDS, encoding="utf-8")]
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model-dir", default="/root/.cache/qwen3-8b",
+                    help="老师模型目录（modelscope 直下目录，含 config.json）")
+    ap.add_argument("--model-tag", default="Qwen3-8B", help="写入 summary 的模型名")
+    ap.add_argument("--seeds", default=os.path.join(BASE, "data", "seeds_500.jsonl"))
+    ap.add_argument("--out", default=os.path.join(BASE, "data", "teacher_raw_500.jsonl"),
+                    help="输出 jsonl——换老师时必须换名，勿覆盖 8B 数据")
+    args = ap.parse_args()
+
+    items = [json.loads(l) for l in open(args.seeds, encoding="utf-8")]
+    PARTIAL = args.out + ".partial.json"
 
     # 断点续跑（与本地评测脚本同一套协议）
     results, done_ids = [], set()
@@ -87,7 +99,7 @@ def main():
     pending = [it for it in items if it["id"] not in done_ids]
     print(f"种子 {len(items)} 题 | 待生成 {len(pending)} 题")
 
-    model_dir = find_model_dir()
+    model_dir = find_model_dir(args.model_dir)
     print("model:", model_dir)
     llm = LLM(model=model_dir, max_model_len=MAX_MODEL_LEN, dtype="bfloat16",
               gpu_memory_utilization=0.85)
@@ -114,7 +126,7 @@ def main():
                 "id": it["id"], "steps": it["steps"],
                 "question": it["question"],
                 "raw_output": text,
-                "visible": visible[-1500:],
+                "visible": visible,  # 全量存储（P18 同款修正：[-1500:] 截头会毁掉长推理）
                 "pred": pred, "reference": it["reference"],
                 "correct": p is not None and ref is not None and p == ref,
                 "extract_method": method,
@@ -128,13 +140,13 @@ def main():
 
     n = len(results)
     summary = {
-        "model": "Qwen3-8B", "n": n,
+        "model": args.model_tag, "n": n,
         "accuracy": round(sum(r["correct"] for r in results) / n, 4),
         "truncated_rate": round(sum(r["truncated"] for r in results) / n, 4),
         "think_unclosed_rate": round(sum(not r["think_closed"] for r in results) / n, 4),
         "runtime_sec": round(time.time() - t0, 1),
     }
-    with open(OUT, "w", encoding="utf-8") as f:
+    with open(args.out, "w", encoding="utf-8") as f:
         json.dump({"summary": summary, "records": results}, f, ensure_ascii=False, indent=1)
     os.remove(PARTIAL)
     print("=== SUMMARY ===")
