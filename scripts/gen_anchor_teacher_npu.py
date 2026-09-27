@@ -1,23 +1,26 @@
 # -*- coding: utf-8 -*-
-"""老师给通用锚点生成推理链（B 线修遗忘）——910B · vllm-ascend。
+"""老师给通用锚点生成推理链（B 线修遗忘）——910B · vllm-ascend · v2 重跑版。
 
-输入  /root/.cache/develop-llm/data/anchor_mmlu_val.jsonl（sample_mmlu_anchor.py 产物）
-输出  data/anchor_teacher_raw.jsonl（逐题判卷字段，审计用）
-      data/anchor_alpaca.json（清洗后，直接可注册进 LLaMA-Factory）
+v1 运行的教训（P18）：用考卷 PROMPT_EN（悬垂 "Answer:"）+ 单行收尾 hint 出题，
+老师把推理全部写进 <think>，visible 只剩 "Answer: C"（output 中位 9 字符）——
+零推理信号的锚点被入库前数据检查拦下（Desktop 有留档）。v2 改用数学线同款
+出题模板（step by step + 固定收尾格式），让推理落在可见区。
 
-与数学线（gen_teacher_npu.py）的三点不同：
-1. prompt 用 mcq_eval.py 的 PROMPT_EN 逐字模板（训练 instruction 必须与考卷
-   prompt 一字不差，学生的答题行为才修在点上）；给老师的版本额外追加一句
-   格式要求（保证收尾干净），但训练 instruction 不含这一句——考卷 prompt 是冻结的
-2. 判卷 = 老师字母 == 种子金标字母（extract 兼容 mcq_eval 的两种模式：
-   Answer/答案 句式优先，孤立字母兜底取最后一次出现）
-3. 清洗后统一以「Answer: X」收尾（数学线的「#### N」对应物，格式统一纪律同源）
-清洗条件与数学线相同：correct & think 闭合 & 未截断——教错的锚比没有锚更糟。
+输入  /root/.cache/develop-llm/data/anchor_mmlu_val.jsonl（sample_mmlu_anchor.py 产物，不变）
+输出  data/anchor_teacher_raw.jsonl（逐题判卷字段，审计用；覆盖 v1）
+      data/anchor_alpaca.json（清洗后，output 含完整可见推理链）
+
+结构说明：
+1. 出题模板 = 数学线同款「step by step + 固定收尾」；训练 instruction 仍逐字用
+   mcq_eval 的 PROMPT_EN（冻结考卷格式）——出题与训练解耦是刻意的（P18）
+2. 判卷 = 老师字母 == 种子金标字母（extract 兼容 mcq_eval 两种模式）
+3. 清洗：correct & think 闭合 & 未截断 & output ≤ MAX_OUTPUT_CHARS（保 cutoff 1024
+   内完整），统一以「Answer: X」收尾；drop 明细为非互斥计数（P17）
 
 用法（容器内）：
     cd /root/.cache/develop-llm
     nohup python3 -u scripts/gen_anchor_teacher_npu.py > gen_anchor.log 2>&1 &
-240 条预计 5-8 分钟（MCQ 推理比数学短）。
+240 条预计 8-12 分钟（可见推理比 v1 的单字母长）。
 """
 import json
 import os
@@ -33,17 +36,24 @@ CLEAN_OUT = os.path.join(BASE, "data", "anchor_alpaca.json")
 PARTIAL = RAW_OUT + ".partial.json"
 MODEL_DIR = "/root/.cache/qwen3-8b"
 CHUNK = 50
-MAX_NEW_TOKENS = 2048
-MAX_MODEL_LEN = 4096
+MAX_NEW_TOKENS = 4096   # v1 用 2048：推理移到可见区后预算对齐数学线，减少撞墙
+MAX_MODEL_LEN = 6144
+MAX_OUTPUT_CHARS = 3200  # ≈800 token（英文约 4 字符/token）+ instruction ~200 token，保 cutoff 1024 内完整
 
-# 与 mcq_eval.py PROMPT_EN 逐字一致（subject 传原始 slug，与考卷一 eval 相同）
+# 训练 instruction：与 mcq_eval.py PROMPT_EN 逐字一致（subject 传原始 slug，与考卷一 eval 相同）
 PROMPT_EN = (
     "The following is a multiple choice question about {subject}. "
     "Answer with the letter of the correct option.\n\n{q}\n"
     "A. {a}\nB. {b}\nC. {c}\nD. {d}\nAnswer:"
 )
-TEACHER_HINT = (
-    "\n(Think step by step, then end your final reply with a single line: Answer: <letter>)"
+# 老师专用出题模板（P18 修正）：数学线同款「分步作答 + 固定收尾」结构。
+# 不能直接拿考卷 PROMPT_EN 出题——悬垂的 "Answer:" 会诱导老师思考完只补一个字母，
+# 推理全留在 <think> 里。训练 instruction 仍逐字用 PROMPT_EN，两者解耦是刻意的。
+PROMPT_TEACHER = (
+    "The following is a multiple choice question about {subject}. "
+    "Explain your reasoning step by step, then end your final answer on its own line "
+    "in the format:\nAnswer: <letter>\n\n{q}\n"
+    "A. {a}\nB. {b}\nC. {c}\nD. {d}"
 )
 
 
@@ -89,8 +99,8 @@ def main():
         prompts = []
         for it in chunk:
             a, b, c, d = (it["choices"] + ["", "", "", ""])[:4]
-            content = PROMPT_EN.format(subject=it["subject"], q=it["question"],
-                                       a=a, b=b, c=c, d=d) + TEACHER_HINT
+            content = PROMPT_TEACHER.format(subject=it["subject"], q=it["question"],
+                                            a=a, b=b, c=c, d=d)
             prompts.append(tok.apply_chat_template(
                 [{"role": "user", "content": content}],
                 add_generation_prompt=True, tokenize=False))
@@ -103,7 +113,7 @@ def main():
                 "id": it["id"], "subject": it["subject"],
                 "gold": it["answer"], "pred": letter,
                 "correct": letter == it["answer"],
-                "raw_output": text, "visible": visible[-1500:],
+                "raw_output": text, "visible": visible,  # 全量存储（P18：截头会毁掉长推理）
                 "think_closed": "</think>" in text,
                 "truncated": n_tok >= MAX_NEW_TOKENS - 1,
                 "gen_tokens": n_tok,
@@ -113,22 +123,26 @@ def main():
             json.dump({"records": results}, f, ensure_ascii=False)
 
     # 清洗（与数学线同纪律）+ 格式统一（100% 以 Answer: X 收尾）
-    # P17 教训：drop 明细用非互斥计数——"think 未闭合"与"撞 max_tokens 截断"是
-    # 重叠类别（撞墙的必然没闭合），顺序归因会把截断吞成 0，误导排查方向
-    kept = []
+    # P17：drop 明细为非互斥计数——"think 未闭合"与"撞 max_tokens 截断"是重叠类别
+    # （撞墙的必然没闭合），互斥顺序归因会把截断吞成 0，误导排查方向
+    kept, n_too_long = [], 0
     for r in results:
-        if r["think_closed"] and not r["truncated"] and r["pred"] is not None and r["correct"]:
-            out = r["visible"].rstrip()
-            if not re.search(r"(?:Answer|答案)\s*[:：]\s*[A-D]\s*$", out):
-                out += f"\nAnswer: {r['gold']}"
-            seed = next(it for it in items if it["id"] == r["id"])
-            a = (seed["choices"] + ["", "", "", ""])[:4]
-            kept.append({
-                "instruction": PROMPT_EN.format(subject=r["subject"], q=seed["question"],
-                                                a=a[0], b=a[1], c=a[2], d=a[3]),
-                "input": "",
-                "output": out,
-            })
+        if not (r["think_closed"] and not r["truncated"] and r["pred"] is not None and r["correct"]):
+            continue
+        out = r["visible"].rstrip()
+        if not re.search(r"(?:Answer|答案)\s*[:：]\s*[A-D]\s*$", out):
+            out += f"\nAnswer: {r['gold']}"
+        if len(out) > MAX_OUTPUT_CHARS:
+            n_too_long += 1
+            continue
+        seed = next(it for it in items if it["id"] == r["id"])
+        a = (seed["choices"] + ["", "", "", ""])[:4]
+        kept.append({
+            "instruction": PROMPT_EN.format(subject=r["subject"], q=seed["question"],
+                                            a=a[0], b=a[1], c=a[2], d=a[3]),
+            "input": "",
+            "output": out,
+        })
 
     with open(RAW_OUT, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=1)
@@ -145,12 +159,16 @@ def main():
             "think_unclosed": sum(1 for r in results if not r["think_closed"]),
             "truncated": sum(1 for r in results if r["truncated"]),
             "no_letter": sum(1 for r in results if r["pred"] is None),
+            "too_long": n_too_long,
         },
         "runtime_sec": round(time.time() - t0, 1),
     }
     print("=== SUMMARY ===")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
-    print(f"-> {CLEAN_OUT}（与 distill_train_v1.json 混合前先各自确认条数）")
+    if kept:
+        L = sorted(len(k["output"]) for k in kept)
+        print(f"output 字符长度: 中位 {L[len(L)//2]} / p90 {L[int(len(L)*0.9)]} / 最长 {L[-1]}")
+    print(f"-> {CLEAN_OUT}")
 
 
 if __name__ == "__main__":
