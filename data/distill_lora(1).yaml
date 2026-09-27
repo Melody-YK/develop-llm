@@ -1,0 +1,34 @@
+### 正式蒸馏训练配置：GSM8K 域内 B 层（学推理链）###
+### 数据：train_alpaca.json（460 条 = 老师生成 500 条筛洗后，淘汰率 8.0%）
+### 跑法: cd ~/distill/LLaMA-Factory && llamafactory-cli train ~/distill/configs/distill_lora.yaml ###
+### 与冒烟配置(smoke_lora.yaml)的差异仅四处：模型 0.6B→1.7B、数据集、epoch 1→3、batch 1→2 ###
+
+model_name_or_path: /home/melody/distill/models/Qwen3-1.7B
+trust_remote_code: true
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+dataset: gsm8k_distill_460
+dataset_dir: /home/melody/distill/data
+template: qwen3
+cutoff_len: 1024
+
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+logging_steps: 5
+save_strategy: "no"
+gradient_checkpointing: true
+
+output_dir: /home/melody/distill/models/distill-gsm8k-lora
+overwrite_output_dir: true
+report_to: none
