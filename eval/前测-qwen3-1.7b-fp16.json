@@ -1,0 +1,3020 @@
+{
+ "summary": {
+  "model": "/home/melody/distill/models/Qwen3-1.7B",
+  "adapter": null,
+  "n": 300,
+  "batch": 8,
+  "max_new_tokens": 2048,
+  "accuracy": 0.76,
+  "blank_or_truncated_rate": 0.8533,
+  "truncated_rate": 0.8533,
+  "accuracy_by_steps": {
+   "2-4步": 0.8009,
+   "5-6步": 0.6615,
+   "7步+": 0.5714
+  },
+  "runtime_sec": 12740.4
+ },
+ "records": [
+  {
+   "id": 2,
+   "steps": 4,
+   "pred": "70000",
+   "ref": "70000",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 11,
+   "steps": 4,
+   "pred": "694",
+   "ref": "694",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 15,
+   "steps": 3,
+   "pred": "125",
+   "ref": "125",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 21,
+   "steps": 2,
+   "pred": "14",
+   "ref": "14",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 22,
+   "steps": 3,
+   "pred": "7",
+   "ref": "7",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 32,
+   "steps": 2,
+   "pred": "35",
+   "ref": "35",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 34,
+   "steps": 3,
+   "pred": "23",
+   "ref": "23",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 35,
+   "steps": 3,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 2033
+  },
+  {
+   "id": 44,
+   "steps": 4,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 48,
+   "steps": 2,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 49,
+   "steps": 3,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 55,
+   "steps": 2,
+   "pred": "14",
+   "ref": "14",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 56,
+   "steps": 2,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 57,
+   "steps": 2,
+   "pred": "83",
+   "ref": "83",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 59,
+   "steps": 2,
+   "pred": "187",
+   "ref": "187",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 62,
+   "steps": 3,
+   "pred": "30",
+   "ref": "25000",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 66,
+   "steps": 5,
+   "pred": "48",
+   "ref": "48",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 67,
+   "steps": 3,
+   "pred": "595",
+   "ref": "595",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 68,
+   "steps": 3,
+   "pred": "36",
+   "ref": "36",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 69,
+   "steps": 2,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 73,
+   "steps": 4,
+   "pred": "255",
+   "ref": "255",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 78,
+   "steps": 5,
+   "pred": "6",
+   "ref": "6",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 90,
+   "steps": 4,
+   "pred": "225",
+   "ref": "225",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 97,
+   "steps": 3,
+   "pred": "12",
+   "ref": "12",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1900
+  },
+  {
+   "id": 100,
+   "steps": 6,
+   "pred": ",",
+   "ref": "175",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 107,
+   "steps": 7,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 112,
+   "steps": 2,
+   "pred": "24",
+   "ref": "24",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 113,
+   "steps": 2,
+   "pred": "25",
+   "ref": "25",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 121,
+   "steps": 3,
+   "pred": "27",
+   "ref": "27",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 125,
+   "steps": 2,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 126,
+   "steps": 2,
+   "pred": "82",
+   "ref": "82",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 132,
+   "steps": 4,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 134,
+   "steps": 2,
+   "pred": "720",
+   "ref": "720",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 143,
+   "steps": 4,
+   "pred": "16",
+   "ref": "16",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 153,
+   "steps": 5,
+   "pred": "48",
+   "ref": "48",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 160,
+   "steps": 2,
+   "pred": "16",
+   "ref": "16",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 172,
+   "steps": 5,
+   "pred": "51",
+   "ref": "51",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 176,
+   "steps": 2,
+   "pred": ",",
+   "ref": "100",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 177,
+   "steps": 7,
+   "pred": "350",
+   "ref": "350",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 179,
+   "steps": 2,
+   "pred": "130",
+   "ref": "130",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 185,
+   "steps": 2,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 187,
+   "steps": 3,
+   "pred": ",",
+   "ref": "106",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 188,
+   "steps": 3,
+   "pred": "50",
+   "ref": "50",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 190,
+   "steps": 2,
+   "pred": "360",
+   "ref": "360",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 192,
+   "steps": 5,
+   "pred": "91",
+   "ref": "91",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 202,
+   "steps": 2,
+   "pred": "100",
+   "ref": "100",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 207,
+   "steps": 4,
+   "pred": "2600",
+   "ref": "2600",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 212,
+   "steps": 4,
+   "pred": "5",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 214,
+   "steps": 7,
+   "pred": ",",
+   "ref": "8",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 220,
+   "steps": 3,
+   "pred": "70",
+   "ref": "70",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 222,
+   "steps": 2,
+   "pred": "140",
+   "ref": "140",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 231,
+   "steps": 2,
+   "pred": "50",
+   "ref": "50",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 235,
+   "steps": 2,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 237,
+   "steps": 2,
+   "pred": "90",
+   "ref": "90",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 238,
+   "steps": 3,
+   "pred": "68",
+   "ref": "68",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 241,
+   "steps": 2,
+   "pred": "1",
+   "ref": "6",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 243,
+   "steps": 2,
+   "pred": "700",
+   "ref": "250",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 259,
+   "steps": 6,
+   "pred": ",",
+   "ref": "168",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 261,
+   "steps": 3,
+   "pred": "62",
+   "ref": "62",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 263,
+   "steps": 3,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 269,
+   "steps": 2,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 272,
+   "steps": 2,
+   "pred": "5.00",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 275,
+   "steps": 5,
+   "pred": "138",
+   "ref": "138",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 277,
+   "steps": 4,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 280,
+   "steps": 3,
+   "pred": "7",
+   "ref": "7",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 289,
+   "steps": 2,
+   "pred": "16",
+   "ref": "16",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 296,
+   "steps": 4,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 297,
+   "steps": 2,
+   "pred": "1",
+   "ref": "55",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 298,
+   "steps": 4,
+   "pred": "250",
+   "ref": "500",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 303,
+   "steps": 4,
+   "pred": "1,",
+   "ref": "1300",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 314,
+   "steps": 6,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 325,
+   "steps": 6,
+   "pred": "224000",
+   "ref": "224000",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 328,
+   "steps": 3,
+   "pred": "2",
+   "ref": "2",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 342,
+   "steps": 2,
+   "pred": "87",
+   "ref": "87",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 346,
+   "steps": 3,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 347,
+   "steps": 3,
+   "pred": "36",
+   "ref": "36",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 356,
+   "steps": 5,
+   "pred": "21",
+   "ref": "21",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 364,
+   "steps": 2,
+   "pred": "49",
+   "ref": "49",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 367,
+   "steps": 4,
+   "pred": "19",
+   "ref": "19",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 368,
+   "steps": 3,
+   "pred": "1",
+   "ref": "18",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 371,
+   "steps": 4,
+   "pred": "56",
+   "ref": "50",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 374,
+   "steps": 2,
+   "pred": "45",
+   "ref": "45",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 382,
+   "steps": 5,
+   "pred": "350",
+   "ref": "350",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 383,
+   "steps": 5,
+   "pred": "2",
+   "ref": "2",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 387,
+   "steps": 3,
+   "pred": "36",
+   "ref": "36",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 395,
+   "steps": 4,
+   "pred": "38",
+   "ref": "38",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 400,
+   "steps": 2,
+   "pred": "48",
+   "ref": "48",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 402,
+   "steps": 5,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 405,
+   "steps": 4,
+   "pred": "50",
+   "ref": "50",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 410,
+   "steps": 4,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 413,
+   "steps": 3,
+   "pred": ",",
+   "ref": "25",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 423,
+   "steps": 6,
+   "pred": ",",
+   "ref": "8",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 427,
+   "steps": 4,
+   "pred": ",",
+   "ref": "150",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 428,
+   "steps": 4,
+   "pred": "54",
+   "ref": "26",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 434,
+   "steps": 5,
+   "pred": ",",
+   "ref": "5",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 439,
+   "steps": 3,
+   "pred": "4",
+   "ref": "17",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 442,
+   "steps": 5,
+   "pred": "49",
+   "ref": "49",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 454,
+   "steps": 2,
+   "pred": "240",
+   "ref": "150",
+   "correct": false,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 455,
+   "steps": 4,
+   "pred": "1920",
+   "ref": "1920",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 463,
+   "steps": 2,
+   "pred": "18",
+   "ref": "18",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 464,
+   "steps": 4,
+   "pred": ",",
+   "ref": "6",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 473,
+   "steps": 3,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 474,
+   "steps": 2,
+   "pred": "80",
+   "ref": "80",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 479,
+   "steps": 5,
+   "pred": "10400",
+   "ref": "15400",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 480,
+   "steps": 3,
+   "pred": "11",
+   "ref": "11",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 489,
+   "steps": 3,
+   "pred": "-10",
+   "ref": "-10",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 491,
+   "steps": 2,
+   "pred": "16",
+   "ref": "16",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 492,
+   "steps": 2,
+   "pred": "32",
+   "ref": "32",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 498,
+   "steps": 4,
+   "pred": "40",
+   "ref": "40",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 510,
+   "steps": 3,
+   "pred": "35,000",
+   "ref": "525",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 512,
+   "steps": 2,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 522,
+   "steps": 3,
+   "pred": "29",
+   "ref": "29",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 524,
+   "steps": 3,
+   "pred": ",",
+   "ref": "9",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 525,
+   "steps": 2,
+   "pred": "12",
+   "ref": "12",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 526,
+   "steps": 6,
+   "pred": "504",
+   "ref": "21",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 528,
+   "steps": 6,
+   "pred": "172",
+   "ref": "172",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 531,
+   "steps": 4,
+   "pred": "80",
+   "ref": "66",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 535,
+   "steps": 2,
+   "pred": "16",
+   "ref": "16",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 536,
+   "steps": 2,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 537,
+   "steps": 3,
+   "pred": "188",
+   "ref": "188",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 540,
+   "steps": 5,
+   "pred": "3",
+   "ref": "39",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 544,
+   "steps": 2,
+   "pred": "80",
+   "ref": "80",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 547,
+   "steps": 4,
+   "pred": "81",
+   "ref": "81",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 562,
+   "steps": 2,
+   "pred": "82",
+   "ref": "82",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 571,
+   "steps": 3,
+   "pred": "308",
+   "ref": "308",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 576,
+   "steps": 6,
+   "pred": "11232",
+   "ref": "11232",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 578,
+   "steps": 5,
+   "pred": "30",
+   "ref": "48",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 580,
+   "steps": 5,
+   "pred": "500",
+   "ref": "500",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 581,
+   "steps": 5,
+   "pred": "215",
+   "ref": "215",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 583,
+   "steps": 6,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 585,
+   "steps": 7,
+   "pred": "40",
+   "ref": "40",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 586,
+   "steps": 3,
+   "pred": "800",
+   "ref": "800",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 587,
+   "steps": 6,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 588,
+   "steps": 3,
+   "pred": "52",
+   "ref": "52",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 591,
+   "steps": 3,
+   "pred": "220",
+   "ref": "220",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 599,
+   "steps": 4,
+   "pred": "48",
+   "ref": "48",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1770
+  },
+  {
+   "id": 608,
+   "steps": 4,
+   "pred": ",",
+   "ref": "8",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 612,
+   "steps": 2,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 615,
+   "steps": 4,
+   "pred": "10.0",
+   "ref": "33",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 616,
+   "steps": 3,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 618,
+   "steps": 5,
+   "pred": "36",
+   "ref": "36",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 622,
+   "steps": 6,
+   "pred": ",",
+   "ref": "7",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 623,
+   "steps": 2,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 628,
+   "steps": 2,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 631,
+   "steps": 3,
+   "pred": "4800",
+   "ref": "4800",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 640,
+   "steps": 3,
+   "pred": ",",
+   "ref": "43,500",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 651,
+   "steps": 4,
+   "pred": "2100",
+   "ref": "2100",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 655,
+   "steps": 2,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 658,
+   "steps": 4,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 661,
+   "steps": 5,
+   "pred": "44",
+   "ref": "44",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 672,
+   "steps": 4,
+   "pred": "17",
+   "ref": "2",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 673,
+   "steps": 5,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 677,
+   "steps": 2,
+   "pred": "3",
+   "ref": "36",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 678,
+   "steps": 3,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 681,
+   "steps": 4,
+   "pred": "298",
+   "ref": "298",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 687,
+   "steps": 11,
+   "pred": "13",
+   "ref": "13",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 705,
+   "steps": 2,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 706,
+   "steps": 2,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 709,
+   "steps": 5,
+   "pred": "3000",
+   "ref": "3000",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 721,
+   "steps": 6,
+   "pred": "1",
+   "ref": "2450",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 726,
+   "steps": 5,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 730,
+   "steps": 2,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 731,
+   "steps": 5,
+   "pred": "1",
+   "ref": "1",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 738,
+   "steps": 3,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 745,
+   "steps": 4,
+   "pred": "1100",
+   "ref": "1100",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 749,
+   "steps": 2,
+   "pred": "6",
+   "ref": "3",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 750,
+   "steps": 5,
+   "pred": "4000",
+   "ref": "4000",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 751,
+   "steps": 5,
+   "pred": "43",
+   "ref": "43",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 756,
+   "steps": 4,
+   "pred": "22",
+   "ref": "22",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 770,
+   "steps": 3,
+   "pred": "5",
+   "ref": "4",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 771,
+   "steps": 3,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 772,
+   "steps": 6,
+   "pred": "50",
+   "ref": "50",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 773,
+   "steps": 5,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 783,
+   "steps": 6,
+   "pred": "2",
+   "ref": "4",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 784,
+   "steps": 5,
+   "pred": "7.50",
+   "ref": "15",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 792,
+   "steps": 2,
+   "pred": "75",
+   "ref": "75",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 796,
+   "steps": 7,
+   "pred": "20",
+   "ref": "2880000",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 804,
+   "steps": 3,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 807,
+   "steps": 3,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 811,
+   "steps": 2,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 812,
+   "steps": 7,
+   "pred": "79",
+   "ref": "79",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 818,
+   "steps": 5,
+   "pred": "20",
+   "ref": "16",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 828,
+   "steps": 4,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 844,
+   "steps": 6,
+   "pred": "180",
+   "ref": "180",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 845,
+   "steps": 2,
+   "pred": "12",
+   "ref": "12",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 846,
+   "steps": 4,
+   "pred": "10",
+   "ref": "11",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 847,
+   "steps": 3,
+   "pred": "975",
+   "ref": "975",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 848,
+   "steps": 3,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 851,
+   "steps": 2,
+   "pred": "110",
+   "ref": "110",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 852,
+   "steps": 5,
+   "pred": "123",
+   "ref": "123",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 856,
+   "steps": 4,
+   "pred": "7",
+   "ref": "7",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 863,
+   "steps": 2,
+   "pred": "40",
+   "ref": "110",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 868,
+   "steps": 3,
+   "pred": "15.00",
+   "ref": "15",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 869,
+   "steps": 2,
+   "pred": "500",
+   "ref": "500",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 871,
+   "steps": 5,
+   "pred": "48",
+   "ref": "48",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 874,
+   "steps": 2,
+   "pred": "132",
+   "ref": "132",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 875,
+   "steps": 3,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 886,
+   "steps": 3,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 887,
+   "steps": 3,
+   "pred": "34",
+   "ref": "34",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 888,
+   "steps": 2,
+   "pred": "6",
+   "ref": "10",
+   "correct": false,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1750
+  },
+  {
+   "id": 889,
+   "steps": 3,
+   "pred": "15",
+   "ref": "15",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 892,
+   "steps": 3,
+   "pred": "1",
+   "ref": "1",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 894,
+   "steps": 5,
+   "pred": ",",
+   "ref": "26",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 896,
+   "steps": 3,
+   "pred": "250",
+   "ref": "250",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 898,
+   "steps": 3,
+   "pred": ",",
+   "ref": "110",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 901,
+   "steps": 5,
+   "pred": ",",
+   "ref": "1",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 906,
+   "steps": 4,
+   "pred": "10",
+   "ref": "10",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 910,
+   "steps": 2,
+   "pred": "700",
+   "ref": "700",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 914,
+   "steps": 2,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 921,
+   "steps": 3,
+   "pred": "4",
+   "ref": "4",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 923,
+   "steps": 3,
+   "pred": ",",
+   "ref": "2",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 926,
+   "steps": 8,
+   "pred": "4",
+   "ref": "1",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 932,
+   "steps": 4,
+   "pred": "24",
+   "ref": "24",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 942,
+   "steps": 3,
+   "pred": "178.75",
+   "ref": "205",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 943,
+   "steps": 4,
+   "pred": "110",
+   "ref": "50",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 944,
+   "steps": 4,
+   "pred": "34",
+   "ref": "34",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 945,
+   "steps": 7,
+   "pred": "17",
+   "ref": "17",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 953,
+   "steps": 7,
+   "pred": ",",
+   "ref": "452",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 967,
+   "steps": 4,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 969,
+   "steps": 5,
+   "pred": "1800",
+   "ref": "1800",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 970,
+   "steps": 2,
+   "pred": "33",
+   "ref": "33",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 974,
+   "steps": 3,
+   "pred": "5",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 978,
+   "steps": 3,
+   "pred": "160",
+   "ref": "160",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 981,
+   "steps": 4,
+   "pred": "7",
+   "ref": "7",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 982,
+   "steps": 4,
+   "pred": "18",
+   "ref": "12",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 983,
+   "steps": 3,
+   "pred": "15",
+   "ref": "15",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 989,
+   "steps": 4,
+   "pred": ",",
+   "ref": "45",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 990,
+   "steps": 4,
+   "pred": "14",
+   "ref": "14",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 998,
+   "steps": 3,
+   "pred": "50",
+   "ref": "50",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 999,
+   "steps": 5,
+   "pred": "25",
+   "ref": "25",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1004,
+   "steps": 3,
+   "pred": "1",
+   "ref": "8",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1005,
+   "steps": 4,
+   "pred": "1",
+   "ref": "1490",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1007,
+   "steps": 3,
+   "pred": "34",
+   "ref": "34",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1014,
+   "steps": 5,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1024,
+   "steps": 5,
+   "pred": "300",
+   "ref": "300",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1026,
+   "steps": 4,
+   "pred": "43200",
+   "ref": "43200",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1049,
+   "steps": 3,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1054,
+   "steps": 3,
+   "pred": "2400",
+   "ref": "2400",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1056,
+   "steps": 3,
+   "pred": "156",
+   "ref": "156",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1068,
+   "steps": 4,
+   "pred": "24",
+   "ref": "24",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1720
+  },
+  {
+   "id": 1069,
+   "steps": 3,
+   "pred": "300",
+   "ref": "300",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1070,
+   "steps": 4,
+   "pred": ",",
+   "ref": "18",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1071,
+   "steps": 5,
+   "pred": "251",
+   "ref": "251",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1072,
+   "steps": 5,
+   "pred": "120",
+   "ref": "85",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1075,
+   "steps": 6,
+   "pred": "1",
+   "ref": "16",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1082,
+   "steps": 3,
+   "pred": "1",
+   "ref": "2",
+   "correct": false,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1089,
+   "steps": 3,
+   "pred": "2",
+   "ref": "32",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1091,
+   "steps": 2,
+   "pred": "1000",
+   "ref": "1000",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1102,
+   "steps": 7,
+   "pred": "113",
+   "ref": "113",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1107,
+   "steps": 3,
+   "pred": "360",
+   "ref": "360",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1108,
+   "steps": 2,
+   "pred": "38",
+   "ref": "38",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1110,
+   "steps": 3,
+   "pred": "60",
+   "ref": "60",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1115,
+   "steps": 3,
+   "pred": "5",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1122,
+   "steps": 8,
+   "pred": "18",
+   "ref": "18",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1128,
+   "steps": 3,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1129,
+   "steps": 5,
+   "pred": "8",
+   "ref": "8",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1132,
+   "steps": 4,
+   "pred": "45,000",
+   "ref": "45000",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1135,
+   "steps": 3,
+   "pred": "32",
+   "ref": "32",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1141,
+   "steps": 4,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1143,
+   "steps": 2,
+   "pred": "300",
+   "ref": "300",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1147,
+   "steps": 4,
+   "pred": ",",
+   "ref": "22",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1148,
+   "steps": 2,
+   "pred": "9",
+   "ref": "9",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1150,
+   "steps": 2,
+   "pred": "21",
+   "ref": "21",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1154,
+   "steps": 3,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1157,
+   "steps": 3,
+   "pred": "3",
+   "ref": "3",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1163,
+   "steps": 2,
+   "pred": "12",
+   "ref": "12",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1167,
+   "steps": 2,
+   "pred": "120",
+   "ref": "120",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1172,
+   "steps": 5,
+   "pred": "93",
+   "ref": "93",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1176,
+   "steps": 7,
+   "pred": ",",
+   "ref": "2",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1179,
+   "steps": 3,
+   "pred": "36",
+   "ref": "50",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1184,
+   "steps": 2,
+   "pred": "306",
+   "ref": "306",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1188,
+   "steps": 3,
+   "pred": "24",
+   "ref": "24",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1191,
+   "steps": 3,
+   "pred": "100",
+   "ref": "100",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1193,
+   "steps": 5,
+   "pred": "0.75",
+   "ref": "9",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1194,
+   "steps": 2,
+   "pred": "1200",
+   "ref": "1200",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1198,
+   "steps": 5,
+   "pred": "140",
+   "ref": "140",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1204,
+   "steps": 4,
+   "pred": ",",
+   "ref": "168",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1210,
+   "steps": 2,
+   "pred": "288",
+   "ref": "288",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1212,
+   "steps": 3,
+   "pred": "150",
+   "ref": "150",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1213,
+   "steps": 4,
+   "pred": "11",
+   "ref": "31",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1214,
+   "steps": 2,
+   "pred": "5",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1215,
+   "steps": 5,
+   "pred": ",",
+   "ref": "36",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1224,
+   "steps": 2,
+   "pred": "5",
+   "ref": "5",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1234,
+   "steps": 3,
+   "pred": "12",
+   "ref": "12",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1238,
+   "steps": 3,
+   "pred": "520",
+   "ref": "520",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1240,
+   "steps": 5,
+   "pred": ",",
+   "ref": "2",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1241,
+   "steps": 5,
+   "pred": ",",
+   "ref": "8",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1245,
+   "steps": 6,
+   "pred": "96",
+   "ref": "96",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1246,
+   "steps": 2,
+   "pred": "3360",
+   "ref": "3360",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1251,
+   "steps": 5,
+   "pred": "6",
+   "ref": "30",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1252,
+   "steps": 3,
+   "pred": "70",
+   "ref": "70",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1259,
+   "steps": 3,
+   "pred": "7200",
+   "ref": "7200",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1261,
+   "steps": 5,
+   "pred": "235",
+   "ref": "235",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1273,
+   "steps": 2,
+   "pred": "27",
+   "ref": "27",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1281,
+   "steps": 4,
+   "pred": "20",
+   "ref": "20",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1288,
+   "steps": 7,
+   "pred": ",",
+   "ref": "34",
+   "correct": false,
+   "extract_method": "last-number-fallback",
+   "truncated": true,
+   "gen_tokens": 2048
+  },
+  {
+   "id": 1293,
+   "steps": 2,
+   "pred": "140000",
+   "ref": "140000",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1483
+  },
+  {
+   "id": 1299,
+   "steps": 3,
+   "pred": "13.00",
+   "ref": "13",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1483
+  },
+  {
+   "id": 1301,
+   "steps": 6,
+   "pred": "23",
+   "ref": "23",
+   "correct": true,
+   "extract_method": "last-number-fallback",
+   "truncated": false,
+   "gen_tokens": 1483
+  },
+  {
+   "id": 1308,
+   "steps": 2,
+   "pred": "30",
+   "ref": "30",
+   "correct": true,
+   "extract_method": "hash",
+   "truncated": false,
+   "gen_tokens": 1483
+  }
+ ]
+}

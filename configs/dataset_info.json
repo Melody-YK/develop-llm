@@ -1,0 +1,10 @@
+{
+  "smoke_200": {
+    "file_name": "smoke_200.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

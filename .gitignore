@@ -1,0 +1,13 @@
+# 模型权重与大文件（Ollama 模型、安装包）
+models/
+downloads/
+logs/
+
+# 运行时临时文件（断点 partial 不入库，最终报告入库）
+*.partial.json
+__pycache__/
+*.pyc
+
+# 本工具配置
+.zcodeignore
+.idea/
