@@ -32,6 +32,14 @@ PROMPT_TMPL = (
     "Solve the following math problem step by step. "
     "End your final answer on its own line in the format:\n#### <number>\n\nProblem: {q}"
 )
+# 老师专用出题模板（P18 推广）：有的老师（Qwen3-4B 实测）会把推理全留在 <think>、
+# 可见区只吐 "#### N"（output 中位 9 字符=零推理信号）。此模板显式要求把步骤写进
+# 回复正文。训练侧不受影响（make_train_set 的 instruction 仍是题目原文）。
+PROMPT_TMPL_VISIBLE = (
+    "Solve the following math problem. Write your complete solution step by step "
+    "in your reply (show every step of your work), then end your reply with the final "
+    "answer on its own line in the format:\n#### <number>\n\nProblem: {q}"
+)
 
 
 def find_model_dir(model_dir: str) -> str:
@@ -80,6 +88,8 @@ def main():
     ap.add_argument("--seeds", default=os.path.join(BASE, "data", "seeds_500.jsonl"))
     ap.add_argument("--out", default=os.path.join(BASE, "data", "teacher_raw_500.jsonl"),
                     help="输出 jsonl——换老师时必须换名，勿覆盖 8B 数据")
+    ap.add_argument("--visible-cot", action="store_true",
+                    help="出题改用显式可见分步模板（P18：有的老师把推理全留 <think>，可见区只吐答案）")
     args = ap.parse_args()
 
     items = [json.loads(l) for l in open(args.seeds, encoding="utf-8")]
@@ -105,13 +115,14 @@ def main():
               gpu_memory_utilization=0.85)
     tok = llm.get_tokenizer()
     sp = SamplingParams(temperature=0, max_tokens=MAX_NEW_TOKENS)
+    tmpl = PROMPT_TMPL_VISIBLE if args.visible_cot else PROMPT_TMPL
 
     t0 = time.time()
     for s in range(0, len(pending), CHUNK):
         chunk = pending[s:s + CHUNK]
         prompts = [
             tok.apply_chat_template(
-                [{"role": "user", "content": PROMPT_TMPL.format(q=it["question"])}],
+                [{"role": "user", "content": tmpl.format(q=it["question"])}],
                 add_generation_prompt=True, tokenize=False)
             for it in chunk
         ]

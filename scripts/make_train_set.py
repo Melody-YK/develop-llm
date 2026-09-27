@@ -45,9 +45,6 @@ for r in records:
         continue
     kept.append({"instruction": r["question"], "input": "", "output": out})
 
-with open(args.out, "w", encoding="utf-8") as f:
-    json.dump(kept, f, ensure_ascii=False, indent=1)
-
 n = len(records)
 # P17：非互斥计数——截断与 think 未闭合重叠（撞墙的必然没闭合），
 # 顺序归因会把截断吞成 0，误导排查方向
@@ -62,7 +59,12 @@ print(f"原始 {n} 条 -> 训练集 {len(kept)} 条（淘汰 {n - len(kept)} 条
 print(f"淘汰明细（非互斥）: {summary}")
 if kept:
     lens = sorted(len(k["output"]) for k in kept)
+    med = lens[len(lens) // 2]
     p90 = lens[min(int(len(lens) * 0.9), len(lens) - 1)]
-    print(f"output 长度（字符）: 中位 {lens[len(lens)//2]} / p90 {p90} / 最长 {lens[-1]}")
+    print(f"output 长度（字符）: 中位 {med} / p90 {p90} / 最长 {lens[-1]}")
+    # P18 长度门：中位过短 = 零推理信号数据（答案对但没有推理链），不得入库
+    assert med > 200, f"output 中位仅 {med} 字符——疑似零推理信号数据（P18），停下查出题模板！"
 assert len({k["instruction"] for k in kept}) == len(kept), "出现重复题目，检查种子去重！"
+with open(args.out, "w", encoding="utf-8") as f:
+    json.dump(kept, f, ensure_ascii=False, indent=1)
 print(f"-> {args.out}")
