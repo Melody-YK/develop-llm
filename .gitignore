@@ -11,3 +11,7 @@ __pycache__/
 # 本工具配置
 .zcodeignore
 .idea/
+
+# 构建产物（交付包与 zip 不入库，GitHub 上内容以源文件为准）
+交付包/
+*.zip
