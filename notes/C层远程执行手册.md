@@ -40,7 +40,7 @@ sha256sum \
 当前权威 SHA-256：
 
 ```text
-1b38cc80aa7a5538ae32244bcbab8b1cc7b0918f4b2404d54219808d1b576dc9  distill_train_v1.json
+471688a31cfd38c4a78e853c90f79ba05a1ed987dd1557735f11aeee9c81f5db  distill_train_v1.json
 bff1b217f49c01fe2595810dcce24c07be21c05d4b4bcdcd84720f51d4c39da7  logits_8b.jsonl.gz
 1f34fb9eae6a36514cc1d5fcdb3defdc40515f1d877c156365416b40405670a2  logits_4b.jsonl.gz
 ```
