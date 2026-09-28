@@ -1,0 +1,3617 @@
+{
+ "summary": {
+  "model": "/home/melody/distill/models/Qwen3-1.7B",
+  "adapter": "/home/melody/distill/models/distill-4b-v2",
+  "n": 400,
+  "batch": 8,
+  "accuracy": 0.6125,
+  "accuracy_by_source": {
+   "mmlu": 0.55,
+   "cmmlu": 0.675
+  },
+  "unparsed_rate": 0.005,
+  "runtime_sec": 1331.8
+ },
+ "records": [
+  {
+   "id": "mmlu-31",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **C. psychology**. "
+  },
+  {
+   "id": "cmmlu-159",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 国家"
+  },
+  {
+   "id": "cmmlu-99",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n答案：C. 这件事他不可能不知道。  \n解析：  \n- A. "
+  },
+  {
+   "id": "cmmlu-32",
+   "source": "cmmlu",
+   "subject": "security_study",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 钨合金钢"
+  },
+  {
+   "id": "mmlu-92",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **A. 1%**. \n\nAs of "
+  },
+  {
+   "id": "mmlu-14",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "mmlu-154",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Steyn (2003)"
+  },
+  {
+   "id": "cmmlu-181",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 细胞外基质"
+  },
+  {
+   "id": "cmmlu-98",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. 激活ACh受体通道"
+  },
+  {
+   "id": "mmlu-147",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo solve the equation $ 18 + p = 29 $, we"
+  },
+  {
+   "id": "cmmlu-5",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A\n\n#### 解析：  \nA. **错误**：  \n向废液中加入"
+  },
+  {
+   "id": "cmmlu-173",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 隐性课程"
+  },
+  {
+   "id": "mmlu-172",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine how many bouquets Sapphire c"
+  },
+  {
+   "id": "mmlu-144",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe concomitant variation fallacy is best"
+  },
+  {
+   "id": "cmmlu-160",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n密码分析的目的是 **D. 发现密钥或者密文对应的明文**。"
+  },
+  {
+   "id": "cmmlu-40",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 综合责任"
+  },
+  {
+   "id": "mmlu-137",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. the Cold War."
+  },
+  {
+   "id": "cmmlu-163",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 1. **题目解析：**  \n题目要求计算每分肺泡通气量（Minute "
+  },
+  {
+   "id": "cmmlu-100",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n五一劳动节当天的月相是 **C. 下弦月**。"
+  },
+  {
+   "id": "cmmlu-115",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n妊娠期妇女由胎盘合成和分泌的主要雌激素成分是  \n**D. 雌三醇**  \n\n**"
+  },
+  {
+   "id": "mmlu-16",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which amino acid cannot prov"
+  },
+  {
+   "id": "cmmlu-179",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n</think>\n\nA. 小李收到一封信\n\n解析：  \n在名法结构中，主语是动作的"
+  },
+  {
+   "id": "cmmlu-81",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 反驳"
+  },
+  {
+   "id": "cmmlu-10",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 艾维·李"
+  },
+  {
+   "id": "cmmlu-51",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 歌德"
+  },
+  {
+   "id": "cmmlu-28",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 不仅指马克思恩格斯创立的基本理论、基本观点和学说的体系，也包括继承者对它的发"
+  },
+  {
+   "id": "cmmlu-97",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n以下是各选项的分析：\n\n- **A. 小李去了北京**：表示“"
+  },
+  {
+   "id": "cmmlu-149",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：D. 盐炙品\n\n解析：益智仁是一种中药材，其性温、味辛，归脾、肾经。在中药调"
+  },
+  {
+   "id": "cmmlu-177",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 一级结构决定高级结构"
+  },
+  {
+   "id": "mmlu-149",
+   "source": "mmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine how terrestrial radiation co"
+  },
+  {
+   "id": "mmlu-146",
+   "source": "mmlu",
+   "subject": "high_school_government_and_politics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B. the strength o"
+  },
+  {
+   "id": "cmmlu-139",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：D. 达格列净\n\n#### 解析：  \n达格列净（Dapaglif"
+  },
+  {
+   "id": "cmmlu-42",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n题目描述的是汽车从平直公路驶上斜坡，牵引力逐渐增大，而输出功率"
+  },
+  {
+   "id": "mmlu-99",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "mmlu-58",
+   "source": "mmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. The courts exe"
+  },
+  {
+   "id": "mmlu-5",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which option is **not** a ba"
+  },
+  {
+   "id": "mmlu-114",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe question asks for the least important"
+  },
+  {
+   "id": "mmlu-135",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct conclusion, we a"
+  },
+  {
+   "id": "cmmlu-116",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n以下是关于细胞核的叙述，判断错误的一项：\n\nA. **有丝分裂过程中存在核膜消失和"
+  },
+  {
+   "id": "cmmlu-141",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 介质过滤除菌"
+  },
+  {
+   "id": "cmmlu-178",
+   "source": "cmmlu",
+   "subject": "college_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 有效\n\n解析：根据《中华人民共和国民法典》相关规定，遗赠扶养协议是双方自愿签"
+  },
+  {
+   "id": "mmlu-118",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct sequence of tiss"
+  },
+  {
+   "id": "cmmlu-25",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 2010年4月13日国务院发布的《进一步做好利用外资工作的若干意见》提出"
+  },
+  {
+   "id": "cmmlu-79",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 前摄抑制"
+  },
+  {
+   "id": "cmmlu-137",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 德谟克利特"
+  },
+  {
+   "id": "cmmlu-78",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 问题解析：\n\n该患者为18岁男性，因头痛针刺合谷穴后次日局部形成血肿，半"
+  },
+  {
+   "id": "mmlu-145",
+   "source": "mmlu",
+   "subject": "formal_logic",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo identify the **antecedent** of the con"
+  },
+  {
+   "id": "mmlu-51",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Socio-cultural environment.\n\n**Explana"
+  },
+  {
+   "id": "cmmlu-133",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n科学的学业生涯规划的特点包括阶段性、综合性、发展性，这些是教育规划中常见的核心要素"
+  },
+  {
+   "id": "cmmlu-112",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. α1-抗胰蛋白酶缺乏"
+  },
+  {
+   "id": "cmmlu-192",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n别嘌呤醇是一种用于治疗痛风的药物，其作用机制是通过抑制黄嘌呤氧化酶（Xanthin"
+  },
+  {
+   "id": "cmmlu-167",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 有限扩张战略\n\n解析：赫鲁晓夫在1950年代末至1960年代初，面对苏联经济"
+  },
+  {
+   "id": "mmlu-79",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. the Trinity**."
+  },
+  {
+   "id": "mmlu-164",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "mmlu-49",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. The bonds linking the monomers of star"
+  },
+  {
+   "id": "mmlu-142",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, let's an"
+  },
+  {
+   "id": "mmlu-32",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe complete resynthesis of phosphocreati"
+  },
+  {
+   "id": "mmlu-20",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. Isolationism\n\n#### \n\nThe passage highl"
+  },
+  {
+   "id": "mmlu-183",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "mmlu-122",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. Yes, because the passenger was not act"
+  },
+  {
+   "id": "cmmlu-142",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 内部公众民主参与法是用来协调关系"
+  },
+  {
+   "id": "mmlu-10",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine who is most likely to prevai"
+  },
+  {
+   "id": "mmlu-198",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we analy"
+  },
+  {
+   "id": "mmlu-22",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct population of Lo"
+  },
+  {
+   "id": "mmlu-125",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. decreased sperm production"
+  },
+  {
+   "id": "cmmlu-15",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n题目给出两个非零矩阵 $ \\boldsymbol{A} $ 和"
+  },
+  {
+   "id": "mmlu-158",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. Barter may be acceptable when certain "
+  },
+  {
+   "id": "mmlu-77",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe question is based on the principles o"
+  },
+  {
+   "id": "cmmlu-46",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 主观唯心主义观点"
+  },
+  {
+   "id": "cmmlu-122",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：C\n\n#### 解析：  \n等价矩阵的定义是：若两个矩阵 $ A "
+  },
+  {
+   "id": "mmlu-117",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-154",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 圈层的关系"
+  },
+  {
+   "id": "mmlu-3",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B. destinations f"
+  },
+  {
+   "id": "mmlu-169",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. humanistic"
+  },
+  {
+   "id": "mmlu-30",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe average life expectancy of white male"
+  },
+  {
+   "id": "mmlu-9",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe passage describes the decline of the "
+  },
+  {
+   "id": "mmlu-89",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine how the first metals were wo"
+  },
+  {
+   "id": "mmlu-103",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which option is **not** an o"
+  },
+  {
+   "id": "cmmlu-157",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n关于法治与德治的联系与区别，以下说法不正确的是：\n\n**B. 法治强调将社会关系纳"
+  },
+  {
+   "id": "cmmlu-12",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. 寒苦不忍言，为君奏丝桐\n\n解析：  \n诗句分析如下：\n\n- **A. 寒苦不"
+  },
+  {
+   "id": "mmlu-66",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. much smaller i"
+  },
+  {
+   "id": "mmlu-108",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **A. Fewer than 7**"
+  },
+  {
+   "id": "cmmlu-18",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n猪的妊娠期平均为 **A. 114天**。"
+  },
+  {
+   "id": "mmlu-39",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we analy"
+  },
+  {
+   "id": "mmlu-166",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC"
+  },
+  {
+   "id": "mmlu-53",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe key factor in the survival and succes"
+  },
+  {
+   "id": "cmmlu-195",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：A"
+  },
+  {
+   "id": "cmmlu-3",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n义务教育的根本性质是  \n**B. 强迫性**  \n\n**解析**：  \n义务教育"
+  },
+  {
+   "id": "mmlu-188",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we analy"
+  },
+  {
+   "id": "mmlu-25",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. Centripetal"
+  },
+  {
+   "id": "mmlu-69",
+   "source": "mmlu",
+   "subject": "human_aging",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. The central pa"
+  },
+  {
+   "id": "mmlu-199",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "mmlu-27",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which option is **not** a so"
+  },
+  {
+   "id": "mmlu-54",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B. PROM**. \n\n**Ex"
+  },
+  {
+   "id": "cmmlu-189",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：C\n\n#### 解析：  \nA. **错误**：FeCl3溶液中滴"
+  },
+  {
+   "id": "mmlu-113",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Guilds\n\n**Explanation:**  \nThe passage"
+  },
+  {
+   "id": "cmmlu-170",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 资本主义社会之中的人与人之间的关系"
+  },
+  {
+   "id": "cmmlu-0",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n#### C. AC\n\n**解析：**\n\n- **A. 冰雪消"
+  },
+  {
+   "id": "cmmlu-184",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 简谐振动的错误说法是：\n\n**D. 做简谐振动的物体，加速度方向与位移方"
+  },
+  {
+   "id": "mmlu-140",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo address the question, we need to under"
+  },
+  {
+   "id": "mmlu-7",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe question revolves around the applicat"
+  },
+  {
+   "id": "cmmlu-102",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在进行竞争者分析时，企业首先需要明确分析的范围和对象，即识别哪些是直接或间接的竞争"
+  },
+  {
+   "id": "mmlu-40",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. The United States became a creditor co"
+  },
+  {
+   "id": "cmmlu-130",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 问题解析\n\n我们需要确定函数 $ f(x) = \\ln(x) - \\fr"
+  },
+  {
+   "id": "cmmlu-41",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n关于教育的相对独立性，以下说法不正确的是：\n\n**A. 教育可以促进社会流动** "
+  },
+  {
+   "id": "cmmlu-199",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 招徕定价"
+  },
+  {
+   "id": "cmmlu-11",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 对两极格局造成冲击"
+  },
+  {
+   "id": "cmmlu-162",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n哲学作为一门专门的学科，其历史可以追溯到古代文明的形成时期。在西方，哲学的起源通常"
+  },
+  {
+   "id": "cmmlu-89",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### B\n\n#### 解析：\n\n题目描述了一个公司通过市场分析，决定在开通网上"
+  },
+  {
+   "id": "cmmlu-186",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 调查法"
+  },
+  {
+   "id": "cmmlu-4",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 生产的中心是工厂，而不是网络等\n\n解析：  \n信息社会与工业社会相比，其核心"
+  },
+  {
+   "id": "mmlu-131",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe polyomavirus family is a group of vir"
+  },
+  {
+   "id": "mmlu-68",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. conventional use."
+  },
+  {
+   "id": "mmlu-84",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. diarrhoea**.  "
+  },
+  {
+   "id": "mmlu-120",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo verify a digital signature, we need th"
+  },
+  {
+   "id": "mmlu-74",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. The bank, because its loan satisfied t"
+  },
+  {
+   "id": "cmmlu-168",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：A. 均质\n\n解析：  \n均质（A）是一种物理处理方法，通过机械作用使液体中"
+  },
+  {
+   "id": "cmmlu-109",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 亚太经合组织"
+  },
+  {
+   "id": "mmlu-121",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine whether Skytop Co. should ac"
+  },
+  {
+   "id": "cmmlu-58",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 程序正义"
+  },
+  {
+   "id": "cmmlu-123",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 是否有目的的培养人"
+  },
+  {
+   "id": "cmmlu-56",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：B. 长颈鹿"
+  },
+  {
+   "id": "mmlu-190",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "mmlu-105",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "cmmlu-96",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A. 商品价格下降\n\n#### 解析：  \n需求曲线的移动是由**"
+  },
+  {
+   "id": "mmlu-60",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC"
+  },
+  {
+   "id": "mmlu-63",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **C. Canada's third"
+  },
+  {
+   "id": "mmlu-179",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the type of network based on"
+  },
+  {
+   "id": "cmmlu-108",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 相对比"
+  },
+  {
+   "id": "cmmlu-87",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 中国"
+  },
+  {
+   "id": "mmlu-42",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct accounting treat"
+  },
+  {
+   "id": "mmlu-38",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. A low blood pressure (<90mmHg systolic"
+  },
+  {
+   "id": "cmmlu-166",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. “假恋爱”"
+  },
+  {
+   "id": "mmlu-75",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the ratio of exchange of mar"
+  },
+  {
+   "id": "mmlu-157",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. its power to regulate commerce."
+  },
+  {
+   "id": "mmlu-127",
+   "source": "mmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA 43-year-old man with a history of self-"
+  },
+  {
+   "id": "mmlu-88",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine how the market demand curve "
+  },
+  {
+   "id": "mmlu-36",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. After its succ"
+  },
+  {
+   "id": "mmlu-6",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the distance between the low"
+  },
+  {
+   "id": "cmmlu-91",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nD. 豆状核和丘脑"
+  },
+  {
+   "id": "mmlu-168",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. human skulls w"
+  },
+  {
+   "id": "mmlu-143",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe court would rule that the evidence is"
+  },
+  {
+   "id": "cmmlu-95",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：B\n\n#### 解析：  \n题目考查的是调节性T细胞数量变化的调控"
+  },
+  {
+   "id": "cmmlu-152",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 钓鱼攻击"
+  },
+  {
+   "id": "cmmlu-26",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 在一定范围内的人群，可以小到一个家庭，大到全人类"
+  },
+  {
+   "id": "cmmlu-121",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n抛物线 $ y^2 = 10x $ 的标准形式为 $ y^2 = 4ax $，其中"
+  },
+  {
+   "id": "cmmlu-188",
+   "source": "cmmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n性教育是终身教育的一部分，涉及从儿童到成人的各个阶段，旨在帮助个体了解和尊重性健康"
+  },
+  {
+   "id": "mmlu-195",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe primary purpose of a **job analysis**"
+  },
+  {
+   "id": "cmmlu-36",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 基金会"
+  },
+  {
+   "id": "mmlu-194",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Parkinson's disease\n\nResearch has show"
+  },
+  {
+   "id": "mmlu-71",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. Dysprosody"
+  },
+  {
+   "id": "mmlu-72",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. No, because the witness cannot be reha"
+  },
+  {
+   "id": "cmmlu-65",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 社会领域中的理想信念"
+  },
+  {
+   "id": "mmlu-184",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. differences in gene expression which m"
+  },
+  {
+   "id": "mmlu-119",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "cmmlu-155",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n答案：A"
+  },
+  {
+   "id": "mmlu-2",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. bird"
+  },
+  {
+   "id": "mmlu-159",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. Latin America\n\n**Step-by-Step Explanat"
+  },
+  {
+   "id": "cmmlu-165",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n病毒囊膜的组成成分是  \n**B. 脂类**  \n\n病毒囊膜主要由脂类组成，包括磷"
+  },
+  {
+   "id": "cmmlu-20",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n我国的农村社区大致有两种形态，即 **散村和集村**。  \n因此，正确答案是：  "
+  },
+  {
+   "id": "cmmlu-77",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### D. 法律规范与非规范性文件不同，具有普遍性\n\n#### 解析：\n- *"
+  },
+  {
+   "id": "cmmlu-145",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 属于侵犯著作权的行为\n\n解析：  \n张某在甲期刊社发表的论文未作版权说明，乙"
+  },
+  {
+   "id": "cmmlu-171",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n根据法理学中的法律规则构成要素，法律规则通常由**假定、规定、"
+  },
+  {
+   "id": "mmlu-44",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "mmlu-52",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe '3' button on a touch-tone telephone "
+  },
+  {
+   "id": "cmmlu-13",
+   "source": "cmmlu",
+   "subject": "college_engineering_hydrology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：B\n\n#### 解析：  \n在河流泥沙输移过程中，输沙特征通常用以"
+  },
+  {
+   "id": "cmmlu-120",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 程序"
+  },
+  {
+   "id": "cmmlu-117",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：B. 乳香\n\n解析：  \n乳香是一种芳香性树脂，具有活血止痛、消肿生肌等功效"
+  },
+  {
+   "id": "cmmlu-27",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：D. 肾脏"
+  },
+  {
+   "id": "cmmlu-86",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### C\n\n#### 解析\n\n- **A.** 错误。封建制法并非人类历史上第"
+  },
+  {
+   "id": "mmlu-197",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct expression, we a"
+  },
+  {
+   "id": "cmmlu-80",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 腋神经"
+  },
+  {
+   "id": "cmmlu-196",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 问题解析\n\n题目要求判断在使用二项分布直接计算概率法进行统计推断时，当样"
+  },
+  {
+   "id": "mmlu-8",
+   "source": "mmlu",
+   "subject": "college_computer_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the hardware address of a gi"
+  },
+  {
+   "id": "mmlu-174",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the maximum value of the z-c"
+  },
+  {
+   "id": "cmmlu-67",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 6个月至1年或以上"
+  },
+  {
+   "id": "mmlu-138",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-119",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n已知圆的半径为 $ \\sqrt{2} \\, \\text{cm} $，圆心到直线 $"
+  },
+  {
+   "id": "cmmlu-22",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 坚强的信念"
+  },
+  {
+   "id": "cmmlu-134",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 事业单位，企业化管理"
+  },
+  {
+   "id": "mmlu-192",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which option is **not** a co"
+  },
+  {
+   "id": "mmlu-18",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. Insulin"
+  },
+  {
+   "id": "mmlu-163",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. Cooperative advertising\n\n**Explanation"
+  },
+  {
+   "id": "cmmlu-114",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. “升了呀月钩，／明了呀织女牵牛；／薄雾呀拂水，／凉风呀飘去莲舟。”"
+  },
+  {
+   "id": "mmlu-95",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "mmlu-126",
+   "source": "mmlu",
+   "subject": "college_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "cmmlu-64",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：D. 头部"
+  },
+  {
+   "id": "mmlu-111",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. Defining criteria are subjective and d"
+  },
+  {
+   "id": "mmlu-61",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe question asks about the core of the a"
+  },
+  {
+   "id": "mmlu-182",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "cmmlu-140",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A. 因为"
+  },
+  {
+   "id": "cmmlu-2",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在学校体育活动中中暑，应采取以下措施：\n\n1. **解开衣扣，平躺休息**：这是为"
+  },
+  {
+   "id": "mmlu-90",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which DNA segment results fr"
+  },
+  {
+   "id": "cmmlu-23",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. “营业外收入”"
+  },
+  {
+   "id": "mmlu-11",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B**. \n\nIn the abs"
+  },
+  {
+   "id": "cmmlu-128",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n已知 $ x > 0 $, $ y > 0 $, 且满足 $ x + 2y + 2"
+  },
+  {
+   "id": "cmmlu-9",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n要确定函数 $ y = \\sin 2x \\cos 2x $ 的最小正周期，我们可以"
+  },
+  {
+   "id": "mmlu-141",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe AH (Authentication Header) protocol p"
+  },
+  {
+   "id": "cmmlu-106",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 菲律宾"
+  },
+  {
+   "id": "mmlu-17",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe question refers to a congressional te"
+  },
+  {
+   "id": "cmmlu-126",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n要做好心理辅导工作，不能遵循的原则是：\n\n**B. 教师中心原则**\n\n**解析："
+  },
+  {
+   "id": "mmlu-136",
+   "source": "mmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. You must act according as if your valu"
+  },
+  {
+   "id": "mmlu-100",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we need "
+  },
+  {
+   "id": "cmmlu-31",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：B. 颈内动脉\n\n#### 解析：  \n大脑动脉环（也称为脑动脉环"
+  },
+  {
+   "id": "mmlu-96",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe long-term effects of Otto von Bismarc"
+  },
+  {
+   "id": "mmlu-0",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. No, because out-of-state casinos are p"
+  },
+  {
+   "id": "mmlu-128",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **A. Aggregate mark"
+  },
+  {
+   "id": "cmmlu-191",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在进行两组数值变量资料的比较时，首先应考虑的是资料是否符合 $ t $ 检验的条件"
+  },
+  {
+   "id": "mmlu-12",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe National Association of School Psycho"
+  },
+  {
+   "id": "cmmlu-48",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 间接控制和直接控制"
+  },
+  {
+   "id": "cmmlu-59",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 问题解析\n\n我们考虑函数 $ y = x^x $ 在区间 $ \\left"
+  },
+  {
+   "id": "mmlu-191",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. Prince William"
+  },
+  {
+   "id": "cmmlu-38",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A. b—c—d—a\n\n#### 解析：  \n施工风险管理工作包括"
+  },
+  {
+   "id": "cmmlu-71",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 国家所赖以存在的经济基础"
+  },
+  {
+   "id": "cmmlu-85",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n在句子“太后之色少解”中，“色”指的是“妇女美貌”。  \n因此，正确答案是：  \n"
+  },
+  {
+   "id": "cmmlu-88",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 实体公正、程序公正和及时高效的原则"
+  },
+  {
+   "id": "mmlu-46",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC"
+  },
+  {
+   "id": "mmlu-62",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B**.\n\n**Explanati"
+  },
+  {
+   "id": "cmmlu-21",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### B. 颗粒型"
+  },
+  {
+   "id": "cmmlu-150",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 人类的生产劳动"
+  },
+  {
+   "id": "cmmlu-164",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n水平桌面上，物体在水平力 $ F $ 作用下向右运动，当它离开桌面时，假如所受的一"
+  },
+  {
+   "id": "mmlu-186",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe biggest single determinant of HIV tra"
+  },
+  {
+   "id": "cmmlu-156",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 变质岩\n\n解析：  \n苏州的砚台原料是岩性和薄板状的岩石，这种特性表明其形成"
+  },
+  {
+   "id": "cmmlu-93",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n题目描述了一种“满100元送20元购物券”的优惠活动，顾客每次"
+  },
+  {
+   "id": "cmmlu-110",
+   "source": "cmmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 《纽约公约》"
+  },
+  {
+   "id": "mmlu-82",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe most common cause of acute confusion "
+  },
+  {
+   "id": "cmmlu-132",
+   "source": "cmmlu",
+   "subject": "chinese_civil_service_exam",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 天文和历法"
+  },
+  {
+   "id": "cmmlu-74",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### C\n\n#### 解析：\n\n在施工成本计划的编制过程中，首先需要将总成本分"
+  },
+  {
+   "id": "cmmlu-148",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n根据皮亚杰的道德认知发展理论，小星在判断道德问题时不仅依据规则，还能出于同情和关心"
+  },
+  {
+   "id": "mmlu-85",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-55",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n病原体生存、生长和繁殖的自然场所被称为 **C. 宿主**。"
+  },
+  {
+   "id": "mmlu-80",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. deal with problems before they occur"
+  },
+  {
+   "id": "mmlu-177",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B. Norway, China,"
+  },
+  {
+   "id": "cmmlu-84",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A\n\n#### 解析：  \n题目要求选择“真正体现了人与自然关系的"
+  },
+  {
+   "id": "cmmlu-161",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n题目给出一个三减因生存模型，其中：\n\n- $\\mu_x^{1}"
+  },
+  {
+   "id": "cmmlu-61",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 农村社区"
+  },
+  {
+   "id": "mmlu-57",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC"
+  },
+  {
+   "id": "cmmlu-43",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A\n\n#### 解析：  \nA. **操作与现象不匹配**：  \n"
+  },
+  {
+   "id": "cmmlu-105",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：A. 髓关节\n\n解析：髓关节（也称为球窝关节）是人体中唯一能绕三个基本轴（冠"
+  },
+  {
+   "id": "mmlu-165",
+   "source": "mmlu",
+   "subject": "high_school_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo solve the problem, we need to determin"
+  },
+  {
+   "id": "cmmlu-33",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 象形\n\n解析：  \n“策”字的结构是“丷”和“一”组合而成。根据“六书”中的"
+  },
+  {
+   "id": "mmlu-107",
+   "source": "mmlu",
+   "subject": "world_religions",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. The Battle of Uhud"
+  },
+  {
+   "id": "mmlu-173",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nD. forward a summary of the file to the p"
+  },
+  {
+   "id": "cmmlu-129",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 田园城市"
+  },
+  {
+   "id": "cmmlu-30",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n答案：C. 土路"
+  },
+  {
+   "id": "mmlu-112",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which vibrational modes of a"
+  },
+  {
+   "id": "cmmlu-75",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 前者高于后者"
+  },
+  {
+   "id": "cmmlu-193",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n答案：C. 其他选项均可"
+  },
+  {
+   "id": "cmmlu-182",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n以下是选项中不属于三大国际天文奥林匹克赛事的英文缩写：\n\n- **APAO**（A"
+  },
+  {
+   "id": "cmmlu-169",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### 答案：B. 十二指肠溃疡\n\n#### 解析：  \n- **A. 结肠多发"
+  },
+  {
+   "id": "mmlu-23",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct interpretation o"
+  },
+  {
+   "id": "mmlu-106",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe common mutation in α-thalassaemia is "
+  },
+  {
+   "id": "cmmlu-144",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n宿主状态是遗传因素与**环境因素**相互作用的结果。  \n**答案：B. 环境因素"
+  },
+  {
+   "id": "mmlu-176",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. fails a prima facie duty of honesty."
+  },
+  {
+   "id": "mmlu-29",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **C. blasphemous**."
+  },
+  {
+   "id": "mmlu-102",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "mmlu-151",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. confusion stag"
+  },
+  {
+   "id": "mmlu-148",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the effects on the equilibri"
+  },
+  {
+   "id": "mmlu-167",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. generalization"
+  },
+  {
+   "id": "cmmlu-146",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 技击动作"
+  },
+  {
+   "id": "mmlu-21",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. \"the last shal"
+  },
+  {
+   "id": "mmlu-73",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. guilty, because a person is presumed t"
+  },
+  {
+   "id": "cmmlu-35",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n吃海鲜时不宜饮用以下哪种酒？  \nA. 干白  \nB. 干红  \nC. 茅台  \n"
+  },
+  {
+   "id": "cmmlu-107",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 口干思饮，大便秘结\n\n解析：脾胃虚寒型胃痛的主症包括胃痛隐隐、绵绵不休、神疲"
+  },
+  {
+   "id": "mmlu-155",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. arguing that someone is not really har"
+  },
+  {
+   "id": "cmmlu-131",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 法律的产生经历了一个从与道德、宗教规范浑为一体到相对独立的过程\n\n解析：  "
+  },
+  {
+   "id": "cmmlu-49",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n在病因研究的轮状模型中，强调宿主与**生物因素**的关系。  \n**答案：C**"
+  },
+  {
+   "id": "cmmlu-37",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n学校利用校庆进行广泛的社会宣传，这一活动表明它重视塑造自己的 **A. 文化形象*"
+  },
+  {
+   "id": "mmlu-19",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. The consent was voluntarily given and "
+  },
+  {
+   "id": "cmmlu-187",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. 古之（学者）必有师  \nB. 是故，弟子（不必）不如师  \nC. （圣人）无"
+  },
+  {
+   "id": "cmmlu-135",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n我国少数民族中人口最多的是 **D. 壮族**。"
+  },
+  {
+   "id": "mmlu-56",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which philosophy most closel"
+  },
+  {
+   "id": "cmmlu-1",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 文官任知州\n\n解析：  \n唐末五代时期，中央集权被削弱，导致地方权力过大，藩"
+  },
+  {
+   "id": "mmlu-139",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct statement about "
+  },
+  {
+   "id": "mmlu-156",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. RNA replication lacks the proofreading"
+  },
+  {
+   "id": "mmlu-45",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe term for the action in which managers"
+  },
+  {
+   "id": "mmlu-185",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-47",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 兴趣"
+  },
+  {
+   "id": "mmlu-70",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe medulla oblongata is a part of the br"
+  },
+  {
+   "id": "mmlu-181",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. the study of how decision makers choos"
+  },
+  {
+   "id": "mmlu-43",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Yes, the trial was unfair in presentin"
+  },
+  {
+   "id": "cmmlu-76",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 社会生产力和国际分工的发展"
+  },
+  {
+   "id": "cmmlu-153",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 科目本位课程"
+  },
+  {
+   "id": "mmlu-109",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe national emblem of Scotland is the th"
+  },
+  {
+   "id": "mmlu-123",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which option is **not** a fe"
+  },
+  {
+   "id": "mmlu-110",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-180",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. 商人中间商"
+  },
+  {
+   "id": "mmlu-97",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we analy"
+  },
+  {
+   "id": "cmmlu-53",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### B\n\n#### B\n\n#### B\n\n#### B"
+  },
+  {
+   "id": "cmmlu-16",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n社会主义法治理念的核心是依法治国，这是社会主义法治的本质要求。依法治国是社会主义法"
+  },
+  {
+   "id": "mmlu-37",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo compare the 0.5 of Mr. Paulson’s class"
+  },
+  {
+   "id": "mmlu-67",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-113",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 夸美纽斯的大教学论"
+  },
+  {
+   "id": "mmlu-65",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe majority of workers in periphery coun"
+  },
+  {
+   "id": "mmlu-78",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. might have been due to chance"
+  },
+  {
+   "id": "mmlu-124",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "cmmlu-197",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. 建立了汉朝与西方的联系\n\n解析：张骞出使西域的主要功绩是开辟了沟通中西的丝绸"
+  },
+  {
+   "id": "mmlu-150",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe key to this question lies in understa"
+  },
+  {
+   "id": "cmmlu-68",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n从经济学角度看，道德在建立市场机制中主要作用是 **C. 降低市场成本**。  \n"
+  },
+  {
+   "id": "mmlu-134",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the interquartile range (IQR"
+  },
+  {
+   "id": "cmmlu-29",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：A\n\n#### 解析：  \n在三阶闭环调节系统中，输入端加给定滤波"
+  },
+  {
+   "id": "mmlu-28",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **B. 7 14**. \n\nThe "
+  },
+  {
+   "id": "cmmlu-190",
+   "source": "cmmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. Burkitt淋巴瘤"
+  },
+  {
+   "id": "mmlu-81",
+   "source": "mmlu",
+   "subject": "abstract_algebra",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo analyze the given statements, we consi"
+  },
+  {
+   "id": "cmmlu-176",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 时间错觉\n\n解析：  \n诗句“欢娱嫌夜短，寂寞恨更长”描述的是人在不同情绪状"
+  },
+  {
+   "id": "cmmlu-73",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 机会成本的概念"
+  },
+  {
+   "id": "cmmlu-118",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n答案：C\n\n解析：  \n新中国20世纪70年代的外交特点主要体"
+  },
+  {
+   "id": "mmlu-76",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. Social accountability standard, SA 800"
+  },
+  {
+   "id": "mmlu-83",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. blood accumulation in the genitals"
+  },
+  {
+   "id": "mmlu-15",
+   "source": "mmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the gravitational field at t"
+  },
+  {
+   "id": "cmmlu-7",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n#### D. abd\n\n#### 解析：\n题目描述了网络平台作为党和政府为民服务"
+  },
+  {
+   "id": "cmmlu-198",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. “我”"
+  },
+  {
+   "id": "cmmlu-174",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. 公平竞争"
+  },
+  {
+   "id": "cmmlu-63",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n答案：D. 4"
+  },
+  {
+   "id": "cmmlu-54",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 皮肤血管"
+  },
+  {
+   "id": "cmmlu-45",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 边际收益"
+  },
+  {
+   "id": "mmlu-94",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **C. a relict bound"
+  },
+  {
+   "id": "cmmlu-60",
+   "source": "cmmlu",
+   "subject": "world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n20世纪70年代中后期，法国经济面临通货膨胀压力，密特朗政府推行国有化政策，旨在通"
+  },
+  {
+   "id": "cmmlu-17",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n在我国，公有制经济的主导地位是社会主义经济制度的重要特征，增强其活力有助于保障这一"
+  },
+  {
+   "id": "mmlu-93",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the nature of the seller's p"
+  },
+  {
+   "id": "cmmlu-52",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在南京国民政府的推动下，全国各地国货界积极响应，国货运动一度声势浩大。特别是在上海"
+  },
+  {
+   "id": "cmmlu-83",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 天津"
+  },
+  {
+   "id": "cmmlu-143",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### A. 配制一定物质的量浓度的溶液时，容量瓶必须洁净、干燥、不漏水\n\n**"
+  },
+  {
+   "id": "mmlu-178",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. pink\n\nPepto-Bismol liquid is typically"
+  },
+  {
+   "id": "mmlu-34",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-94",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 消费者关系"
+  },
+  {
+   "id": "mmlu-116",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct answer, we analy"
+  },
+  {
+   "id": "mmlu-59",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. Intolerance is present in up to 20% of"
+  },
+  {
+   "id": "mmlu-171",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine how the U.S. national income"
+  },
+  {
+   "id": "mmlu-115",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the measure of a firm's mono"
+  },
+  {
+   "id": "mmlu-133",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe question asks which of the given opti"
+  },
+  {
+   "id": "cmmlu-124",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n关于食管裂孔的描述，以下选项中正确的是：\n\n**C. 有胸导管通过**\n\n**解析"
+  },
+  {
+   "id": "mmlu-196",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct condition for an"
+  },
+  {
+   "id": "mmlu-41",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo convert the mixed number $8 \\frac{2}{4"
+  },
+  {
+   "id": "cmmlu-8",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": null,
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 三边的垂直平分线的交点\n\n#### 三边的垂直平分线的交点\n\n#### "
+  },
+  {
+   "id": "cmmlu-138",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 社会干预中心"
+  },
+  {
+   "id": "mmlu-161",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-125",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 王实甫的《西厢记》"
+  },
+  {
+   "id": "cmmlu-194",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 直线制"
+  },
+  {
+   "id": "mmlu-35",
+   "source": "mmlu",
+   "subject": "machine_learning",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which steps in the EM algori"
+  },
+  {
+   "id": "cmmlu-66",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 各民族的无产阶级和劳动人民的团结"
+  },
+  {
+   "id": "cmmlu-19",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在以下认证方式中，最常用的认证方式是：\n\n**D. 基于账户名／口令认证**\n\n*"
+  },
+  {
+   "id": "mmlu-64",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe key to this question lies in understa"
+  },
+  {
+   "id": "mmlu-101",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which option results in a **"
+  },
+  {
+   "id": "cmmlu-57",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### C\n\n#### 解析：\n\n1. **病史与症状**：患者有长期咳嗽、咳喘"
+  },
+  {
+   "id": "cmmlu-39",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n相邻营养级之间的能量转化效率大约是  \nA. 30%  \n\n**解析：**  \n在"
+  },
+  {
+   "id": "mmlu-86",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. Firmographics"
+  },
+  {
+   "id": "cmmlu-24",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n脂肪酸的β-氧化过程包括以下四步反应：  \n1. **脱氢**：脂肪酸的α-碳原子"
+  },
+  {
+   "id": "mmlu-175",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB"
+  },
+  {
+   "id": "cmmlu-34",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n在我国会计法规制度体系中，最高层次的法规是《会计法》。《会计法》是国家法律体系中对"
+  },
+  {
+   "id": "cmmlu-14",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n答案：D. 重大误解制度\n\n解析：  \n在契约关系中，公平理念主要体现在以下几个方"
+  },
+  {
+   "id": "cmmlu-183",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 强调对治疗的依从性，否则就建议转院\n\n**解析：**  \n在医患沟通中，强调"
+  },
+  {
+   "id": "cmmlu-175",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 法理学的研究应当为法治建设提供理论支持与指导\n\n解析：  \n选项A错误，因为"
+  },
+  {
+   "id": "mmlu-91",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which sentence is written in"
+  },
+  {
+   "id": "mmlu-13",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe reticular formation and reticular act"
+  },
+  {
+   "id": "cmmlu-127",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 教师对学生的期望"
+  },
+  {
+   "id": "mmlu-104",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "mmlu-180",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the change in aggregate dema"
+  },
+  {
+   "id": "cmmlu-90",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 来源于肝总动脉"
+  },
+  {
+   "id": "mmlu-47",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. Brisk finger j"
+  },
+  {
+   "id": "mmlu-189",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is D. People's Republi"
+  },
+  {
+   "id": "mmlu-160",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine the correct statement about "
+  },
+  {
+   "id": "cmmlu-136",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n新闻学的母体是  \n**B. 文学**  \n\n**解析**：  \n新闻学作为一门学"
+  },
+  {
+   "id": "mmlu-130",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "cmmlu-62",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD. 建设有中国特色的社会主义"
+  },
+  {
+   "id": "cmmlu-151",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 0是最小的有理数  \nB. 0是整数，但不是正数，也不是负数  \nC. 0是"
+  },
+  {
+   "id": "mmlu-24",
+   "source": "mmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which group or organization "
+  },
+  {
+   "id": "mmlu-4",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. Solve their problems\n\nThe peer's advic"
+  },
+  {
+   "id": "mmlu-26",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nB. It was written long after the time per"
+  },
+  {
+   "id": "cmmlu-103",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 酥油茶"
+  },
+  {
+   "id": "cmmlu-44",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n答案：B. 符合设计规程"
+  },
+  {
+   "id": "cmmlu-6",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 解决我国⽬前⽯油对外依存度过⾼的问题"
+  },
+  {
+   "id": "cmmlu-104",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n哲学所研究的一般规律，适用于  \nA. 客观物质世界的某一领域  \nB. 客观物质"
+  },
+  {
+   "id": "cmmlu-185",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 乐曲"
+  },
+  {
+   "id": "cmmlu-72",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n题目给出新生儿的生存函数为：\n\n$$\nS(x) = 1 - \\"
+  },
+  {
+   "id": "cmmlu-147",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nB. 叙事诗"
+  },
+  {
+   "id": "mmlu-87",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which factor most likely dec"
+  },
+  {
+   "id": "mmlu-162",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe candidate's argument hinges on the in"
+  },
+  {
+   "id": "mmlu-98",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. millennium"
+  },
+  {
+   "id": "mmlu-132",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **D. Meat and Dairy"
+  },
+  {
+   "id": "mmlu-129",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine the limiting high-temperatur"
+  },
+  {
+   "id": "mmlu-48",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which expression shows a pri"
+  },
+  {
+   "id": "mmlu-50",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe Egyptian system of hieroglyphics is a"
+  },
+  {
+   "id": "cmmlu-111",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 王勃"
+  },
+  {
+   "id": "mmlu-187",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nThe correct answer is **A. 36%**. \n\nIn 19"
+  },
+  {
+   "id": "cmmlu-82",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nA. 世界贸易组织"
+  },
+  {
+   "id": "mmlu-153",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. It was not supported by new considerat"
+  },
+  {
+   "id": "cmmlu-92",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nC. 抽象和具体的关系"
+  },
+  {
+   "id": "cmmlu-158",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n</think>\n\n**答案：A. abc**\n\n**解析：**  \n企业整体的道"
+  },
+  {
+   "id": "mmlu-55",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-70",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n以下是各选项的分析：\n\n- **A. 分泌蛋白从胰腺的腺泡细胞到胞外的过程**：这"
+  },
+  {
+   "id": "mmlu-152",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nTo determine which scenario involves a mo"
+  },
+  {
+   "id": "cmmlu-50",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n肝功能不全病人进行肠外营养时，应选择对肝脏代谢负担较小的药物。以下是对各选项的分析"
+  },
+  {
+   "id": "cmmlu-101",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\n#### 答案：C\n\n#### 解析：  \n根据《侵权责任法》的规定，在多数人侵权"
+  },
+  {
+   "id": "mmlu-33",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nTo determine which of the given compounds"
+  },
+  {
+   "id": "cmmlu-172",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC. 青蛙"
+  },
+  {
+   "id": "cmmlu-69",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\n### 问题解析\n\n已知：  \n- $ {}_t p_x = 0.9^t $，其中"
+  },
+  {
+   "id": "mmlu-170",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n\n</think>\n\nA. Congress cannot remove federal judges "
+  },
+  {
+   "id": "mmlu-193",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nD"
+  },
+  {
+   "id": "mmlu-1",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n\n</think>\n\nC"
+  }
+ ]
+}

@@ -30,5 +30,13 @@
    "query": "input",
    "response": "output"
   }
+ },
+ "distill_train_4b_think": {
+  "file_name": "distill_train_4b_think.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
  }
 }
