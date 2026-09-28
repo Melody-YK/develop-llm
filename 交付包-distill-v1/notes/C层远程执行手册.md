@@ -2,15 +2,47 @@
 
 > 目标：本地电脑不再承担训练或评测。老师 logits 已离线采集，远程训练阶段只加载 Qwen3-1.7B 学生。
 
+## 0. 文件传输路径：Mac 直接上传
+
+GitHub 用来汇总 Windows 与 Mac 的代码版本；实验文件真正进入实验室服务器时，仍由已连接 AOne 的 Mac 通过 `scp` 上传：
+
+```text
+GitHub 最新 main → Mac 本地仓库 → scp → 服务器宿主机 → 训练容器
+```
+
+`scp` 只能把文件送到服务器宿主机，不能自动送进 Docker 容器。上传后必须检查 `llamafactory-npu` 的目录挂载；如果项目目录没有挂载进容器，再使用 `docker cp`。不要把训练依赖安装进 `vllm-ascend`：它负责老师推理与 logits 采集，`llamafactory-npu` 才负责反向传播训练。
+
+Mac 侧本轮上传包只需要以下文件：
+
+- `probe_npu_train.py`：验证训练容器能做 NPU 反向传播和参数更新。
+- `kl_train_4b.py`：执行 1.7B 学生的离线 top-k KL/CE LoRA 训练；文件名是历史遗留，脚本不只用于 4B 老师。
+- `gsm8k_eval.py`：考卷二 GSM8K 300 题数学后测。
+- `mcq_eval.py`：考卷一 CMMLU+MMLU 400 题通用能力后测。
+- `distill_train_v1.json`：460 条题目与完整 8B 解答文本，是 CE 硬标签和 token 对齐基准。
+- `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz`：同一 460 条解答在两个老师下的逐 token top-32 软标签。
+- 两张冻结考卷：保证远程后测仍使用原协议。
+
+老师 logits 已经采集并验收完成，所以本轮**不用再运行** `dump_teacher_logits.py`。该脚本只在需要重新采集老师分布时使用，运行位置是 `vllm-ascend` 推理容器，不是训练容器。
+
 ## 1. 方案边界
 
 采用**远程离线 KL**：已有 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。单份压缩文件约 16MB，解压后约 57MB；两份均为 460 条、top-32、逐 token 对齐。
 
 不采用在线师生共驻作为本轮主方案。910B 显存理论上可同时容纳 8B 教师和 1.7B 学生，但在线方案要把 vLLM 推理栈改成 Transformers teacher forward，并在每个 batch 重算老师分布；它改变了计算路径和信号口径。已有离线 logits 时，这只会增加时间和故障面。若后续要研究全词表 KL，可另立实验。
 
+本轮现成数据支持的是三组**同文本软标签对照**：纯 CE、原始 8B logits→1.7B、原始 4B logits→1.7B。`logits_4b.jsonl.gz` 来自未经 8B 蒸馏的原始 Qwen3-4B，所以第三组不能写成 `8B→4B→1.7B` 真级联。真正的串行 logits 级联还需要先用 8B 训练 4B，再用这个“蒸馏后 4B”在另一批传递题上重新采 logits，最后训练 1.7B；中间训练题与出题题还应分离，避免同题复述造成假级联。
+
 ## 2. 远程前置检查
 
 以下操作都在**支持反向传播的 Ascend PyTorch / LLaMA-Factory NPU 训练容器**内执行。不要直接向已经稳定工作的 vLLM 推理容器安装或替换 torch。
+
+四个执行脚本的分工如下：
+
+1. `probe_npu_train.py` 只用小张量验证 `torch_npu`、BF16、CE、KL、反向传播和 AdamW；不加载模型、不写权重。
+2. `kl_train_4b.py --check-only` 加载真实 1.7B 学生和一条真实样本，检查 460 条文本/logits 的题目、解答、token 数是否同源，并计算一次 CE+KL 前向；不反向、不保存。
+3. `kl_train_4b.py --max-samples 8` 用 8 条真实样本完成两次 optimizer update，验证 LoRA、梯度检查点、反向传播和 adapter 保存链路。
+4. `kl_train_4b.py` 全量运行时训练 1.7B LoRA。`--alpha 0` 是同训练循环的纯 CE 控制组；`--alpha 0.7 --temp 2.0` 才加入老师 top-32 条件 KL。
+5. `gsm8k_eval.py` 与 `mcq_eval.py` 不训练，只把基座或 adapter 挂到 1.7B 上做两张冻结考卷，并按批写 partial 文件支持断点续跑。
 
 ```bash
 BASE=/root/.cache/develop-llm
@@ -40,7 +72,7 @@ sha256sum \
 当前权威 SHA-256：
 
 ```text
-1b38cc80aa7a5538ae32244bcbab8b1cc7b0918f4b2404d54219808d1b576dc9  distill_train_v1.json
+471688a31cfd38c4a78e853c90f79ba05a1ed987dd1557735f11aeee9c81f5db  distill_train_v1.json
 bff1b217f49c01fe2595810dcce24c07be21c05d4b4bcdcd84720f51d4c39da7  logits_8b.jsonl.gz
 1f34fb9eae6a36514cc1d5fcdb3defdc40515f1d877c156365416b40405670a2  logits_4b.jsonl.gz
 ```
