@@ -9,17 +9,18 @@
 
 不生成、只 forward：llm.generate(max_tokens=1, prompt_logprobs=topk)，
 prompt = chat模板(user=题目) + assistant头 + 解答文本；只保留解答区位置。
+每 25 条一次批量调用（vLLM 内部调度；一次性 460 条会让 prompt_logprobs
+结果对象撑爆内存）。
 
 用法（容器内，两个老师各跑一遍，每个 ~10 分钟）：
     nohup python3 -u scripts/dump_teacher_logits.py \
         --model-dir /root/.cache/qwen3-8b --tag 8b \
         --out data/logits_8b.jsonl > dump8b.log 2>&1 &
-    nohup python3 -u scripts/dump_teacher_logits.py \
-        --model-dir /root/.cache/qwen3-4b --tag 4b \
-        --out data/logits_4b.jsonl > dump4b.log 2>&1 &
 
-风险备注：prompt_logprobs 走 sampler 返回路径，若 vllm-ascend 此版本不支持会启动报错
-——fallback = 用 llamafactory-npu 容器的 transformers forward 重写（约 40 行），说一声即可。
+⚠️ 重跑前检查僵尸：上次崩溃若发生在引擎加载后，EngineCore 子进程会残留占显存
+（症状：新引擎报 Free memory 8.8/60.96 GiB）。清理：pkill -9 -f EngineCore。
+风险备注：prompt_logprobs 若 vllm-ascend 不支持会启动报错——fallback 是
+llamafactory-npu 容器的 transformers forward 重写（~40 行），说一声即可。
 """
 import argparse
 import hashlib
@@ -50,47 +51,50 @@ llm = LLM(model=args.model_dir, max_model_len=4096, dtype="bfloat16",
           gpu_memory_utilization=0.85)
 tok = AutoTokenizer.from_pretrained(args.model_dir)
 
+# 第一遍：纯编码，构建全部样本（不做引擎调用，崩溃无代价）
+samples, n_skip = [], 0
+for it in data:
+    enc = tok.apply_chat_template(
+        [{"role": "user", "content": it["instruction"]}],
+        add_generation_prompt=True, tokenize=True)
+    prefix = enc.input_ids if hasattr(enc, "input_ids") else enc
+    if prefix and isinstance(prefix[0], list):  # 部分版本带批量维，去一层
+        prefix = prefix[0]
+    sol_ids = tok.encode(it["output"], add_special_tokens=False)
+    if len(prefix) + len(sol_ids) > args.max_len:
+        n_skip += 1
+        continue
+    samples.append((it, prefix, sol_ids))
+print(f"待采集 {len(samples)} 条（跳过长样本 {n_skip}）", flush=True)
+
+CHUNK = 25
 t0 = time.time()
-n_done, n_skip = 0, 0
+n_done = 0
 with open(OUT, "w", encoding="utf-8") as f:
-    for it in data:
-        # 前缀（chat 模板 + 生成头）与解答文本分别编码，位置边界由此确定
-        enc = tok.apply_chat_template(
-            [{"role": "user", "content": it["instruction"]}],
-            add_generation_prompt=True, tokenize=True)
-        prefix = enc.input_ids if hasattr(enc, "input_ids") else enc
-        if prefix and isinstance(prefix[0], list):  # 部分版本带批量维，去一层
-            prefix = prefix[0]
-        sol_ids = tok.encode(it["output"], add_special_tokens=False)
-        if len(prefix) + len(sol_ids) > args.max_len:
-            n_skip += 1
-            continue
-        full_ids = prefix + sol_ids
-
-        outs = llm.generate(
-            [{"prompt_token_ids": full_ids}],
-            SamplingParams(max_tokens=1, prompt_logprobs=args.topk, temperature=0))
-        pos_lp = outs[0].prompt_logprobs  # 长度 = len(full_ids)，None 处为首个 token
-
-        # 只保留解答区；每位置 top-k 存 [token_id, logprob]
-        sol_rows = []
-        for pos in range(len(prefix), len(full_ids)):
-            d = pos_lp[pos] or {}
-            top = sorted(d.items(), key=lambda kv: kv[1].logprob, reverse=True)[:args.topk]
-            sol_rows.append([[int(tid), round(v.logprob, 4)] for tid, v in top])
-
-        f.write(json.dumps({
-            "id": hashlib.md5(it["instruction"].encode()).hexdigest()[:12],  # 跨进程稳定（内置 hash 随机化不可用）
-            "question": it["instruction"],
-            "solution": it["output"],
-            "n_sol_tokens": len(sol_ids),
-            "topk": args.topk,
-            "positions": sol_rows,
-        }, ensure_ascii=False) + "\n")
-        n_done += 1
-        if n_done % 50 == 0:
-            print(f"[{n_done}/{len(data)}] 已用 {time.time()-t0:.0f}s", flush=True)
+    for cs in range(0, len(samples), CHUNK):
+        chunk = samples[cs:cs + CHUNK]
+        prompts = [{"prompt_token_ids": prefix + sol_ids} for _, prefix, sol_ids in chunk]
+        outs = llm.generate(prompts, SamplingParams(
+            max_tokens=1, prompt_logprobs=args.topk, temperature=0))
+        for (it, prefix, sol_ids), o in zip(chunk, outs):
+            pos_lp = o.prompt_logprobs  # 长度 = len(full_ids)，首位置为 None
+            sol_rows = []
+            for pos in range(len(prefix), len(prefix) + len(sol_ids)):
+                d = pos_lp[pos] or {}
+                top = sorted(d.items(), key=lambda kv: kv[1].logprob,
+                             reverse=True)[:args.topk]
+                sol_rows.append([[int(tid), round(v.logprob, 4)] for tid, v in top])
+            f.write(json.dumps({
+                "id": hashlib.md5(it["instruction"].encode()).hexdigest()[:12],
+                "question": it["instruction"],
+                "solution": it["output"],
+                "n_sol_tokens": len(sol_ids),
+                "topk": args.topk,
+                "positions": sol_rows,
+            }, ensure_ascii=False) + "\n")
+        n_done += len(chunk)
+        print(f"[{n_done}/{len(samples)}] 已用 {time.time()-t0:.0f}s", flush=True)
 
 print(f"=== DONE === 采集 {n_done} 条（跳过长样本 {n_skip}）-> {OUT}")
-print(f"体积预估：单条 ≈ {os.path.getsize(OUT)//max(n_done,1)//1024} KB")
-print("下一步：Windows 自写 KL 训练循环（学生 forward 对齐 positions 算 KL(T²)+CE）")
+print(f"体积: {os.path.getsize(OUT)//1024//1024} MB")
+print("下一步：两份文件拽回 Mac 验对齐 → Windows 写 KL 训练循环")
