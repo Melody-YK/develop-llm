@@ -28,6 +28,8 @@ MODEL_DIR = "/root/.cache/qwen3-4b"
 MAX_NEW_TOKENS = 4096
 MAX_MODEL_LEN = 6144
 MIN_OUT, MAX_OUT = 100, 3200
+LOGPROBS_K = 8       # 每步采 top-8 logprob（C 层原材料首采 + 裸答案行为诊断）
+TRACE_TAIL = 48      # 只存每题最后 48 步的分布（think→答案转折区）
 
 PROMPT_RETRY = (
     "Solve the following math problem. In your reply, write EVERY step of your "
