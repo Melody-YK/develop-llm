@@ -28,6 +28,9 @@ import json
 import os
 import time
 
+# 引擎随主进程共存亡（默认独立子进程模式会在主进程崩溃时残留孤儿占显存——已踩两次）
+os.environ.setdefault("VLLM_ENABLE_V1_MULTIPROCESSING", "0")
+
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
 
