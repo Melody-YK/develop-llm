@@ -47,8 +47,23 @@ OUT = args.out or os.path.join(BASE, "data", f"logits_{args.tag}.jsonl")
 
 data = json.load(open(args.data, encoding="utf-8"))
 
-llm = LLM(model=args.model_dir, max_model_len=4096, dtype="bfloat16",
-          gpu_memory_utilization=0.85)
+def build_engine():
+    """引擎初始化：尝试把 prompt_logprobs 上限提到 topk；旧版不认该参数则降级 top-20。"""
+    global TOPK
+    try:
+        eng = LLM(model=args.model_dir, max_model_len=4096, dtype="bfloat16",
+                  gpu_memory_utilization=0.85, max_logprobs=args.topk)
+        TOPK = args.topk
+        return eng
+    except (TypeError, ValueError) as e:
+        print(f"max_logprobs 参数不被支持（{repr(e)[:80]}），topk 降为 20 重试")
+        TOPK = min(args.topk, 20)
+        return LLM(model=args.model_dir, max_model_len=4096, dtype="bfloat16",
+                   gpu_memory_utilization=0.85)
+
+
+TOPK = args.topk
+llm = build_engine()
 tok = AutoTokenizer.from_pretrained(args.model_dir)
 
 # 第一遍：纯编码，构建全部样本（不做引擎调用，崩溃无代价）
@@ -75,21 +90,21 @@ with open(OUT, "w", encoding="utf-8") as f:
         chunk = samples[cs:cs + CHUNK]
         prompts = [{"prompt_token_ids": prefix + sol_ids} for _, prefix, sol_ids in chunk]
         outs = llm.generate(prompts, SamplingParams(
-            max_tokens=1, prompt_logprobs=args.topk, temperature=0))
+            max_tokens=1, prompt_logprobs=TOPK, temperature=0))
         for (it, prefix, sol_ids), o in zip(chunk, outs):
             pos_lp = o.prompt_logprobs  # 长度 = len(full_ids)，首位置为 None
             sol_rows = []
             for pos in range(len(prefix), len(prefix) + len(sol_ids)):
                 d = pos_lp[pos] or {}
                 top = sorted(d.items(), key=lambda kv: kv[1].logprob,
-                             reverse=True)[:args.topk]
+                             reverse=True)[:TOPK]
                 sol_rows.append([[int(tid), round(v.logprob, 4)] for tid, v in top])
             f.write(json.dumps({
                 "id": hashlib.md5(it["instruction"].encode()).hexdigest()[:12],
                 "question": it["instruction"],
                 "solution": it["output"],
                 "n_sol_tokens": len(sol_ids),
-                "topk": args.topk,
+                "topk": TOPK,
                 "positions": sol_rows,
             }, ensure_ascii=False) + "\n")
         n_done += len(chunk)
