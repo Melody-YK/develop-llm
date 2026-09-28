@@ -1,18 +1,42 @@
 {
-  "smoke_200": {
-    "file_name": "smoke_200.jsonl",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "distill_train_v1": {
-    "file_name": "distill_train_v1.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
+ "smoke_200": {
+  "file_name": "smoke_200.jsonl",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
   }
+ },
+ "distill_train_v1": {
+  "file_name": "distill_train_v1.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "distill_train_4b_clean": {
+  "file_name": "distill_train_4b_clean.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "distill_v2_mix": {
+  "file_name": "distill_v2_mix.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "distill_train_4b_think": {
+  "file_name": "distill_train_4b_think.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
 }
