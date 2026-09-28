@@ -64,6 +64,25 @@ def extract(text: str):
     return None, visible.strip(), closed
 
 
+def capture_trace(o, k=LOGPROBS_K, tail=TRACE_TAIL):
+    """每步 top-k 的 (token, logprob) + 全程 top1 均值。只留尾部转折区，控制体积。"""
+    lp = o.logprobs or []
+    ps = []
+    for d in lp:
+        if d:
+            ps.append(max(v.logprob for v in d.values()))
+    tail_steps = []
+    for pos in range(max(0, len(lp) - tail), len(lp)):
+        d = lp[pos]
+        if not d:
+            continue
+        top = sorted(d.items(), key=lambda kv: kv[1].logprob, reverse=True)[:k]
+        tail_steps.append([pos, [[v.decoded_token, round(v.logprob, 4)] for _, v in top]])
+    return {"n_steps": len(lp),
+            "mean_top1_logprob": round(sum(ps) / len(ps), 4) if ps else None,
+            "tail": tail_steps}
+
+
 def main():
     raw = json.load(open(RAW, encoding="utf-8"))["records"]
     bare = [r for r in raw if len(r["visible"].rstrip()) < MIN_OUT]
@@ -76,7 +95,7 @@ def main():
               gpu_memory_utilization=0.85)
     tok = llm.get_tokenizer()
 
-    kept, t0 = [], time.time()
+    kept, traces, t0 = [], [], time.time()
     remaining = {r["id"]: r for r in bare}
     for temp in (0.7, 0.9):
         if not remaining:
@@ -88,11 +107,12 @@ def main():
                 add_generation_prompt=True, tokenize=False)
             for it in items
         ]
-        outs = llm.generate(prompts, SamplingParams(temperature=temp, max_tokens=MAX_NEW_TOKENS))
+        outs = llm.generate(prompts, SamplingParams(temperature=temp, max_tokens=MAX_NEW_TOKENS, logprobs=LOGPROBS_K))
         for it, o in zip(items, outs):
             text = o.outputs[0].text
             pred, visible, closed = extract(text)
             n_tok = len(o.outputs[0].token_ids)
+            traces.append({"id": it["id"], "temp": temp, "accepted_later": None, **capture_trace(o)})
             ok = (closed and n_tok < MAX_NEW_TOKENS - 1
                   and norm_num(pred) == norm_num(it["reference"])
                   and MIN_OUT <= len(visible.rstrip()) <= MAX_OUT)
@@ -100,10 +120,16 @@ def main():
                 kept.append({"instruction": it["question"], "input": "",
                              "output": visible.rstrip()})
                 del remaining[it["id"]]
+                for tr in reversed(traces):
+                    if tr["id"] == it["id"]:
+                        tr["accepted_later"] = temp
+                        break
         print(f"temp={temp}: 回收 {len(kept)} 累计 / 剩余 {len(remaining)} | {time.time()-t0:.0f}s")
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(kept, f, ensure_ascii=False, indent=1)
+    with open(OUT.replace(".jsonl", "_logprobs.json"), "w", encoding="utf-8") as f:
+        json.dump(traces, f, ensure_ascii=False)
     print(f"=== SUMMARY === top-up {len(kept)}/{len(bare)} 条合格 -> {OUT}")
     print("并入方式：v2 数据(398) + top-up = v3 候选训练集（合并前查重）")
 
