@@ -1,0 +1,39 @@
+### A 线重训 v2：4B 数据清洗+过滤版（398 条，退化裸答案记录已滤除）###
+### 与 distill_lora_4b.yaml 唯一差异：dataset 与 output_dir ###
+### 跑法: cd ~/distill/LLaMA-Factory && ~/distill/venv/bin/llamafactory-cli train ~/distill/configs/distill_lora_4b_v2.yaml ###
+
+model_name_or_path: /home/melody/distill/models/Qwen3-1.7B
+trust_remote_code: true
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+dataset: distill_train_4b_v2
+dataset_dir: /home/melody/distill/data
+template: qwen3
+cutoff_len: 1024
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+logging_steps: 10
+
+val_size: 0.05
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 50
+
+save_strategy: epoch
+gradient_checkpointing: true
+
+output_dir: /home/melody/distill/models/distill-4b-v2
+overwrite_output_dir: true
+report_to: none
