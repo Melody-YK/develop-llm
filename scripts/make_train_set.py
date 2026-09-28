@@ -35,11 +35,14 @@ args = ap.parse_args()
 data = json.load(open(args.raw, encoding="utf-8"))
 records = data["records"]
 
-kept, too_long = [], 0
+kept, too_long, too_short = [], 0, 0
 for r in records:
     if not (r["correct"] and r["think_closed"] and not r["truncated"]):
         continue
     out = r["visible"].rstrip()
+    if len(out) < 100:  # P18 推广：裸答案（推理全留 think，可见区只吐 #### N）零蒸馏价值，直接剔
+        too_short += 1
+        continue
     if len(out) > args.max_chars:
         too_long += 1
         continue
@@ -49,7 +52,7 @@ n = len(records)
 # P17：非互斥计数——截断与 think 未闭合重叠（撞墙的必然没闭合），
 # 顺序归因会把截断吞成 0，误导排查方向
 summary = {
-    "raw": n, "clean": len(kept), "too_long": too_long,
+    "raw": n, "clean": len(kept), "too_long": too_long, "too_short": too_short,
     "wrong": sum(1 for r in records if not r["correct"]),
     "think_unclosed": sum(1 for r in records if not r["think_closed"]),
     "truncated": sum(1 for r in records if r["truncated"]),
