@@ -55,9 +55,12 @@ n_done, n_skip = 0, 0
 with open(OUT, "w", encoding="utf-8") as f:
     for it in data:
         # 前缀（chat 模板 + 生成头）与解答文本分别编码，位置边界由此确定
-        prefix = tok.apply_chat_template(
+        enc = tok.apply_chat_template(
             [{"role": "user", "content": it["instruction"]}],
             add_generation_prompt=True, tokenize=True)
+        prefix = enc.input_ids if hasattr(enc, "input_ids") else enc
+        if prefix and isinstance(prefix[0], list):  # 部分版本带批量维，去一层
+            prefix = prefix[0]
         sol_ids = tok.encode(it["output"], add_special_tokens=False)
         if len(prefix) + len(sol_ids) > args.max_len:
             n_skip += 1
