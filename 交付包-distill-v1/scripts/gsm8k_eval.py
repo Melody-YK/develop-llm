@@ -45,6 +45,31 @@ def norm_num(s):
         return None
 
 
+def resolve_device(requested: str, index: int) -> torch.device:
+    if requested in ("auto", "npu"):
+        try:
+            import torch_npu  # noqa: F401
+        except ImportError:
+            if requested == "npu":
+                raise RuntimeError("请求了 NPU，但当前环境未安装 torch_npu")
+        else:
+            if hasattr(torch, "npu") and torch.npu.is_available():
+                device = torch.device(f"npu:{index}")
+                torch.npu.set_device(device)
+                if not torch.npu.is_bf16_supported():
+                    raise RuntimeError("当前 NPU/torch_npu 组合不支持 BF16")
+                return device
+            if requested == "npu":
+                raise RuntimeError("请求了 NPU，但 torch.npu.is_available() 为 False")
+    if requested in ("auto", "cuda") and torch.cuda.is_available():
+        device = torch.device(f"cuda:{index}")
+        torch.cuda.set_device(device)
+        return device
+    if requested == "cuda":
+        raise RuntimeError("请求了 CUDA，但 torch.cuda.is_available() 为 False")
+    return torch.device("cpu")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True)
@@ -53,7 +78,10 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--max-new-tokens", type=int, default=2048)
+    ap.add_argument("--device", choices=("auto", "npu", "cuda", "cpu"), default="auto")
+    ap.add_argument("--device-index", type=int, default=0)
     args = ap.parse_args()
+    device = resolve_device(args.device, args.device_index)
 
     items = [json.loads(l) for l in open(args.paper, encoding="utf-8")]
 
@@ -79,15 +107,20 @@ def main():
     pending = [it for it in items if it["id"] not in done_ids]
     print(f"考卷: {len(items)} 题 | 待跑 {len(pending)} 题 | model={args.model} | adapter={args.adapter}")
 
-    tok = AutoTokenizer.from_pretrained(args.model)
+    tok = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
     tok.padding_side = "left"
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     model = AutoModelForCausalLM.from_pretrained(
-        args.model, dtype=torch.bfloat16, device_map="cuda")
+        args.model,
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True,
+        attn_implementation="eager",
+    ).to(device)
     if args.adapter:
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, args.adapter)
+        model.to(device)
     model.eval()
 
     prompts = [
@@ -103,7 +136,7 @@ def main():
     for s in range(0, len(pending), args.batch):
         chunk_p = prompts[s:s + args.batch]
         chunk_i = pending[s:s + args.batch]
-        enc = tok(chunk_p, return_tensors="pt", padding=True).to("cuda")
+        enc = tok(chunk_p, return_tensors="pt", padding=True).to(device)
         with torch.no_grad():
             gen = model.generate(
                 **enc, max_new_tokens=args.max_new_tokens, do_sample=False,
