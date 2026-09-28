@@ -114,7 +114,7 @@ for ep in range(args.epochs):
         kl_sum, n_pos = 0.0, 0
         logS_all = F.log_softmax(out[sol_start - 1:sol_end - 1] / T, dim=-1)
         for j, pos_top in enumerate(b["topk"]):
-            pos = sol_start + j - 1  # 学生在该位置预测下一 token 的 logits
+            pos = j  # logS_all 从 sol_start-1 起，局部索引 j 即预测 solution token j 的位置
             tids = torch.tensor([tid for tid, _ in pos_top], device=device)
             logp_t = torch.tensor([lp for _, lp in pos_top], device=device)
             p_t = F.softmax(logp_t / T, dim=-1)          # 老师软化分布（截断归一）
