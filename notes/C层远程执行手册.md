@@ -24,6 +24,26 @@ Mac 侧本轮上传包只需要以下文件：
 
 老师 logits 已经采集并验收完成，所以本轮**不用再运行** `dump_teacher_logits.py`。该脚本只在需要重新采集老师分布时使用，运行位置是 `vllm-ascend` 推理容器，不是训练容器。
 
+### 0.1 宿主机只读确认：容器、挂载与可见卡
+
+上传完成后，先在宿主机做三项只读确认再进入容器。这一步的责任是分清「宿主机 / 训练容器 / 推理容器」三层：文件传到宿主机不等于训练容器能看到；看不到时用 `docker cp` 补进去，而不是改挂载或重启容器。
+
+```bash
+# 1) 确认训练容器的真实名称与状态。本手册以 llamafactory-npu 为例，
+#    实际以输出为准；无论哪种情况都不要改动 vllm-ascend。
+docker ps -a --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
+
+# 2) 确认宿主机目录是否挂载进训练容器：Source=宿主机路径，Destination=容器内路径。
+#    若解包目录不在输出里，容器看不到刚上传的文件，用 docker cp 复制进容器。
+docker inspect llamafactory-npu --format '{{range .Mounts}}{{println .Source " -> " .Destination}}{{end}}'
+
+# 3) 进入训练容器，并看容器内可见的 NPU 卡与占用情况
+docker exec -it llamafactory-npu bash
+npu-smi info
+```
+
+选卡原则：容器内可见哪些卡由启动参数决定，`--device-index` 默认 0 指容器内第一张可见卡。若容器透传多张卡且已有他人在用，先把 `npu-smi info` 的占用情况发给老师确认，再用 `--device-index N` 指定空闲卡；禁止抢卡，禁止在多张卡上并发铺开训练。
+
 ## 1. 方案边界
 
 采用**远程离线 KL**：已有 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。单份压缩文件约 16MB，解压后约 57MB；两份均为 460 条、top-32、逐 token 对齐。
@@ -43,6 +63,8 @@ Mac 侧本轮上传包只需要以下文件：
 3. `kl_train_4b.py --max-samples 8` 用 8 条真实样本完成两次 optimizer update，验证 LoRA、梯度检查点、反向传播和 adapter 保存链路。
 4. `kl_train_4b.py` 全量运行时训练 1.7B LoRA。`--alpha 0` 是同训练循环的纯 CE 控制组；`--alpha 0.7 --temp 2.0` 才加入老师 top-32 条件 KL。
 5. `gsm8k_eval.py` 与 `mcq_eval.py` 不训练，只把基座或 adapter 挂到 1.7B 上做两张冻结考卷，并按批写 partial 文件支持断点续跑。
+
+设备选择：所有 `--device npu` 命令默认使用容器内第 0 张可见卡。若容器透传多张卡且已被他人占用，先按第 0.1 节用 `npu-smi info` 确认空闲卡，再加 `--device-index N` 指定；不要在多张卡上并发铺开。
 
 ```bash
 BASE=/root/.cache/develop-llm
@@ -207,29 +229,31 @@ python3 -u "$BASE/scripts/mcq_eval.py" \
 
 ### 5.2 Adapter 双卷
 
-以下以 8B KL 为例：
+控制组与实验组用同一段循环跑；评测脚本每批写 `.partial.json`，中断后用同一命令重跑即自动续跑（partial 会校验 model/adapter，防止把两个模型的结果混在一起）：
 
 ```bash
-ADAPTER="$BASE/models/distill-8b-kl"
+for NAME in distill-kl-control-ce distill-8b-kl; do
+  ADAPTER="$BASE/models/$NAME"
 
-python3 -u "$BASE/scripts/gsm8k_eval.py" \
-  --device npu \
-  --model "$STUDENT" \
-  --adapter "$ADAPTER" \
-  --paper "$BASE/eval/考卷二-gsm8k-test300.jsonl" \
-  --batch 8 \
-  --out "$BASE/eval/后测-distill-8b-kl-gsm8k300.json"
+  python3 -u "$BASE/scripts/gsm8k_eval.py" \
+    --device npu \
+    --model "$STUDENT" \
+    --adapter "$ADAPTER" \
+    --paper "$BASE/eval/考卷二-gsm8k-test300.jsonl" \
+    --batch 8 \
+    --out "$BASE/eval/后测-$NAME-gsm8k300.json"
 
-python3 -u "$BASE/scripts/mcq_eval.py" \
-  --device npu \
-  --model "$STUDENT" \
-  --adapter "$ADAPTER" \
-  --paper "$BASE/eval/考卷一-通用mcq400.jsonl" \
-  --batch 8 \
-  --out "$BASE/eval/后测-distill-8b-kl-mcq400.json"
+  python3 -u "$BASE/scripts/mcq_eval.py" \
+    --device npu \
+    --model "$STUDENT" \
+    --adapter "$ADAPTER" \
+    --paper "$BASE/eval/考卷一-通用mcq400.jsonl" \
+    --batch 8 \
+    --out "$BASE/eval/后测-$NAME-mcq400.json"
+done
 ```
 
-把 `ADAPTER` 与输出文件名改成 `distill-kl-control-ce`，再跑控制组双卷。评测脚本仍会每批写 `.partial.json`，中断后用同一命令续跑。
+两场跑完后，再决定是否加跑可选的第三组 `distill-4b-kl`：把 `distill-4b-kl` 追加进循环的 `NAME` 列表即可。
 
 ## 6. 结果判读
 
@@ -243,3 +267,19 @@ NPU adapter accuracy - NPU 未蒸馏基线 accuracy # 整体训练收益/遗忘
 只有第一层能干净回答“top-32 软分布是否比同文本的纯 CE 多教会了东西”。第二层回答训练后的能力变化。与本地历史 v1（数学 0.8033 / 通用 0.5925）的比较可作为背景，但不应写成严格单变量结论。
 
 当前实现是老师 top-32 集合内重新归一化后的**条件 KL**，不是完整词表 KL。正式汇报应使用“稀疏 top-32 KL”或“top-32 条件 KL”，不要写“完整 logits KL”。
+
+## 7. 结果回传与归档
+
+全部原始输出必须离开服务器：`eval/` 里的 JSON（含逐题记录）和 `logs/` 里的训练日志是汇报的唯一证据，不能只留在服务器上。在同一个 shell 会话中执行（`$BASE`/`$STUDENT` 已定义）：
+
+```bash
+tar -czf /root/kl-results-$(date +%Y%m%d).tar.gz -C "$BASE" eval logs
+
+sha256sum /root/kl-results-*.tar.gz
+```
+
+再在 Mac 上拉回（同样需要 AOne 连接）：
+
+```bash
+scp lab910b:/root/kl-results-*.tar.gz ~/Desktop/
+```
