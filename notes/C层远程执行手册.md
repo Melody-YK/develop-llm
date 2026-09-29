@@ -10,7 +10,7 @@ GitHub 用来汇总 Windows 与 Mac 的代码版本；实验文件真正进入�
 GitHub 最新 main → Mac 本地仓库 → scp → 服务器宿主机 → 训练容器
 ```
 
-`scp` 只能把文件送到服务器宿主机，不能自动送进 Docker 容器。上传后必须检查 `llamafactory-npu` 的目录挂载；如果项目目录没有挂载进容器，再使用 `docker cp`。不要把训练依赖安装进 `vllm-ascend`：它负责老师推理与 logits 采集，`llamafactory-npu` 才负责反向传播训练。
+`scp` 只能把文件送到服务器宿主机，不能自动送进 Docker 容器。上传后必须检查训练容器的目录挂载；如果项目目录没有挂载进容器，再使用 `docker cp`。不要把训练依赖安装进 `vllm-ascend`：它是实验室的推理服务（老师推理与 logits 采集都靠它），本项目的反向传播训练一律在专用容器 `develop-llm-npu` 里做，且不要改动实验室原有的 `llamafactory-npu`。
 
 Mac 侧本轮上传包只需要以下文件：
 
@@ -24,25 +24,55 @@ Mac 侧本轮上传包只需要以下文件：
 
 老师 logits 已经采集并验收完成，所以本轮**不用再运行** `dump_teacher_logits.py`。该脚本只在需要重新采集老师分布时使用，运行位置是 `vllm-ascend` 推理容器，不是训练容器。
 
-### 0.1 宿主机只读确认：容器、挂载与可见卡
+### 0.1 项目专用训练容器 develop-llm-npu（只映射 NPU 0-3）
 
-上传完成后，先在宿主机做三项只读确认再进入容器。这一步的责任是分清「宿主机 / 训练容器 / 推理容器」三层：文件传到宿主机不等于训练容器能看到；看不到时用 `docker cp` 补进去，而不是改挂载或重启容器。
+实验室原有的 `llamafactory-npu` 把 8 张卡（davinci0-7）全部映射进容器，而 `vllm-ascend` 长期占用 4-7。实测这种重叠会让容器内 dcmi 初始化整体失败，报 `dcmi model initialized failed, because the device is used. ret is -8020`，容器里 `torch.npu` 一张卡也看不到（对照实验：同一镜像只映射 0-3 卡时完全正常）。因此在老师同意后，本项目照 lab 脚本另起一个只映射 0-3 卡的容器，与 `vllm-ascend` 互不干扰：
 
 ```bash
-# 1) 确认训练容器的真实名称与状态。本手册以 llamafactory-npu 为例，
-#    实际以输出为准；无论哪种情况都不要改动 vllm-ascend。
+docker run -itd \
+    --net=host \
+    --device=/dev/davinci0 \
+    --device=/dev/davinci1 \
+    --device=/dev/davinci2 \
+    --device=/dev/davinci3 \
+    --device=/dev/davinci_manager \
+    --device=/dev/devmm_svm \
+    --device=/dev/hisi_hdc \
+    --shm-size=1200g \
+    -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+    -v /usr/local/dcmi:/usr/local/dcmi \
+    -v /etc/ascend_install.info:/etc/ascend_install.info \
+    -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+    -v /root/data/gdut-yc/llamafactory-npu:/data \
+    --name develop-llm-npu \
+    quay.io/ascend/llamafactory:latest-910b-ubuntu \
+    /bin/bash
+
+# 验证：npu-smi 应列出 4 张卡，torch 应报 True 4
+docker exec develop-llm-npu bash -lc 'npu-smi info | head -12'
+docker exec develop-llm-npu bash -lc 'python3 -c "import torch, torch_npu; print(torch.__version__, torch_npu.__version__, torch.npu.is_available(), torch.npu.device_count())"'
+```
+
+除 `--name` 与卡列表两处外，其余参数与 lab 的 `docker-llamafactory-npu.sh` 完全一致（同镜像、同挂载、同 `/data`），便于对照与回滚。
+
+### 0.2 宿主机只读确认：容器、挂载与可见卡
+
+文件传到宿主机不等于训练容器能看到；确认挂载后再进入容器。这一步只读，全程不要改动 `vllm-ascend`。
+
+```bash
+# 1) 容器状态：应能看到 develop-llm-npu 与 vllm-ascend（后者是实验室推理服务，不动它）
 docker ps -a --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'
 
-# 2) 确认宿主机目录是否挂载进训练容器：Source=宿主机路径，Destination=容器内路径。
-#    若解包目录不在输出里，容器看不到刚上传的文件，用 docker cp 复制进容器。
-docker inspect llamafactory-npu --format '{{range .Mounts}}{{println .Source " -> " .Destination}}{{end}}'
+# 2) 挂载映射：Source=宿主机路径，Destination=容器内路径。
+#    项目目录应在列表里（/root/data/gdut-yc/llamafactory-npu -> /data）；不在则用 docker cp 补。
+docker inspect develop-llm-npu --format '{{range .Mounts}}{{println .Source " -> " .Destination}}{{end}}'
 
-# 3) 进入训练容器，并看容器内可见的 NPU 卡与占用情况
-docker exec -it llamafactory-npu bash
+# 3) 进入训练容器并确认可见卡
+docker exec -it develop-llm-npu bash
 npu-smi info
 ```
 
-选卡原则：容器内可见哪些卡由启动参数决定，`--device-index` 默认 0 指容器内第一张可见卡。若容器透传多张卡且已有他人在用，先把 `npu-smi info` 的占用情况发给老师确认，再用 `--device-index N` 指定空闲卡；禁止抢卡，禁止在多张卡上并发铺开训练。
+卡与路径：训练容器只映射 NPU 0-3（`--device-index` 0 即物理 0 号卡），`vllm-ascend` 用 4-7，双方互不干扰。容器内项目根目录是 `/data/develop-llm`，对应宿主机 `/root/data/gdut-yc/llamafactory-npu/develop-llm`；scp、打包回传都在宿主机这一侧操作。
 
 ## 1. 方案边界
 
@@ -64,10 +94,10 @@ npu-smi info
 4. `kl_train_4b.py` 全量运行时训练 1.7B LoRA。`--alpha 0` 是同训练循环的纯 CE 控制组；`--alpha 0.7 --temp 2.0` 才加入老师 top-32 条件 KL。
 5. `gsm8k_eval.py` 与 `mcq_eval.py` 不训练，只把基座或 adapter 挂到 1.7B 上做两张冻结考卷，并按批写 partial 文件支持断点续跑。
 
-设备选择：所有 `--device npu` 命令默认使用容器内第 0 张可见卡。若容器透传多张卡且已被他人占用，先按第 0.1 节用 `npu-smi info` 确认空闲卡，再加 `--device-index N` 指定；不要在多张卡上并发铺开。
+设备选择：训练容器只映射 NPU 0-3，`--device npu` 默认用容器内第 0 张（物理 0 号卡）；4-7 归 `vllm-ascend`，不存在抢卡问题。需要指定时用 `--device-index N`（N=0..3）。
 
 ```bash
-BASE=/root/.cache/develop-llm
+BASE=/data/develop-llm          # 容器内路径；宿主机同目录为 /root/data/gdut-yc/llamafactory-npu/develop-llm
 cd "$BASE"
 
 python3 -u scripts/probe_npu_train.py
@@ -78,7 +108,7 @@ python3 -u scripts/probe_npu_train.py
 检查学生权重与输入文件：
 
 ```bash
-STUDENT=/root/.cache/qwen3-1.7b
+STUDENT=/data/develop-llm/models/Qwen3-1.7B
 
 test -f "$STUDENT/config.json"
 test -f "$BASE/data/distill_train_v1.json"
