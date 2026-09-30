@@ -10,6 +10,11 @@
 "老师 top-k 集合内重新归一化"的条件 KL；存档没有完整尾部分布，不能把它
 表述成全词表 KL。
 
+停尾监督（默认开启，`--no-stop-token` 关闭）：训练序列在解答末尾追加一个
+收尾 token（Qwen3 对话格式为 <|im_end|>），CE 覆盖"解答 token + 收尾 token"
+共 S+1 个位置；KL 仍只用前 S 个位置——存档的老师分布只对齐解答 token，没有
+"收尾位置"的分布。缺少这项监督时学生学不到停止，实测截断率会显著升高。
+
 远程 NPU 用法：
     python3 -u scripts/kl_train_4b.py \
         --device npu \
@@ -98,6 +103,19 @@ def parse_args() -> argparse.Namespace:
         "--save-every-epoch",
         action="store_true",
         help="每个 epoch 额外保存一个 adapter checkpoint",
+    )
+    parser.add_argument(
+        "--stop-token",
+        dest="stop_token",
+        action="store_true",
+        default=True,
+        help="训练时在解答末尾追加收尾 token 并纳入 CE（默认开启）",
+    )
+    parser.add_argument(
+        "--no-stop-token",
+        dest="stop_token",
+        action="store_false",
+        help="关闭停尾监督，复现上一轮无停尾监督的对照口径",
     )
     return parser.parse_args()
 
@@ -204,6 +222,18 @@ def normalize_chat_ids(encoded: Any) -> list[int]:
     return list(encoded)
 
 
+def resolve_stop_token_id(tokenizer: Any) -> int:
+    """确定对话收尾 token（Qwen3 为 <|im_end|>），供停尾监督使用。"""
+    for token in ("<|im_end|>", "<|eot_id|>"):
+        token_id = tokenizer.convert_tokens_to_ids(token)
+        if isinstance(token_id, int) and token_id >= 0:
+            if tokenizer.convert_ids_to_tokens(token_id) == token:
+                return token_id
+    if tokenizer.eos_token_id is not None:
+        return int(tokenizer.eos_token_id)
+    raise ValueError("无法从 tokenizer 确定收尾 token")
+
+
 def build_samples(
     tokenizer: Any,
     base_data_path: str,
@@ -211,6 +241,7 @@ def build_samples(
     cutoff: int,
     vocab_size: int,
     max_samples: int,
+    stop_token_id: int | None = None,
 ) -> tuple[list[Sample], dict[str, int]]:
     with open(base_data_path, encoding="utf-8") as handle:
         base_data = json.load(handle)
@@ -236,7 +267,8 @@ def build_samples(
             )
         )
         solution_ids = tokenizer.encode(solution, add_special_tokens=False)
-        if len(prompt_ids) + len(solution_ids) > cutoff:
+        extra = 1 if stop_token_id is not None else 0
+        if len(prompt_ids) + len(solution_ids) + extra > cutoff:
             stats["too_long"] += 1
             continue
         if len(solution_ids) != teacher["n_sol_tokens"]:
@@ -282,13 +314,18 @@ def compute_losses(
     device: torch.device,
     alpha: float,
     temperature: float,
+    stop_token_id: int | None = None,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    stop_ids = [] if stop_token_id is None else [stop_token_id]
     input_ids = torch.tensor(
-        [sample.prompt_ids + sample.solution_ids], dtype=torch.long, device=device
+        [sample.prompt_ids + sample.solution_ids + stop_ids],
+        dtype=torch.long,
+        device=device,
     )
     attention_mask = torch.ones_like(input_ids)
     solution_start = len(sample.prompt_ids)
-    solution_end = solution_start + len(sample.solution_ids)
+    n_sol = len(sample.solution_ids)
+    solution_end = solution_start + n_sol + len(stop_ids)
 
     logits = model(
         input_ids=input_ids,
@@ -306,9 +343,10 @@ def compute_losses(
         teacher_token_ids = sample.teacher_token_ids.to(device)
         teacher_logprobs = sample.teacher_logprobs.to(device)
 
-        # 与旧逐位置实现数学等价：只在老师 top-k 集合内 gather 后重新归一化。
+        # 与逐位置实现数学等价：只在老师 top-k 集合内 gather 后重新归一化。
         # 一次处理 [solution_length, top_k]，避免十万次 Python→NPU 小算子调度。
-        student_topk_logits = prediction_logits_fp32.gather(
+        # 只取前 n_sol 行：KL 与存档的老师分布一一对应，收尾位置不在其中。
+        student_topk_logits = prediction_logits_fp32[:n_sol].gather(
             dim=-1, index=teacher_token_ids
         )
         student_topk_logprobs = F.log_softmax(
@@ -392,6 +430,18 @@ def main() -> None:
     print("加载学生模型（老师不在训练进程中）...", flush=True)
     model, tokenizer = load_model_and_tokenizer(args.base_model, device)
 
+    stop_token_id = resolve_stop_token_id(tokenizer) if args.stop_token else None
+    if stop_token_id is not None:
+        if not 0 <= stop_token_id < model.config.vocab_size:
+            raise ValueError(f"收尾 token id 超出学生词表：{stop_token_id}")
+        print(
+            "停尾监督: 开（token="
+            f"{tokenizer.convert_ids_to_tokens(stop_token_id)}，id={stop_token_id}）",
+            flush=True,
+        )
+    else:
+        print("停尾监督: 关（--no-stop-token，复现旧口径）", flush=True)
+
     teacher_records = load_teacher_logits(args.teacher_logits)
     samples, stats = build_samples(
         tokenizer=tokenizer,
@@ -400,6 +450,7 @@ def main() -> None:
         cutoff=args.cutoff,
         vocab_size=model.config.vocab_size,
         max_samples=args.max_samples,
+        stop_token_id=stop_token_id,
     )
     print(
         "对齐样本 "
@@ -417,9 +468,19 @@ def main() -> None:
                 device=device,
                 alpha=args.alpha,
                 temperature=args.temp,
+                stop_token_id=stop_token_id,
             )
         if not torch.isfinite(loss):
             raise RuntimeError("前向检查得到非有限 loss")
+        preview_ids = samples[0].solution_ids[-3:] + (
+            [] if stop_token_id is None else [stop_token_id]
+        )
+        print(
+            f"目标末尾预览: {tokenizer.decode(preview_ids)!r} | "
+            f"CE 行数={len(samples[0].solution_ids) + (0 if stop_token_id is None else 1)}"
+            f"（解答 {len(samples[0].solution_ids)} + 收尾 {0 if stop_token_id is None else 1}）",
+            flush=True,
+        )
         print(
             f"=== CHECK OK === sample={samples[0].key} | "
             f"CE={ce.item():.4f} | KL={kl.item():.4f} | loss={loss.item():.4f}",
@@ -446,7 +507,7 @@ def main() -> None:
     print(
         f"训练计划: samples={len(samples)} | epochs={args.epochs} | accum={args.accum} "
         f"| updates={total_updates} | warmup={warmup_steps} | alpha={args.alpha} "
-        f"| T={args.temp}",
+        f"| T={args.temp} | 停尾监督={'开' if stop_token_id is not None else '关'}",
         flush=True,
     )
 
@@ -471,6 +532,7 @@ def main() -> None:
                 device=device,
                 alpha=args.alpha,
                 temperature=args.temp,
+                stop_token_id=stop_token_id,
             )
             if not torch.isfinite(loss):
                 raise RuntimeError(
@@ -529,6 +591,8 @@ def main() -> None:
         "accumulation": args.accum,
         "cutoff": args.cutoff,
         "seed": args.seed,
+        "stop_token": bool(stop_token_id is not None),
+        "stop_token_id": stop_token_id,
     }
     with open(os.path.join(args.out, "training_summary.json"), "w", encoding="utf-8") as handle:
         json.dump(summary, handle, ensure_ascii=False, indent=2)
