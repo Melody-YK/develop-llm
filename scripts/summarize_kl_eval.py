@@ -30,6 +30,7 @@ GROUPS = [
     ("CE(新:停尾监督)", "后测-distill-kl-control-ce-eos-{tag}.json"),
     ("KL(新:停尾监督)", "后测-distill-8b-kl-eos-{tag}.json"),
     ("级联(4B助教)", "后测-distill-cascade-4bta-{tag}.json"),
+    ("原始4B直教", "后测-distill-raw4b-kl-{tag}.json"),
 ]
 
 COMPARISONS = [
@@ -44,6 +45,9 @@ COMPARISONS = [
     ("基线", "级联(4B助教)", "级联 − 基线"),
     ("CE(新:停尾监督)", "级联(4B助教)", "级联 − CE（新）"),
     ("KL(新:停尾监督)", "级联(4B助教)", "级联 vs 直教 8B（级联主对比）"),
+    ("基线", "原始4B直教", "原始 4B 直教 − 基线"),
+    ("KL(新:停尾监督)", "原始4B直教", "原始 4B 直教 vs 直教 8B"),
+    ("原始4B直教", "级联(4B助教)", "级联 vs 原始 4B（中间模型是否需先被蒸馏）"),
 ]
 
 EXTRA_KEYS = (
