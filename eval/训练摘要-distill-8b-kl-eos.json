@@ -1,0 +1,17 @@
+{
+  "base_model": "/data/develop-llm/models/Qwen3-1.7B",
+  "teacher_logits": "/data/develop-llm/data/logits_8b.jsonl.gz",
+  "base_data": "/data/develop-llm/data/distill_train_v1.json",
+  "device": "npu:1",
+  "samples": 460,
+  "epochs": 3,
+  "optimizer_updates": 174,
+  "alpha": 0.7,
+  "temperature": 2.0,
+  "learning_rate": 5e-05,
+  "accumulation": 8,
+  "cutoff": 1024,
+  "seed": 42,
+  "stop_token": true,
+  "stop_token_id": 151645
+}

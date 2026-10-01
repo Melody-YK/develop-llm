@@ -1,0 +1,3617 @@
+{
+ "summary": {
+  "model": "/data/develop-llm/models/Qwen3-1.7B",
+  "adapter": "/data/develop-llm/models/distill-8b-kl",
+  "n": 400,
+  "batch": 8,
+  "accuracy": 0.5925,
+  "accuracy_by_source": {
+   "mmlu": 0.575,
+   "cmmlu": 0.61
+  },
+  "unparsed_rate": 0.01,
+  "runtime_sec": 11615.2
+ },
+ "records": [
+  {
+   "id": "mmlu-31",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to consider Anscombe's phil"
+  },
+  {
+   "id": "cmmlu-159",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-99",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目，找出四个选项中意思不同的那一个。题目是四个句子，A到D，我需要仔细分析每个句子"
+  },
+  {
+   "id": "cmmlu-32",
+   "source": "cmmlu",
+   "subject": "security_study",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-92",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to recall the share"
+  },
+  {
+   "id": "mmlu-14",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "mmlu-154",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to identify which a"
+  },
+  {
+   "id": "cmmlu-181",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n在伤口愈合过程中，**细胞外基质（ECM）** 是对增加伤口愈合强度起主要作用的因素。\n\n---"
+  },
+  {
+   "id": "cmmlu-98",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 激活ACh受体通道**\n\n---\n\n### 解析：\n\n重症肌无力（Myas"
+  },
+  {
+   "id": "mmlu-147",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To solve the equation $ 18 + p = 29 $, we need to isolate th"
+  },
+  {
+   "id": "cmmlu-5",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To solve this problem, we need to analyze the given options "
+  },
+  {
+   "id": "cmmlu-173",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the d"
+  },
+  {
+   "id": "mmlu-172",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine how many bouquets Sapphire can make, we need to"
+  },
+  {
+   "id": "mmlu-144",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "cmmlu-160",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**D. 发现密钥或者密文对应的明文**\n\n---\n\n### 解析：\n\n密码分析（C"
+  },
+  {
+   "id": "cmmlu-40",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-137",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to analyze the context of S"
+  },
+  {
+   "id": "cmmlu-163",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To solve this problem, we need to calculate the **alveolar v"
+  },
+  {
+   "id": "cmmlu-100",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the moon phase on May 1st, we need to consider "
+  },
+  {
+   "id": "cmmlu-115",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to recall the prima"
+  },
+  {
+   "id": "mmlu-16",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine which amino acid cannot provide a substrate for"
+  },
+  {
+   "id": "cmmlu-179",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine which of the given sentences has a subject that"
+  },
+  {
+   "id": "cmmlu-81",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于论证功能的问题。题目是说，论证的功能包括证成和哪一个选项，选项有A. 反驳，B."
+  },
+  {
+   "id": "cmmlu-10",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：C. 艾维·李\n\n解析：艾维·李（A. P. L.）被誉为“公共关系之父”，他是公共关系领"
+  },
+  {
+   "id": "cmmlu-51",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：A\n\n解析：世界文学的概念最早由德国文学家**歌德**提出。他在1807年发表的《世界文学"
+  },
+  {
+   "id": "cmmlu-28",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the d"
+  },
+  {
+   "id": "cmmlu-97",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目，题目是问下面哪个句子不表示“转移”意义。选项是A到D四个。首先，我需要明确“转"
+  },
+  {
+   "id": "cmmlu-149",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D. 盐炙品**\n\n---\n\n**解析：**\n\n“益智仁”是一种中药材，其性味为**温"
+  },
+  {
+   "id": "cmmlu-177",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**B. 一级结构决定高级结构**\n\n---\n\n**解析：**\n\n题目问的是“不同蛋白质有"
+  },
+  {
+   "id": "mmlu-149",
+   "source": "mmlu",
+   "subject": "conceptual_physics",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which of the options is correct, we need to com"
+  },
+  {
+   "id": "mmlu-146",
+   "source": "mmlu",
+   "subject": "high_school_government_and_politics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to recall the key points of"
+  },
+  {
+   "id": "cmmlu-139",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D. 达格列净**\n\n---\n\n### 解析：\n\n题目问的是**能降低体重、血压和尿酸"
+  },
+  {
+   "id": "cmmlu-42",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To solve this problem, we need to analyze the relationship b"
+  },
+  {
+   "id": "mmlu-99",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze each opt"
+  },
+  {
+   "id": "mmlu-58",
+   "source": "mmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the legal pri"
+  },
+  {
+   "id": "mmlu-5",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which option is NOT a barrier to the diffusion "
+  },
+  {
+   "id": "mmlu-114",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the least important factor indicating that Wend"
+  },
+  {
+   "id": "mmlu-135",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the info"
+  },
+  {
+   "id": "cmmlu-116",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the incorrect statement about the cell nucleus,"
+  },
+  {
+   "id": "cmmlu-141",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options p"
+  },
+  {
+   "id": "cmmlu-178",
+   "source": "cmmlu",
+   "subject": "college_law",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the validity of the will, we need to consider t"
+  },
+  {
+   "id": "mmlu-118",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To solve this question, we need to understand the structure "
+  },
+  {
+   "id": "cmmlu-25",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n根据题干材料，我们可以分析出以下几点：\n\n---\n\n### 材料内容分析：\n\n- **2010年"
+  },
+  {
+   "id": "cmmlu-79",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：A. 前摄抑制\n\n---\n\n**解析：**\n\n题目问的是“清晨起床后背诵东西效果很好，这是"
+  },
+  {
+   "id": "cmmlu-137",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**B. 德谟克利特**\n\n**解析：**  \n古希腊唯物主义的代表是**德谟克利特**（"
+  },
+  {
+   "id": "cmmlu-78",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n根据题干信息，患者为18岁男性，因**头痛针刺合谷穴**后，次日**局部形成血肿**，且**半年"
+  },
+  {
+   "id": "mmlu-145",
+   "source": "mmlu",
+   "subject": "formal_logic",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To identify the **antecedent** of the conditional propositio"
+  },
+  {
+   "id": "mmlu-51",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the ques"
+  },
+  {
+   "id": "cmmlu-133",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A. 独特性\n</think>\n\n答案：**A. 独特性**\n\n**解析：**\n\n科学的学业生涯规划具有以下几个特点：\n"
+  },
+  {
+   "id": "cmmlu-112",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-192",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**C. 抑制黄嘌呤氧化酶**\n\n---\n\n### 解析：\n\n别嘌呤醇（Allopu"
+  },
+  {
+   "id": "cmmlu-167",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "mmlu-79",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the collectiv"
+  },
+  {
+   "id": "mmlu-164",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the concept o"
+  },
+  {
+   "id": "mmlu-49",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the differenc"
+  },
+  {
+   "id": "mmlu-142",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-32",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the physiolog"
+  },
+  {
+   "id": "mmlu-20",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to analyze the passage and "
+  },
+  {
+   "id": "mmlu-183",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the r"
+  },
+  {
+   "id": "mmlu-122",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine whether the court would grant the passenger's m"
+  },
+  {
+   "id": "cmmlu-142",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "mmlu-10",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine who is most likely to prevail in this scenario,"
+  },
+  {
+   "id": "mmlu-198",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze each opt"
+  },
+  {
+   "id": "mmlu-22",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To solve this problem, we need to determine which of the giv"
+  },
+  {
+   "id": "mmlu-125",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "cmmlu-15",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this problem, we need to analyze the properties of "
+  },
+  {
+   "id": "mmlu-158",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the eth"
+  },
+  {
+   "id": "mmlu-77",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the core idea"
+  },
+  {
+   "id": "cmmlu-46",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the stat"
+  },
+  {
+   "id": "cmmlu-122",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To solve this problem, we need to understand the relationshi"
+  },
+  {
+   "id": "mmlu-117",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-154",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A. 友善的关系\n</think>\n\n答案：**A. 友善的关系**\n\n解析：  \n传播者与受众的关系通常指的是在信息传"
+  },
+  {
+   "id": "mmlu-3",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "mmlu-169",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the core prin"
+  },
+  {
+   "id": "mmlu-30",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the average life expectancy of white males born"
+  },
+  {
+   "id": "mmlu-9",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to analyze the provided pas"
+  },
+  {
+   "id": "mmlu-89",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the m"
+  },
+  {
+   "id": "mmlu-103",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which option is not an objection that Kass make"
+  },
+  {
+   "id": "cmmlu-157",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A. 现代社会的法律与道德仍然有着不可分割的联系，治理国家既要依靠法律，也要依靠道德\nB. 法治强调将社会关系纳入法律的"
+  },
+  {
+   "id": "cmmlu-12",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问下面哪个诗句不是描写古琴的。选项是A到D四个选项。首先，我需要回忆一下"
+  },
+  {
+   "id": "mmlu-66",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to analyze each option in r"
+  },
+  {
+   "id": "mmlu-108",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine how many states in the international system cur"
+  },
+  {
+   "id": "cmmlu-18",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to recall the avera"
+  },
+  {
+   "id": "mmlu-39",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the prop"
+  },
+  {
+   "id": "mmlu-166",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "mmlu-53",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the key"
+  },
+  {
+   "id": "cmmlu-195",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**A**\n\n**解析：**  \n根据《道路交通安全法》的相关规定，对驾驶拼装机动车上路行"
+  },
+  {
+   "id": "cmmlu-3",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "A. 全民性\nB. 强迫性\nC. 普及性\nD. 基础性\n</think>\n\n答案：**B. 强迫性**\n\n**解析：**"
+  },
+  {
+   "id": "mmlu-188",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to evaluate the tru"
+  },
+  {
+   "id": "mmlu-25",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "mmlu-69",
+   "source": "mmlu",
+   "subject": "human_aging",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the definitio"
+  },
+  {
+   "id": "mmlu-199",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "mmlu-27",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which option is NOT a source of atmospheric car"
+  },
+  {
+   "id": "mmlu-54",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the terminolo"
+  },
+  {
+   "id": "cmmlu-189",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "D\n</think>\n\n我们来逐项分析选项，判断哪个是**合理**的。\n\n---\n\n### A. 向FeCl₃溶液中滴加"
+  },
+  {
+   "id": "mmlu-113",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which organization was partially responsible fo"
+  },
+  {
+   "id": "cmmlu-170",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "cmmlu-0",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which of the given phenomena involves the relea"
+  },
+  {
+   "id": "cmmlu-184",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the incorrect statement about simple harmonic m"
+  },
+  {
+   "id": "mmlu-140",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the appropriate fiscal policy to address a rece"
+  },
+  {
+   "id": "mmlu-7",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the fact"
+  },
+  {
+   "id": "cmmlu-102",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "mmlu-40",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the economic "
+  },
+  {
+   "id": "cmmlu-130",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the interval in which the zero of the function "
+  },
+  {
+   "id": "cmmlu-41",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the incorrect statement about the relative inde"
+  },
+  {
+   "id": "cmmlu-199",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A. 声望定价\nB. 整数定价\nC. 招徕定价\nD. 尾数定价\n</think>\n\n答案：**C. 招徕定价**\n\n--"
+  },
+  {
+   "id": "cmmlu-11",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：A\n\n解析：根据题干所述，美国1964年3月的官方档案中提到，时任美总统特使哈里曼认为法国"
+  },
+  {
+   "id": "cmmlu-162",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the his"
+  },
+  {
+   "id": "cmmlu-89",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n我们来分析这个题目。\n\n题目描述的是一个公司为了扩大网上商店的销售收入，采取了广告和促销手段，但"
+  },
+  {
+   "id": "cmmlu-186",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the scenario "
+  },
+  {
+   "id": "cmmlu-4",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于信息社会和工业社会对比的问题。题目是问哪一个选项不属于信息社会相比工业社会的崭新"
+  },
+  {
+   "id": "mmlu-131",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "mmlu-68",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the philosoph"
+  },
+  {
+   "id": "mmlu-84",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand what "
+  },
+  {
+   "id": "mmlu-120",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To verify a digital signature, we need the **Receiver’s Publ"
+  },
+  {
+   "id": "mmlu-74",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which party has priority in this scenario, we n"
+  },
+  {
+   "id": "cmmlu-168",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**A. 均质**\n\n---\n\n**解析：**\n\n题目问的是“**不属于减少微生物的加工方"
+  },
+  {
+   "id": "cmmlu-109",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：C. 亚太经合组织\n\n**解析：**\n\n亚太经合组织（Asia-Pacific Econo"
+  },
+  {
+   "id": "mmlu-121",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine whether Skytop Co. should acquire the machine, "
+  },
+  {
+   "id": "cmmlu-58",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "cmmlu-123",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 是否促进人的发展**\n\n### 解析：\n\n教育活动与其他社会活动（如生产、"
+  },
+  {
+   "id": "cmmlu-56",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：A. 金钱豹\n\n解析：  \n在明朝永乐年间（1405年—1433年），郑和下西洋带回了多种"
+  },
+  {
+   "id": "mmlu-190",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the context o"
+  },
+  {
+   "id": "mmlu-105",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the key "
+  },
+  {
+   "id": "cmmlu-96",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**A. 商品价格下降**\n\n---\n\n**解析：**\n\n需求曲线的移动是指在**相同价格"
+  },
+  {
+   "id": "mmlu-60",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "mmlu-63",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-179",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the type of network based on the arrangement of"
+  },
+  {
+   "id": "cmmlu-108",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "A. 罹患率\nB. 构成比\nC. 流行率\nD. 相对比\n</think>\n\n答案：B. 构成比\n\n解析：  \n题目中提到"
+  },
+  {
+   "id": "cmmlu-87",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "mmlu-42",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which amounts Stark Co. should accrue and/or di"
+  },
+  {
+   "id": "mmlu-38",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "cmmlu-166",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "mmlu-75",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the ratio of exchange of market prices, we need"
+  },
+  {
+   "id": "mmlu-157",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the natu"
+  },
+  {
+   "id": "mmlu-127",
+   "source": "mmlu",
+   "subject": "professional_medicine",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the most appropriate next step in this case, we"
+  },
+  {
+   "id": "mmlu-88",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand how c"
+  },
+  {
+   "id": "mmlu-36",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which statement does **not** characterize arms "
+  },
+  {
+   "id": "mmlu-6",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the best estimate of the distance between the l"
+  },
+  {
+   "id": "cmmlu-91",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**D. 豆状核和丘脑**\n\n---\n\n### 解析：\n\n原发性高血压脑出血最常见的部位是"
+  },
+  {
+   "id": "mmlu-168",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to recall the historical co"
+  },
+  {
+   "id": "mmlu-143",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-95",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To solve this question, we need to understand the roles of M"
+  },
+  {
+   "id": "cmmlu-152",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**A. 钓鱼攻击**\n\n---\n\n### 解析：\n\n**钓鱼攻击**（Phishi"
+  },
+  {
+   "id": "cmmlu-26",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-121",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To solve the problem of finding the distance from the focus "
+  },
+  {
+   "id": "cmmlu-188",
+   "source": "cmmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options o"
+  },
+  {
+   "id": "mmlu-195",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-36",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**A. 基金会**\n\n---\n\n### 解析：\n\n根据中国《民法典》和《慈善法》的"
+  },
+  {
+   "id": "mmlu-194",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to recall the relationship "
+  },
+  {
+   "id": "mmlu-71",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the character"
+  },
+  {
+   "id": "mmlu-72",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine whether the court will allow the prosecution to"
+  },
+  {
+   "id": "cmmlu-65",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-184",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "mmlu-119",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-155",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**A. 扫描仪**\n\n---\n\n**解析：**\n\n题目问的是“除显示器、绘图仪外，也属于"
+  },
+  {
+   "id": "mmlu-2",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to identify the cat"
+  },
+  {
+   "id": "mmlu-159",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the key "
+  },
+  {
+   "id": "cmmlu-165",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**C. 蛋白质**\n\n---\n\n**解析：**\n\n病毒囊膜（也称为病毒包膜）是由**蛋白"
+  },
+  {
+   "id": "cmmlu-20",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the s"
+  },
+  {
+   "id": "cmmlu-77",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A. 法律规范包括规范性文件\n</think>\n\n正确答案是：**D. 法律规范与非规范性文件不同，具有普遍性**\n\n-"
+  },
+  {
+   "id": "cmmlu-145",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the situ"
+  },
+  {
+   "id": "cmmlu-171",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A. 该条中所规定的军人的配偶在离婚方面所承担的义务没有相应的权利存在\n</think>\n\n正确答案是：**D. 该条所"
+  },
+  {
+   "id": "mmlu-44",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "mmlu-52",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine what letters are on the '3' button of a touch-t"
+  },
+  {
+   "id": "cmmlu-13",
+   "source": "cmmlu",
+   "subject": "college_engineering_hydrology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**C. 输沙率、输沙量**\n\n---\n\n**解析：**\n\n在水文学和河流动力学中，**输"
+  },
+  {
+   "id": "cmmlu-120",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-117",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**A. 乌贼骨**\n\n---\n\n### 解析：\n\n我们来逐项分析这四个选项的**收涩敛疮"
+  },
+  {
+   "id": "cmmlu-27",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "A. 升结肠\n</think>\n\n答案：**B. 阑尾**\n\n---\n\n### 解析：\n\n腹膜外位器官是指**不与腹膜直"
+  },
+  {
+   "id": "cmmlu-86",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A. 封建制法是人类历史上第一种私有制的法律类型\n</think>\n\n正确答案是：**C. 私有财产神圣不可侵犯是资本主"
+  },
+  {
+   "id": "mmlu-197",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the expressio"
+  },
+  {
+   "id": "cmmlu-80",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which nerve支配 (innervates) the trapezius muscle"
+  },
+  {
+   "id": "cmmlu-196",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n在使用**二项分布直接计算概率法**进行统计推断时，我们检验的原假设是：\n\n$$\nH_0: \\p"
+  },
+  {
+   "id": "mmlu-8",
+   "source": "mmlu",
+   "subject": "college_computer_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, let's first understand the role of "
+  },
+  {
+   "id": "mmlu-174",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the maximum value of the z-component of the spi"
+  },
+  {
+   "id": "cmmlu-67",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the t"
+  },
+  {
+   "id": "mmlu-138",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "cmmlu-119",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the number of common points between a line and "
+  },
+  {
+   "id": "cmmlu-22",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于公共关系人员心理素质的问题。题目是说，公共关系人员需要具备良好的心理素质，包括自"
+  },
+  {
+   "id": "cmmlu-134",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the n"
+  },
+  {
+   "id": "mmlu-192",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which option is not a concern for all liberal e"
+  },
+  {
+   "id": "mmlu-18",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which of the options promotes glucose and amino"
+  },
+  {
+   "id": "mmlu-163",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-114",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A**\n\n---\n\n### 解析：\n\n题目要求找出出自辛笛诗歌《航》中，体现“思"
+  },
+  {
+   "id": "mmlu-95",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "mmlu-126",
+   "source": "mmlu",
+   "subject": "college_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the s"
+  },
+  {
+   "id": "cmmlu-64",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the pri"
+  },
+  {
+   "id": "mmlu-111",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the concept o"
+  },
+  {
+   "id": "mmlu-61",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the core of t"
+  },
+  {
+   "id": "mmlu-182",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the r"
+  },
+  {
+   "id": "cmmlu-140",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问以下哪个选项不属于前提标识词。选项是A到D，分别是“因为”、“鉴于”、"
+  },
+  {
+   "id": "cmmlu-2",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-90",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To solve this question, we need to understand the effects of"
+  },
+  {
+   "id": "cmmlu-23",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**C. “营业外收入”**\n\n---\n\n### 解析：\n\n在会计处理中，**材料盘"
+  },
+  {
+   "id": "mmlu-11",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the gen"
+  },
+  {
+   "id": "cmmlu-128",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To solve the problem, we are given the equation:\n\n$$\nx + 2y "
+  },
+  {
+   "id": "cmmlu-9",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the smallest positive period of the function $ "
+  },
+  {
+   "id": "mmlu-141",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the key featu"
+  },
+  {
+   "id": "cmmlu-106",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to identify which o"
+  },
+  {
+   "id": "mmlu-17",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the context o"
+  },
+  {
+   "id": "cmmlu-126",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于心理辅导工作原则的问题。题目是问以下哪个原则是不能遵循的，选项是A到D。首先，我"
+  },
+  {
+   "id": "mmlu-136",
+   "source": "mmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-100",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "cmmlu-31",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**A. 大脑前动脉**\n\n---\n\n**解析：**\n\n大脑动脉环（Circle of W"
+  },
+  {
+   "id": "mmlu-96",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "mmlu-0",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the constitutionality of the law prohibiting al"
+  },
+  {
+   "id": "mmlu-128",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the concept o"
+  },
+  {
+   "id": "cmmlu-191",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-12",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to consider the recommendat"
+  },
+  {
+   "id": "cmmlu-48",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**C. 间接控制和直接控制**\n\n---\n\n### 解析：\n\n控制可以根据**主管人员与"
+  },
+  {
+   "id": "cmmlu-59",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To solve this problem, we need to analyze the function $ y ="
+  },
+  {
+   "id": "mmlu-191",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to identify the correct ord"
+  },
+  {
+   "id": "cmmlu-38",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct order of the construction risk mana"
+  },
+  {
+   "id": "cmmlu-71",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the ques"
+  },
+  {
+   "id": "cmmlu-85",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：A\n\n解析：“太后之色少解”中的“色”指的是“怒色”或“脸色”。在古汉语中，“色”常用来指"
+  },
+  {
+   "id": "cmmlu-88",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-46",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the pass"
+  },
+  {
+   "id": "mmlu-62",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the core of P"
+  },
+  {
+   "id": "cmmlu-21",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which shape of the same food has the fastest he"
+  },
+  {
+   "id": "cmmlu-150",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“教育起源于()”，选项是A到D。首先，我需要回忆一下关于教育起源的理论。教育"
+  },
+  {
+   "id": "cmmlu-164",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To solve this problem, we need to analyze the situation care"
+  },
+  {
+   "id": "mmlu-186",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the k"
+  },
+  {
+   "id": "cmmlu-156",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是说苏州人利用当地砚瓦山的岩石制作优质砚台，这种岩石致密、呈薄板状，问可能"
+  },
+  {
+   "id": "cmmlu-93",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this problem, we need to calculate the total value "
+  },
+  {
+   "id": "cmmlu-110",
+   "source": "cmmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D. 《纽约公约》**\n\n---\n\n### 解析：\n\n在国际商事仲裁的国际立法中，**"
+  },
+  {
+   "id": "mmlu-82",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which drug is most commonly responsible for acu"
+  },
+  {
+   "id": "cmmlu-132",
+   "source": "cmmlu",
+   "subject": "chinese_civil_service_exam",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "cmmlu-74",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "A. 可在控制施工进度的网络图基础上进一步扩充得到施工成本计划\n</think>\n\n正确答案是：**C. 首先要将总成本"
+  },
+  {
+   "id": "cmmlu-148",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to recall the stage"
+  },
+  {
+   "id": "mmlu-85",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-55",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A. 媒介物\n</think>\n\n答案：**C. 宿主**\n\n---\n\n**解析：**\n\n“病原体生存、生长和繁殖的自然"
+  },
+  {
+   "id": "mmlu-80",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to recall the three types o"
+  },
+  {
+   "id": "mmlu-177",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to identify which countries"
+  },
+  {
+   "id": "cmmlu-84",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the opti"
+  },
+  {
+   "id": "cmmlu-161",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this problem, we need to understand the relationshi"
+  },
+  {
+   "id": "cmmlu-61",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A. 集镇社区\n</think>\n\n答案：**B. 农村社区**\n\n**解析：**\n\n题目描述的是以农业生产为主要谋生手"
+  },
+  {
+   "id": "mmlu-57",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the chai"
+  },
+  {
+   "id": "cmmlu-43",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To solve this question, we need to analyze each option and d"
+  },
+  {
+   "id": "cmmlu-105",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze the options o"
+  },
+  {
+   "id": "mmlu-165",
+   "source": "mmlu",
+   "subject": "high_school_mathematics",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To solve the problem, we need to determine the degree of the"
+  },
+  {
+   "id": "cmmlu-33",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "A. 象形\n</think>\n\n答案：**D. 会意**\n\n---\n\n**解析：**\n\n“策”字在传统“六书”中属于 *"
+  },
+  {
+   "id": "mmlu-107",
+   "source": "mmlu",
+   "subject": "world_religions",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which battle led to the conversion of Mecca, we"
+  },
+  {
+   "id": "mmlu-173",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to consider the leg"
+  },
+  {
+   "id": "cmmlu-129",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**C. 田园城市**\n\n---\n\n**解析：**\n\n霍华德（Ebenezer Howar"
+  },
+  {
+   "id": "cmmlu-30",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which surface is most likely to cause the wheel"
+  },
+  {
+   "id": "mmlu-112",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which normal modes of a carbon dioxide molecule"
+  },
+  {
+   "id": "cmmlu-75",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**A. 前者高于后者**\n\n---\n\n### 解析：\n\n企业自律行为的道德标准与法"
+  },
+  {
+   "id": "cmmlu-193",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 一手提灭火器并下压压把**\n\n---\n\n### 解析：\n\n在使用 **手提"
+  },
+  {
+   "id": "cmmlu-182",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：A. APAO\n\n**解析：**\n\n国际天文奥林匹克（International Astr"
+  },
+  {
+   "id": "cmmlu-169",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which of the given conditions is least likely t"
+  },
+  {
+   "id": "mmlu-23",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the Engle-Gra"
+  },
+  {
+   "id": "mmlu-106",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the common mu"
+  },
+  {
+   "id": "cmmlu-144",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**B. 环境因素**\n\n---\n\n**解析：**\n\n宿主状态（Host State"
+  },
+  {
+   "id": "mmlu-176",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the position "
+  },
+  {
+   "id": "mmlu-29",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the philosoph"
+  },
+  {
+   "id": "mmlu-102",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "mmlu-151",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the s"
+  },
+  {
+   "id": "mmlu-148",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the effect on the equilibrium price and quantit"
+  },
+  {
+   "id": "mmlu-167",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the scenario "
+  },
+  {
+   "id": "cmmlu-146",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "mmlu-21",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to consider the attitudes o"
+  },
+  {
+   "id": "mmlu-73",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-35",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which alcohol is not suitable to drink when eat"
+  },
+  {
+   "id": "cmmlu-107",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D**\n\n---\n\n**解析：**\n\n脾胃虚寒型胃痛的主症通常表现为：\n\n- **胃痛"
+  },
+  {
+   "id": "mmlu-155",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the options i"
+  },
+  {
+   "id": "cmmlu-131",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "A. 法律对政策具有指导作用\nB. 法律的产生经历了一个从与道德、宗教规范浑为一体到相对独立的过程\nC. 法律与道德都是"
+  },
+  {
+   "id": "cmmlu-49",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n在病因研究的轮状模型中，强调宿主与**生物因素**的关系。\n\n---\n\n**解析：**\n\n轮状模"
+  },
+  {
+   "id": "cmmlu-37",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the ques"
+  },
+  {
+   "id": "mmlu-19",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-187",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze each opt"
+  },
+  {
+   "id": "cmmlu-135",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to identify the eth"
+  },
+  {
+   "id": "mmlu-56",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the philosoph"
+  },
+  {
+   "id": "cmmlu-1",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 设枢密院**\n\n---\n\n### 解析：\n\n唐末五代时期，中央集权逐渐被削"
+  },
+  {
+   "id": "mmlu-139",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct statement about glucose metabolism,"
+  },
+  {
+   "id": "mmlu-156",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the differenc"
+  },
+  {
+   "id": "mmlu-45",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "mmlu-185",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "cmmlu-47",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：A. 兴趣\n\n解析：  \n人的认识的倾向性是指人在认识过程中表现出的主动性和方向性，这种倾"
+  },
+  {
+   "id": "mmlu-70",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the role of t"
+  },
+  {
+   "id": "mmlu-181",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the core conc"
+  },
+  {
+   "id": "mmlu-43",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-76",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D. 社会生产力和国际分工的发展**\n\n**解析：**\n\n世界市场形成的根本原因在于*"
+  },
+  {
+   "id": "cmmlu-153",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "A. 社会中心课程\n</think>\n\n正确答案是：**C. 科目本位课程**\n\n---\n\n**解析：**\n\n- **科"
+  },
+  {
+   "id": "mmlu-109",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the national emblem of Scotland, we need to con"
+  },
+  {
+   "id": "mmlu-123",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which option is NOT a feature of continuously c"
+  },
+  {
+   "id": "mmlu-110",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-180",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the r"
+  },
+  {
+   "id": "mmlu-97",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To solve this question, we need to recall the principles of "
+  },
+  {
+   "id": "cmmlu-53",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "cmmlu-16",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 依法治国**\n\n---\n\n### 解析：\n\n社会主义法治理念的核心内容包括"
+  },
+  {
+   "id": "mmlu-37",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the info"
+  },
+  {
+   "id": "mmlu-67",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-113",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**B. 夸美纽斯的大教学论**\n\n---\n\n**解析：**\n\n题目问的是西方教育史上提出"
+  },
+  {
+   "id": "mmlu-65",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the different"
+  },
+  {
+   "id": "mmlu-78",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To answer this question, we need to understand what it means"
+  },
+  {
+   "id": "mmlu-124",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze Dr. Ston"
+  },
+  {
+   "id": "cmmlu-197",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the info"
+  },
+  {
+   "id": "mmlu-150",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": null,
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-68",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n从经济学角度看，道德在建立市场机制中具有的作用是：\n\n**C. 降低市场成本**\n\n---\n\n#"
+  },
+  {
+   "id": "mmlu-134",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the approximate interquartile range (IQR) of a "
+  },
+  {
+   "id": "cmmlu-29",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the impa"
+  },
+  {
+   "id": "mmlu-28",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to recall the structure of "
+  },
+  {
+   "id": "cmmlu-190",
+   "source": "cmmlu",
+   "subject": "clinical_knowledge",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**A. 星形细胞瘤**\n\n---\n\n### 解析：\n\n**HMB45** 是一种**神经"
+  },
+  {
+   "id": "mmlu-81",
+   "source": "mmlu",
+   "subject": "abstract_algebra",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the truth of the statements, we analyze each on"
+  },
+  {
+   "id": "cmmlu-176",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the give"
+  },
+  {
+   "id": "cmmlu-73",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-118",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the hist"
+  },
+  {
+   "id": "mmlu-76",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To answer this question, we need to identify the correct glo"
+  },
+  {
+   "id": "mmlu-83",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the concept o"
+  },
+  {
+   "id": "mmlu-15",
+   "source": "mmlu",
+   "subject": "high_school_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To solve this problem, we need to use the formula for gravit"
+  },
+  {
+   "id": "cmmlu-7",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "A\n</think>\n\n我们来分析题干和选项，找出党和政府的做法所体现的正确观点。\n\n---\n\n### 题干内容：\n\n题"
+  },
+  {
+   "id": "cmmlu-198",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the char"
+  },
+  {
+   "id": "cmmlu-174",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "cmmlu-63",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the s"
+  },
+  {
+   "id": "cmmlu-54",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**D. 皮肤血管**\n\n---\n\n**解析：**\n\n交感缩血管纤维（也称为交感神经末梢）"
+  },
+  {
+   "id": "cmmlu-45",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze the question "
+  },
+  {
+   "id": "mmlu-94",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the concept o"
+  },
+  {
+   "id": "cmmlu-60",
+   "source": "cmmlu",
+   "subject": "world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法国20世纪70年代中后期经济政策的问题。题目是说，法国的GDP年平均增长率从2"
+  },
+  {
+   "id": "cmmlu-17",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 更充分地发挥市场在资源配置中的基础性作用**\n\n---\n\n### 解析：\n"
+  },
+  {
+   "id": "mmlu-93",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the natu"
+  },
+  {
+   "id": "cmmlu-52",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**C. 促进民族工业的发展**\n\n---\n\n**解析：**\n\n题干描述的是在南京国民政府"
+  },
+  {
+   "id": "cmmlu-83",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the ques"
+  },
+  {
+   "id": "cmmlu-143",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "A. 配制一定物质的量浓度的溶液时，容量瓶必须洁净、干燥、不漏水\nB. 实验室配制500 mL 0.2 mol·L^－1"
+  },
+  {
+   "id": "mmlu-178",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to recall the typic"
+  },
+  {
+   "id": "mmlu-34",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-94",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "A. 媒介关系\n</think>\n\n答案：**A. 媒介关系**\n\n解析：  \n题目中提到“公共关系为市场销售服务的功能"
+  },
+  {
+   "id": "mmlu-116",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-59",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To answer this question, let's analyze each option in relati"
+  },
+  {
+   "id": "mmlu-171",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine how the U.S. national income accounts treat the"
+  },
+  {
+   "id": "mmlu-115",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which index represents a firm's market power, w"
+  },
+  {
+   "id": "mmlu-133",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which of the given options is not a Hindu deity"
+  },
+  {
+   "id": "cmmlu-124",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-196",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to recall the condi"
+  },
+  {
+   "id": "mmlu-41",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To convert the mixed number $8 \\frac{2}{4}$ into an improper"
+  },
+  {
+   "id": "cmmlu-8",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To solve this problem, we need to determine which point is e"
+  },
+  {
+   "id": "cmmlu-138",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A. 监测系统\n</think>\n\n答案：**B. 社会干预中心**\n\n**解析：**\n\n在社会预警系统中，对人们潜伏的"
+  },
+  {
+   "id": "mmlu-161",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which scenario involves a morally wrong action,"
+  },
+  {
+   "id": "cmmlu-125",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to identify which l"
+  },
+  {
+   "id": "cmmlu-194",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A. 职能制\n</think>\n\n正确答案是：**C. 直线制**\n\n---\n\n### 解析：\n\n直线制（Line Sy"
+  },
+  {
+   "id": "mmlu-35",
+   "source": "mmlu",
+   "subject": "machine_learning",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the differenc"
+  },
+  {
+   "id": "cmmlu-66",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "cmmlu-19",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the most commonly used authentication method, w"
+  },
+  {
+   "id": "mmlu-64",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the cons"
+  },
+  {
+   "id": "mmlu-101",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which option results in a permanent increase in"
+  },
+  {
+   "id": "cmmlu-57",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": null,
+   "ref": "D",
+   "correct": false,
+   "raw": "To solve this question, we need to analyze the patient's cli"
+  },
+  {
+   "id": "cmmlu-39",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to recall the conce"
+  },
+  {
+   "id": "mmlu-86",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To answer this question, let's analyze the options provided "
+  },
+  {
+   "id": "cmmlu-24",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct order of the steps in the β-oxidati"
+  },
+  {
+   "id": "mmlu-175",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To answer this question, we need to focus on the key point m"
+  },
+  {
+   "id": "cmmlu-34",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n在中国的会计法规制度体系中，**最高层次的法律地位**是 **《会计法》**。\n\n---\n\n##"
+  },
+  {
+   "id": "cmmlu-14",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A. 诚信制度\n</think>\n\n答案：**A. 诚信制度**\n\n---\n\n**解析：**\n\n在契约关系中，**公平理"
+  },
+  {
+   "id": "cmmlu-183",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**C. 强调对治疗的依从性，否则就建议转院**\n\n---\n\n### 解析：\n\n在医"
+  },
+  {
+   "id": "cmmlu-175",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A. 法学的研究对象是有效的法律规范与现行的法律制度\n</think>\n\n正确答案是：**D. 法理学的研究应当为法治建"
+  },
+  {
+   "id": "mmlu-91",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine which sentence is written in the subjunctive, w"
+  },
+  {
+   "id": "mmlu-13",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the r"
+  },
+  {
+   "id": "cmmlu-127",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "A\n</think>\n\n正确答案是：**D. 教师对学生的期望**\n\n---\n\n### 解析：\n\n**罗森塔尔效应**（"
+  },
+  {
+   "id": "mmlu-104",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the pass"
+  },
+  {
+   "id": "mmlu-180",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this problem, we need to understand the relationshi"
+  },
+  {
+   "id": "cmmlu-90",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**C**\n\n### 解析：\n\n**胃左动脉**是胃的供血动脉之一，其**起源于肝总动脉*"
+  },
+  {
+   "id": "mmlu-47",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "mmlu-189",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "To determine which country is not a federal state, we need t"
+  },
+  {
+   "id": "mmlu-160",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this question, we need to understand the concept of"
+  },
+  {
+   "id": "cmmlu-136",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the f"
+  },
+  {
+   "id": "mmlu-130",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the lega"
+  },
+  {
+   "id": "cmmlu-62",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "cmmlu-151",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, let's analyze each option s"
+  },
+  {
+   "id": "mmlu-24",
+   "source": "mmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which group or organization can be identified a"
+  },
+  {
+   "id": "mmlu-4",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the most likely advice from the peer, we need t"
+  },
+  {
+   "id": "mmlu-26",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to analyze the ques"
+  },
+  {
+   "id": "cmmlu-103",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the c"
+  },
+  {
+   "id": "cmmlu-44",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：**A. 越近越好**\n\n### 解析：\n\n避雷器与被保护设备的距离对保护效果的影响主要取"
+  },
+  {
+   "id": "cmmlu-6",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n答案：**A**\n\n**解析：**\n\n题目问的是“2012年5月我国首座深水钻井平台在南海首钻成"
+  },
+  {
+   "id": "cmmlu-104",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "A\n</think>\n\n正确答案是：**A. 客观物质世界的某一领域**\n\n---\n\n### 解析：\n\n哲学作为一门研究"
+  },
+  {
+   "id": "cmmlu-185",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the h"
+  },
+  {
+   "id": "cmmlu-72",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "To solve this problem, we need to understand the definitions"
+  },
+  {
+   "id": "cmmlu-147",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "A. 抒情诗\n</think>\n\n答案：**B. 叙事诗**\n\n解析：  \n《石壕吏》是唐代诗人杜甫的作品，是一首叙事诗"
+  },
+  {
+   "id": "mmlu-87",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which option most likely decreases the demand f"
+  },
+  {
+   "id": "mmlu-162",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the strongest constitutional argument the candi"
+  },
+  {
+   "id": "mmlu-98",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine what the 'K' in 'Y2K' stands for, we need to co"
+  },
+  {
+   "id": "mmlu-132",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the glo"
+  },
+  {
+   "id": "mmlu-129",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "To determine the limiting high-temperature molar heat capaci"
+  },
+  {
+   "id": "mmlu-48",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which expression shows a **prime factorization*"
+  },
+  {
+   "id": "mmlu-50",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the correct answer, let's analyze each option i"
+  },
+  {
+   "id": "cmmlu-111",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine which poet is part of the \"Initial Tang Four Im"
+  },
+  {
+   "id": "mmlu-187",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the percentage of the global population that wa"
+  },
+  {
+   "id": "cmmlu-82",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "A\n</think>\n\n答案：A\n\n解析：  \n以建立没有贸易壁垒的世界市场为宗旨的是 **世界贸易组织（WTO）**。"
+  },
+  {
+   "id": "mmlu-153",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine the strongest ground for the unenforceability o"
+  },
+  {
+   "id": "cmmlu-92",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "To determine the correct answer, we need to understand the r"
+  },
+  {
+   "id": "cmmlu-158",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "A\n</think>\n\n根据题目要求，我们需要判断以下四个选项中哪些是“企业整体的道德责任”的内容：\n\n---\n\n###"
+  },
+  {
+   "id": "mmlu-55",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "cmmlu-70",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which process is not a form of exocytosis, we n"
+  },
+  {
+   "id": "mmlu-152",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine which scenario involves a morally wrong action "
+  },
+  {
+   "id": "cmmlu-50",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to consider the spe"
+  },
+  {
+   "id": "cmmlu-101",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the l"
+  },
+  {
+   "id": "mmlu-33",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To determine which of the given compounds can form hydrogen "
+  },
+  {
+   "id": "cmmlu-172",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to analyze the cont"
+  },
+  {
+   "id": "cmmlu-69",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "To solve this problem, we need to determine the value of $ T"
+  },
+  {
+   "id": "mmlu-170",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "To answer this question, we need to understand the implicati"
+  },
+  {
+   "id": "mmlu-193",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "To answer this question, we need to understand the context o"
+  },
+  {
+   "id": "mmlu-1",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "To determine the correct answer, we need to understand the k"
+  }
+ ]
+}
