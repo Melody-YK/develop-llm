@@ -21,7 +21,8 @@ Mac 侧本轮上传包只需要以下文件：
 - `gsm8k_eval.py`：考卷二 GSM8K 300 题数学后测。
 - `mcq_eval.py`：考卷一 CMMLU+MMLU 400 题通用能力后测。
 - `distill_train_v1.json`：460 条题目与完整 8B 解答文本，是 CE 硬标签和 token 对齐基准。
-- `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz`：同一 460 条解答在两个老师下的逐 token top-32 软标签。
+- `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz`：vLLM 采集的原始 8B/4B 分布。
+- `logits_4b_hf.jsonl.gz` / `logits_4bta.jsonl.gz`：Transformers/NPU 采集的原始 4B/4B 助教分布；四份均为 460 条、top-32、逐 token 对齐，当前仓库已归档。
 - 两张冻结考卷：保证远程后测仍使用原协议。
 
 老师 logits 已经采集并验收完成，所以本轮**不用再运行** `dump_teacher_logits.py`。该脚本只在需要重新采集老师分布时使用，运行位置是 `vllm-ascend` 推理容器，不是训练容器。
@@ -78,7 +79,7 @@ npu-smi info
 
 ## 1. 方案边界
 
-采用**远程离线 KL**：实验记录中的 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。主对照实际还使用了 `logits_4b_hf.jsonl.gz`（原始 4B 直教）和 `logits_4bta.jsonl.gz`（4B 助教级联）；前者已在远程执行记录中生成，但当前 `main` checkout 不含该原始文件，不能拿 vLLM 版 `logits_4b.jsonl.gz` 静默替代。实验记录中的四份归档口径均为 460 条、top-32、逐 token 对齐。
+采用**远程离线 KL**：实验记录中的 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。主对照实际还使用了已入库的 `logits_4b_hf.jsonl.gz`（原始 4B 直教）和 `logits_4bta.jsonl.gz`（4B 助教级联）；前者从 `kl-final-20261002.tar.gz` 恢复，SHA-256 为 `d347ec459e586cedd90142fe9352988eb9ef90903292ae2b1097bce88c66cc60`。四份归档口径均为 460 条、top-32、逐 token 对齐。
 
 不采用在线师生共驻作为本轮主方案。910B 显存理论上可同时容纳 8B 教师和 1.7B 学生，但在线方案要把 vLLM 推理栈改成 Transformers teacher forward，并在每个 batch 重算老师分布；它改变了计算路径和信号口径。已有离线 logits 时，这只会增加时间和故障面。若后续要研究全词表 KL，可另立实验。
 
@@ -324,7 +325,7 @@ done
 
 当前文档的两组命令默认输出第二轮停尾监督目录。第一轮历史结果对应 `distill-kl-control-ce-v1` / `distill-8b-kl-v1` 这类独立目录，并在命令中加 `--no-stop-token`；不要用旧命令覆盖第二轮产物。
 
-两组正式命令跑完后，原始 4B 直教和级联臂不再是待办：它们需要各自准备远程归档的 `logits_4b_hf.jsonl.gz` / `logits_4bta.jsonl.gz`，具体产物和已完成结果见 [项目总览.md](../项目总览.md)。
+两组正式命令跑完后，原始 4B 直教和级联臂的原始 logits 已归档在当前仓库：`data/logits_4b_hf.jsonl.gz` / `data/logits_4bta.jsonl.gz`。具体产物和已完成结果见 [项目总览.md](../项目总览.md)。
 
 ## 6. 结果判读
 

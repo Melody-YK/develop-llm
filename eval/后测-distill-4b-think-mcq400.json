@@ -1,0 +1,3617 @@
+{
+ "summary": {
+  "model": "/home/melody/distill/models/Qwen3-1.7B",
+  "adapter": "/home/melody/distill/models/distill-4b-think",
+  "n": 400,
+  "batch": 8,
+  "accuracy": 0.6325,
+  "accuracy_by_source": {
+   "mmlu": 0.59,
+   "cmmlu": 0.675
+  },
+  "unparsed_rate": 0.025,
+  "runtime_sec": 9461.9
+ },
+ "records": [
+  {
+   "id": "mmlu-31",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about Anscombe's vi"
+  },
+  {
+   "id": "cmmlu-159",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国国营农场土地和资产所有权的问题。题目是问我国国营农场的土地、资产归谁所有，选"
+  },
+  {
+   "id": "cmmlu-99",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目，找出四个选项中意思不同的那一个。题目是四个句子，我需要仔细分析每个句子的意思，"
+  },
+  {
+   "id": "cmmlu-32",
+   "source": "cmmlu",
+   "subject": "security_study",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问防弹衣是由什么材料制成的，选项有四个：A是陶瓷玻璃钢，B是钨合金钢，C"
+  },
+  {
+   "id": "mmlu-92",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking about the sh"
+  },
+  {
+   "id": "mmlu-14",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "mmlu-154",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is asking which author"
+  },
+  {
+   "id": "cmmlu-181",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问在伤口愈合时，对增加伤口愈合强度起主要作用的因素是什么，选项有A到D四"
+  },
+  {
+   "id": "cmmlu-98",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于新斯的明治疗重症肌无力的问题。首先，我需要回忆一下重症肌无力的病理机制和新斯的明"
+  },
+  {
+   "id": "mmlu-147",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. I need to solve the equation 18 + p"
+  },
+  {
+   "id": "cmmlu-5",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于FeCl3溶液腐蚀铜制印刷线路板后废液成分的实验题。题目问的是四个选项中哪个结论"
+  },
+  {
+   "id": "cmmlu-173",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问从课程的表现形式来看，校园文化属于哪一个选项。选项有A到D四个，分别是"
+  },
+  {
+   "id": "mmlu-172",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. Sapphire has 179 balloons and needs"
+  },
+  {
+   "id": "mmlu-144",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": null,
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about the concomita"
+  },
+  {
+   "id": "cmmlu-160",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于密码分析的目的是什么，选项有四个：A是发现解密算法，B是发现攻击者，"
+  },
+  {
+   "id": "cmmlu-40",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，一个社会组织的领导者必须对本组织的声誉和形象承担什么责任，选项有四个"
+  },
+  {
+   "id": "mmlu-137",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "cmmlu-163",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于肺泡通气量的问题。题目是说，某人的潮气量是500ml，生理无效腔是150ml，呼"
+  },
+  {
+   "id": "cmmlu-100",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，用户问的是五一劳动节当天的月相是什么。首先，我需要回忆一下月相的变化规律。月相是月亮在不同时间的形状"
+  },
+  {
+   "id": "cmmlu-115",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问妊娠期妇女由胎盘合成和分泌的主要雌激素成分是什么。选项有A到D四个选项"
+  },
+  {
+   "id": "mmlu-16",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about amino acids a"
+  },
+  {
+   "id": "cmmlu-179",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于中文语法结构的问题。题目是问下面哪个选项的主语是当事性质。选项有四个：A、B、C"
+  },
+  {
+   "id": "cmmlu-81",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": null,
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于论证功能的问题。题目是说，论证的功能包括证成和哪一个选项，选项有A. 反驳，B."
+  },
+  {
+   "id": "cmmlu-10",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问谁被誉为“公共关系之父”。选项有四个：A是卡特里普，B是巴纳姆，C是艾"
+  },
+  {
+   "id": "cmmlu-51",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问最早提出“世界文学”概念的人是谁，选项有A.歌德，B.莎士比亚，C.司"
+  },
+  {
+   "id": "cmmlu-28",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于马克思主义的选择题。题目是问“作为中国共产党和社会主义事业指导思想的马克思主义是"
+  },
+  {
+   "id": "cmmlu-97",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目，题目是找出四个选项中不表示“转移”意义的句子。首先，我需要明确“转移”在这里的"
+  },
+  {
+   "id": "cmmlu-149",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中药调剂的问题。题目是说处方名益智仁，调剂时应付什么，选项是A到D四个选项，分别"
+  },
+  {
+   "id": "cmmlu-177",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于蛋白质空间构象的问题。题目是说“不同蛋白质有不同的空间构象”，然后给出四个选项，"
+  },
+  {
+   "id": "mmlu-149",
+   "source": "mmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about comparing ter"
+  },
+  {
+   "id": "mmlu-146",
+   "source": "mmlu",
+   "subject": "high_school_government_and_politics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the primary p"
+  },
+  {
+   "id": "cmmlu-139",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个药物能降低体重、血压和尿酸，并且保护肾脏。选项有四个：A是瑞格列奈"
+  },
+  {
+   "id": "cmmlu-42",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个物理题。题目是说，汽车从平直公路驶上斜坡，牵引力逐渐增大而输出功率保持不变，问在这个"
+  },
+  {
+   "id": "mmlu-99",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-58",
+   "source": "mmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-5",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "mmlu-114",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "mmlu-135",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this statistics proble"
+  },
+  {
+   "id": "cmmlu-116",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于细胞核的题目，题目是问哪个选项是错误的。首先，我需要回忆一下细胞核的相关知识，然"
+  },
+  {
+   "id": "cmmlu-141",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问目前发酵工业大多数采用哪种方法来制备大量的无菌空气。选项有四个：A是静"
+  },
+  {
+   "id": "cmmlu-178",
+   "source": "cmmlu",
+   "subject": "college_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于遗赠扶养协议效力的问题。题目是说张某在丈夫去世后，和保姆李某签订了遗赠扶养协议，"
+  },
+  {
+   "id": "mmlu-118",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-25",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国政府利用外资政策的问题。题目给出的是2010年国务院发布的《进一步做好利用外"
+  },
+  {
+   "id": "cmmlu-79",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，清晨起床后背诵东西效果很好，这是因为没有哪一个抑制。选项是四个：前摄"
+  },
+  {
+   "id": "cmmlu-137",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问古希腊唯物主义的代表是谁，选项有四个：A是苏格拉底，B是德谟克利特，C"
+  },
+  {
+   "id": "cmmlu-78",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个医学问题。题目是说一个18岁男性，因为头痛针刺合谷穴后，次日局部形成了血肿。半年前因"
+  },
+  {
+   "id": "mmlu-145",
+   "source": "mmlu",
+   "subject": "formal_logic",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about identifying t"
+  },
+  {
+   "id": "mmlu-51",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about Robert, a mar"
+  },
+  {
+   "id": "cmmlu-133",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问科学的学业生涯规划的特点不包括哪一个选项。选项是A到D，分别是独特性、"
+  },
+  {
+   "id": "cmmlu-112",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于全腺泡型肺气肿的问题。题目是问全腺泡型肺气肿主要见于哪个选项，选项有A到D四个。"
+  },
+  {
+   "id": "cmmlu-192",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于别嘌呤醇治疗痛风的可能机制的问题。题目给出四个选项，我需要仔细分析每个选项，找出"
+  },
+  {
+   "id": "cmmlu-167",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于赫鲁晓夫时期苏联政策的问题。题目是问赫鲁晓夫当政时期，基于苏联经济军事力量与美国"
+  },
+  {
+   "id": "mmlu-79",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking what collect"
+  },
+  {
+   "id": "mmlu-164",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about a rational co"
+  },
+  {
+   "id": "mmlu-49",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about why people ca"
+  },
+  {
+   "id": "mmlu-142",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this marketing research question."
+  },
+  {
+   "id": "mmlu-32",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about how long it t"
+  },
+  {
+   "id": "mmlu-20",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about Peter the Gre"
+  },
+  {
+   "id": "mmlu-183",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "mmlu-122",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure this out. So the question "
+  },
+  {
+   "id": "cmmlu-142",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于民主参与法的问题。题目是问民主参与法是用来协调哪类公众关系，选项有四个：A是外部"
+  },
+  {
+   "id": "mmlu-10",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this legal question. S"
+  },
+  {
+   "id": "mmlu-198",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this multiple-choice question. Th"
+  },
+  {
+   "id": "mmlu-22",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about rounding the "
+  },
+  {
+   "id": "mmlu-125",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about vasectomy. Th"
+  },
+  {
+   "id": "cmmlu-15",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于矩阵的线性相关性的问题。题目是说，设A和B是满足A乘B等于零的任意两个非零矩阵，"
+  },
+  {
+   "id": "mmlu-158",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about ethical guide"
+  },
+  {
+   "id": "mmlu-77",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about Rawls' views "
+  },
+  {
+   "id": "cmmlu-46",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“存在就是被感知”是哪个哲学观点？选项是A到D，分别是主观唯心主义、机械唯物主"
+  },
+  {
+   "id": "cmmlu-122",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于矩阵等价和行列式的问题。题目是说，如果两个n阶矩阵A和B等价，那么下面哪个选项是"
+  },
+  {
+   "id": "mmlu-117",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-154",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问以下哪一种不属于传播者与受众的关系，选项是A到D四个选项。首先，我需要"
+  },
+  {
+   "id": "mmlu-3",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about why Varanasi "
+  },
+  {
+   "id": "mmlu-169",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which approa"
+  },
+  {
+   "id": "mmlu-30",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking about the av"
+  },
+  {
+   "id": "mmlu-9",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "mmlu-89",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about how the first"
+  },
+  {
+   "id": "mmlu-103",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "cmmlu-157",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法治与德治的问题。题目是问哪些选项的说法不正确。首先，我需要回忆一下法治和德治的"
+  },
+  {
+   "id": "cmmlu-12",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问下面哪个诗句不是描写古琴的。选项是A到D四个选项。首先，我需要回忆每个"
+  },
+  {
+   "id": "mmlu-66",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about Mayan city-st"
+  },
+  {
+   "id": "mmlu-108",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking how many sta"
+  },
+  {
+   "id": "cmmlu-18",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问猪的妊娠期平均是多少天，选项有A到D四个选项。首先，我需要回忆一下关于"
+  },
+  {
+   "id": "mmlu-39",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about whether every"
+  },
+  {
+   "id": "mmlu-166",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "mmlu-53",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the key facto"
+  },
+  {
+   "id": "cmmlu-195",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于驾驶拼装机动车上路行驶的驾驶人会受到哪种处罚。选项有四个：A是罚款2"
+  },
+  {
+   "id": "cmmlu-3",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问义务教育的根本性质是什么，选项有四个：A是全民性，B是强迫性，C是普及"
+  },
+  {
+   "id": "mmlu-188",
+   "source": "mmlu",
+   "subject": "college_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this problem step by step. The qu"
+  },
+  {
+   "id": "mmlu-25",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which term d"
+  },
+  {
+   "id": "mmlu-69",
+   "source": "mmlu",
+   "subject": "human_aging",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about glaucoma. The"
+  },
+  {
+   "id": "mmlu-199",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "mmlu-27",
+   "source": "mmlu",
+   "subject": "college_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "mmlu-54",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about what the ROM "
+  },
+  {
+   "id": "cmmlu-189",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于FeCl3溶液的问题。题目是四个选项，我需要判断哪个是正确的。让我仔细看看每个选"
+  },
+  {
+   "id": "mmlu-113",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "cmmlu-170",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于“物的依赖性关系”的选择题。题目给出四个选项，我需要仔细分析每个选项，然后确定正"
+  },
+  {
+   "id": "cmmlu-0",
+   "source": "cmmlu",
+   "subject": "high_school_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于热现象的选择题。题目是问下面哪个现象发生过程中放出热量，选项是A到D，然后给出四"
+  },
+  {
+   "id": "cmmlu-184",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于简谐振动的问题，题目是找出错误的说法。选项是A到D四个选项。让我仔细看看每个选项"
+  },
+  {
+   "id": "mmlu-140",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "mmlu-7",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-102",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于竞争者分析的，问企业首先应该做什么。选项有四个：A是确定竞争者的目标"
+  },
+  {
+   "id": "mmlu-40",
+   "source": "mmlu",
+   "subject": "us_foreign_policy",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about how World War"
+  },
+  {
+   "id": "cmmlu-130",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，就是找出函数f(x)=ln(x)-1/x的零点所在的区间。选项是A到D四个区间"
+  },
+  {
+   "id": "cmmlu-41",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于教育相对独立性的选择题。题目是问哪个选项不正确。首先，我需要回忆一下教育的相对独"
+  },
+  {
+   "id": "cmmlu-199",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于定价策略的问题。题目是说某超市为了吸引顾客，把大米和鸡蛋的价格定得很低，问这种策"
+  },
+  {
+   "id": "cmmlu-11",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个历史题。题目是关于1964年美国官方档案中提到的中法建交可能带来的影响，选项有四个："
+  },
+  {
+   "id": "cmmlu-162",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，用户问的是哲学作为一门专门学科大约有多少年的历史，选项是A到D。首先，我需要确定哲学作为专门学科的起"
+  },
+  {
+   "id": "cmmlu-89",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，这个问题看起来有点挑战性，不过让我慢慢来想。首先题目是说某公司想扩大网上商店的销售收入，用了各种广告"
+  },
+  {
+   "id": "cmmlu-186",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说某家电生产企业从目标市场的顾客中随机抽取了50名顾客进行问卷调查，目的"
+  },
+  {
+   "id": "cmmlu-4",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于信息社会和工业社会对比的问题。题目是问哪个选项不属于信息社会的崭新特点。选项有四"
+  },
+  {
+   "id": "mmlu-131",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the genome st"
+  },
+  {
+   "id": "mmlu-68",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "mmlu-84",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "mmlu-120",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about verifying a d"
+  },
+  {
+   "id": "mmlu-74",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": null,
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-168",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个选项不属于减少微生物的加工方法。选项有A到D四个选项，我需要仔细分"
+  },
+  {
+   "id": "cmmlu-109",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问世界上第一个由发达国家和发展中国家共同组成的经济集团是什么。选项有四个"
+  },
+  {
+   "id": "mmlu-121",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about Skytop Co., a"
+  },
+  {
+   "id": "cmmlu-58",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法律正义的问题。题目是说维护正义是法律的重要使命，然后问在司法实践中，被称为“看"
+  },
+  {
+   "id": "cmmlu-123",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问教育活动与其他社会活动最根本的区别是什么。选项有四个：A是是否促进人的"
+  },
+  {
+   "id": "cmmlu-56",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说明朝永乐年间，郑和船队带回了一只西方异域兽“麒麟”，现在我们所知的应该"
+  },
+  {
+   "id": "mmlu-190",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "mmlu-105",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-96",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于需求曲线移动的问题。题目是说，以下哪一项不会导致需求曲线移动，选项是A到D。首先"
+  },
+  {
+   "id": "mmlu-60",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about the fallacy o"
+  },
+  {
+   "id": "mmlu-63",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-179",
+   "source": "mmlu",
+   "subject": "electrical_engineering",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "cmmlu-108",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是说男性吸烟率是女性的10倍，问这个指标属于哪个选项。选项有A到D四个，分"
+  },
+  {
+   "id": "cmmlu-87",
+   "source": "cmmlu",
+   "subject": "marxist_theory",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是说在第一次世界大战中，哪个国家成为东西方矛盾焦点和帝国主义政治体系最薄弱"
+  },
+  {
+   "id": "mmlu-42",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this accounting questi"
+  },
+  {
+   "id": "mmlu-38",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about haematemesis."
+  },
+  {
+   "id": "cmmlu-166",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问《少女小渔》一文是围绕哪个事件展开的，选项有四个：A是“假结婚”，B是"
+  },
+  {
+   "id": "mmlu-75",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about calculating t"
+  },
+  {
+   "id": "mmlu-157",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about which power o"
+  },
+  {
+   "id": "mmlu-127",
+   "source": "mmlu",
+   "subject": "professional_medicine",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "mmlu-88",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "mmlu-36",
+   "source": "mmlu",
+   "subject": "security_studies",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-6",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking for the best"
+  },
+  {
+   "id": "cmmlu-91",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于原发性高血压脑出血最常见的部位的问题。题目给出四个选项，我需要仔细分析每个选项的"
+  },
+  {
+   "id": "mmlu-168",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about a multiple-ch"
+  },
+  {
+   "id": "mmlu-143",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this legal question. S"
+  },
+  {
+   "id": "cmmlu-95",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于调节性T细胞和相关蛋白的问题。题目是给出四个选项，问哪个是不正确的。首先，我需要"
+  },
+  {
+   "id": "cmmlu-152",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说用户收到一封可疑的电子邮件，要求提供银行账户和密码，这属于哪种攻击手段"
+  },
+  {
+   "id": "cmmlu-26",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于流行病学中群体定义的问题。题目是问“以下哪一项正确描述了流行病学中的群体”，选项"
+  },
+  {
+   "id": "cmmlu-121",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于抛物线焦点到准线距离的问题。题目是抛物线y²=10x的焦点到准线的距离是多少，选"
+  },
+  {
+   "id": "cmmlu-188",
+   "source": "cmmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“性教育是”选项中的哪一个。题目给出的选项是A到D，我需要仔细分析每个选项的含"
+  },
+  {
+   "id": "mmlu-195",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the primary p"
+  },
+  {
+   "id": "cmmlu-36",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于捐助法人的选择题。题目是问下面哪个选项属于捐助法人。选项有A到D四个，分别是基金"
+  },
+  {
+   "id": "mmlu-194",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about a neurotransm"
+  },
+  {
+   "id": "mmlu-71",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "mmlu-72",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure this out. The question is "
+  },
+  {
+   "id": "cmmlu-65",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，人们在社会公共生活方面所持有的基本理念和对理想社会制度的向往与追求，"
+  },
+  {
+   "id": "mmlu-184",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "mmlu-119",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about describing a "
+  },
+  {
+   "id": "cmmlu-155",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问除了显示器和绘图仪之外，还有哪些属于输出设备。选项是A到D，分别是扫描"
+  },
+  {
+   "id": "mmlu-2",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking what kind of"
+  },
+  {
+   "id": "mmlu-159",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about where Spanish"
+  },
+  {
+   "id": "cmmlu-165",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问病毒囊膜的组成成分是什么，选项有A到D四个选项。首先，我需要回忆一下病"
+  },
+  {
+   "id": "cmmlu-20",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国农村社区形态的问题。题目是说我国的农村社区大致有两种形态，然后给了四个选项，"
+  },
+  {
+   "id": "cmmlu-77",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法律规范的选择题。题目是四个选项中哪个是正确的。让我仔细看看每个选项，然后逐一分"
+  },
+  {
+   "id": "cmmlu-145",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于著作权的问题。题目是说张某在甲期刊社发表了一篇学术论文，但没有做版权说明。乙期刊"
+  },
+  {
+   "id": "cmmlu-171",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国《婚姻法》第33条的问题。题目是问根据法理学原理，哪个选项正确。首先，我需要"
+  },
+  {
+   "id": "mmlu-44",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-52",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the letters o"
+  },
+  {
+   "id": "cmmlu-13",
+   "source": "cmmlu",
+   "subject": "college_engineering_hydrology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于输沙特征的指标选择题。题目是问常用来表示输沙特征的指标有哪些，选项是A到D四个选"
+  },
+  {
+   "id": "cmmlu-120",
+   "source": "cmmlu",
+   "subject": "elementary_information_and_technology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问计算机病毒是什么，选项有四个：A是电子仪器，B是生物，C是硬件损坏产生"
+  },
+  {
+   "id": "cmmlu-117",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问以下哪一个是无收涩敛疮功效的药物。选项有四个：A是乌贼骨，B是乳香，C"
+  },
+  {
+   "id": "cmmlu-27",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问属于腹膜外位器官的是哪一个选项。选项有A到D四个，分别是升结肠、阑尾、"
+  },
+  {
+   "id": "cmmlu-86",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法的历史演进的选择题。题目是四个选项，我需要仔细分析每个选项的正确性。首先，我得"
+  },
+  {
+   "id": "mmlu-197",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about which total c"
+  },
+  {
+   "id": "cmmlu-80",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：支配三角肌的神经是哪一个选项？选项有A.尺神经，B.肌皮神经，C.腋神经，D."
+  },
+  {
+   "id": "cmmlu-196",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于二项分布的问题。题目是说，用二项分布直接计算概率法检验H0: π=0.4，H1:"
+  },
+  {
+   "id": "mmlu-8",
+   "source": "mmlu",
+   "subject": "college_computer_science",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the Address R"
+  },
+  {
+   "id": "mmlu-174",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": null,
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the maximum v"
+  },
+  {
+   "id": "cmmlu-67",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是关于Cushing综合征患者进行单侧肾上腺切除术后，糖皮质激素替代治疗需"
+  },
+  {
+   "id": "mmlu-138",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "cmmlu-119",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个几何问题，题目是说已知圆的半径是√2厘米，圆心到直线l的距离是1.4厘米，问直线l和"
+  },
+  {
+   "id": "cmmlu-22",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于公共关系人员心理素质的问题。题目是说，公共关系人员需要具备良好的心理素质，包括自"
+  },
+  {
+   "id": "cmmlu-134",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问随着社会主义市场经济体制的建立，目前我国新闻机构的主要运作方式是什么。"
+  },
+  {
+   "id": "mmlu-192",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-18",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "mmlu-163",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about types of adve"
+  },
+  {
+   "id": "cmmlu-114",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于辛笛诗歌《航》的问题。题目是问哪一句诗句体现了现代派诗人“思想知觉化”的艺术观，"
+  },
+  {
+   "id": "mmlu-95",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "mmlu-126",
+   "source": "mmlu",
+   "subject": "college_physics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the diamond s"
+  },
+  {
+   "id": "cmmlu-64",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是说地震后应该不顾一切地保护哪个部位，选项是胸部、颈部、腹部、头部，答案是"
+  },
+  {
+   "id": "mmlu-111",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about why perceptua"
+  },
+  {
+   "id": "mmlu-61",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "mmlu-182",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "cmmlu-140",
+   "source": "cmmlu",
+   "subject": "logical",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是找出不属于前提标识词的选项。选项有A到D，分别是“因为”、“鉴于”、“由"
+  },
+  {
+   "id": "cmmlu-2",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中暑的题目。题目是说在学校的体育活动中发生中暑，应该选择哪个选项。选项有A到D四"
+  },
+  {
+   "id": "mmlu-90",
+   "source": "mmlu",
+   "subject": "college_medicine",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-23",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个会计题目。题目是说，由于日常收发计量原因造成的材料盘盈，按管理权限报经批准后，应贷记"
+  },
+  {
+   "id": "mmlu-11",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "cmmlu-128",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题：已知x>0，y>0，满足x+2y+2xy=8，求x+2y的最小值。选项是A到D"
+  },
+  {
+   "id": "cmmlu-9",
+   "source": "cmmlu",
+   "subject": "high_school_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个题目：函数y=sin2x cos2x的最小正周期是多少，选项是A到D四个选项。让我仔"
+  },
+  {
+   "id": "mmlu-141",
+   "source": "mmlu",
+   "subject": "computer_security",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about the AH protoc"
+  },
+  {
+   "id": "cmmlu-106",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个国家与中国在黄岩岛问题上有领土争议。选项是泰国、菲律宾、马来西亚和"
+  },
+  {
+   "id": "mmlu-17",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "cmmlu-126",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于心理辅导工作原则的问题。题目是问哪一项是不能遵循的原则，选项是A到D四个选项。首"
+  },
+  {
+   "id": "mmlu-136",
+   "source": "mmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about Kant's catego"
+  },
+  {
+   "id": "mmlu-100",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "cmmlu-31",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问在大脑动脉环的构成中，哪一项结构是不存在的。选项是A到D，分别是大脑前"
+  },
+  {
+   "id": "mmlu-96",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "mmlu-0",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure this out. The question is "
+  },
+  {
+   "id": "mmlu-128",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about marketing and"
+  },
+  {
+   "id": "cmmlu-191",
+   "source": "cmmlu",
+   "subject": "college_medical_statistics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于两数值变量资料的小样本比较的假设检验，首先应该考虑什么。选项有四个："
+  },
+  {
+   "id": "mmlu-12",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about which strateg"
+  },
+  {
+   "id": "cmmlu-48",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于控制类型的问题。题目是说，按照主管人员与控制对象的关系，控制可以分为哪几类，选项"
+  },
+  {
+   "id": "cmmlu-59",
+   "source": "cmmlu",
+   "subject": "college_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于函数y = x^x在区间[1/e, +∞)上的问题。题目给出四个选项，我需要仔细"
+  },
+  {
+   "id": "mmlu-191",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the order of "
+  },
+  {
+   "id": "cmmlu-38",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于施工风险管理工作流程的问题。题目给出四个步骤：a施工风险应对，b施工风险评估，c"
+  },
+  {
+   "id": "cmmlu-71",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于国家对法的作用的问题。题目是问，就国家对法的作用来说，能影响以至决定法的形式的最"
+  },
+  {
+   "id": "cmmlu-85",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目：“太后之色少解”中“色”指什么，选项是A到D。首先，我需要理解这句话的意思。这"
+  },
+  {
+   "id": "cmmlu-88",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于社会主义法治理念中公平正义内涵的问题。题目是问实现公平正义必须坚持哪个选项，选项"
+  },
+  {
+   "id": "mmlu-46",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The passage is fro"
+  },
+  {
+   "id": "mmlu-62",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question about Pl"
+  },
+  {
+   "id": "cmmlu-21",
+   "source": "cmmlu",
+   "subject": "food_science",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：同一种食品在进行热交换过程中，热交换速度最快的是哪一个选项？选项是A到D，分别"
+  },
+  {
+   "id": "cmmlu-150",
+   "source": "cmmlu",
+   "subject": "college_education",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“教育起源于()”，选项是A到D。首先，我需要回忆一下关于教育起源的理论。教育"
+  },
+  {
+   "id": "cmmlu-164",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "D",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个物理题。题目是说，水平桌面上有一个物体，在水平力F的作用下向右运动。当它离开桌面时，"
+  },
+  {
+   "id": "mmlu-186",
+   "source": "mmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about HIV transmiss"
+  },
+  {
+   "id": "cmmlu-156",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是说苏州人利用当地砚石山的岩石制作优质砚台，这种岩石致密、呈薄板状，然后问"
+  },
+  {
+   "id": "cmmlu-93",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，这个问题看起来有点复杂，不过让我慢慢来想。首先题目是说某商场在五一小长假期间有优惠活动，采用“满10"
+  },
+  {
+   "id": "cmmlu-110",
+   "source": "cmmlu",
+   "subject": "international_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于国际商事仲裁的多边条约的问题。题目是问目前最重要的多边条约，是联合国1958年通"
+  },
+  {
+   "id": "mmlu-82",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is as"
+  },
+  {
+   "id": "cmmlu-132",
+   "source": "cmmlu",
+   "subject": "chinese_civil_service_exam",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问沈括和郭守敬在哪些领域做出了卓越贡献，选项是A到D四个选项。首先，我需"
+  },
+  {
+   "id": "cmmlu-74",
+   "source": "cmmlu",
+   "subject": "construction_project_management",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于施工成本计划编制的问题。题目是问关于按工程实施阶段编制施工成本计划的说法，正确的"
+  },
+  {
+   "id": "cmmlu-148",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于皮亚杰道德认知发展阶段的问题。题目是说小星在判断道德问题时，不仅依据规则，还能出"
+  },
+  {
+   "id": "mmlu-85",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-55",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是问病原体生存、生长和繁殖的自然场所被称为什么，选项有A到D四个选项。首先"
+  },
+  {
+   "id": "mmlu-80",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about community men"
+  },
+  {
+   "id": "mmlu-177",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about civil society"
+  },
+  {
+   "id": "cmmlu-84",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于人与自然关系的问题。题目是问哪一个选项真正体现了人与自然关系的基础。选项有四个："
+  },
+  {
+   "id": "cmmlu-161",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于三减因生存模型的问题。题目是说，已知一个三减因生存模型，给出的参数是μ_x^1 "
+  },
+  {
+   "id": "cmmlu-61",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，以农业生产为主要谋生手段的人们为主体构成的同质性较高的地域性生活共同"
+  },
+  {
+   "id": "mmlu-57",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-43",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个题目，找出四个选项中操作和现象不匹配的那一个。让我仔细看看每个选项，然后逐一分析。\n"
+  },
+  {
+   "id": "cmmlu-105",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个关节可以绕三个基本轴运动。选项是A到D四个选项，分别是髓关节、肘关"
+  },
+  {
+   "id": "mmlu-165",
+   "source": "mmlu",
+   "subject": "high_school_mathematics",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. I need to find the value of p + q w"
+  },
+  {
+   "id": "cmmlu-33",
+   "source": "cmmlu",
+   "subject": "ancient_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问“策”字按照传统的“六书”体例属于哪一种。选项是A到D，分别是象形、指"
+  },
+  {
+   "id": "mmlu-107",
+   "source": "mmlu",
+   "subject": "world_religions",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is asking which early "
+  },
+  {
+   "id": "mmlu-173",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about handling a cl"
+  },
+  {
+   "id": "cmmlu-129",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于英国城市学家霍华德提出的理论的问题。题目是问，霍华德提出的城乡交融、群体组合型城"
+  },
+  {
+   "id": "cmmlu-30",
+   "source": "cmmlu",
+   "subject": "chinese_driving_rule",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：制动时车轮最容易抱死的路面是哪一个选项？选项有A沙土路，B混凝土路，C土路，D"
+  },
+  {
+   "id": "mmlu-112",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question about in"
+  },
+  {
+   "id": "cmmlu-75",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说企业自律行为的道德标准和法律（他律）标准相比，哪个更高，或者有什么关系"
+  },
+  {
+   "id": "cmmlu-193",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于使用手提式灭火器的正确方法。选项有四个：A、B、C、D。我需要仔细分"
+  },
+  {
+   "id": "cmmlu-182",
+   "source": "cmmlu",
+   "subject": "astronomy",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个英文缩写不属于三大国际天文奥林匹克赛事。选项是A到D四个选项，分别"
+  },
+  {
+   "id": "cmmlu-169",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问以下哪个疾病不易发生癌变。选项是A到D四个选项。首先，我需要回忆每个选"
+  },
+  {
+   "id": "mmlu-23",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this econometrics ques"
+  },
+  {
+   "id": "mmlu-106",
+   "source": "mmlu",
+   "subject": "medical_genetics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about α-thalassaemi"
+  },
+  {
+   "id": "cmmlu-144",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说宿主状态是遗传因素与下列哪种因素相互作用的结果，选项有A到D四个选项。"
+  },
+  {
+   "id": "mmlu-176",
+   "source": "mmlu",
+   "subject": "moral_disputes",
+   "pred": "B",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-29",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about Epictetus and"
+  },
+  {
+   "id": "mmlu-102",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "mmlu-151",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the stages of"
+  },
+  {
+   "id": "mmlu-148",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure this out. The question is "
+  },
+  {
+   "id": "mmlu-167",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about classical con"
+  },
+  {
+   "id": "cmmlu-146",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问武术的主要内容是什么，选项有四个：A是技击动作，B是表演动作，C是舞蹈"
+  },
+  {
+   "id": "mmlu-21",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "mmlu-73",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-35",
+   "source": "cmmlu",
+   "subject": "elementary_commonsense",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，用户问的是吃海鲜时不宜饮用哪种酒，选项有干白、干红、茅台和啤酒。我需要先回忆一下相关的知识。首先，海"
+  },
+  {
+   "id": "cmmlu-107",
+   "source": "cmmlu",
+   "subject": "traditional_chinese_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于脾胃虚寒型胃痛的主症选择题。题目是问哪一个选项不是主症。首先，我需要回忆一下脾胃"
+  },
+  {
+   "id": "mmlu-155",
+   "source": "mmlu",
+   "subject": "logical_fallacies",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about the fallacy o"
+  },
+  {
+   "id": "cmmlu-131",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法律和道德的选择题。题目是四个选项，我需要判断哪个是正确的。让我仔细看看每个选项"
+  },
+  {
+   "id": "cmmlu-49",
+   "source": "cmmlu",
+   "subject": "virology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于轮状模型的问题。题目是问在病因研究的轮状模型中，强调宿主与下列哪种因素的关系，选"
+  },
+  {
+   "id": "cmmlu-37",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于学校利用校庆进行社会宣传的问题。题目问的是，这种活动表明学校重视塑造哪个方面的形"
+  },
+  {
+   "id": "mmlu-19",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": null,
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-187",
+   "source": "cmmlu",
+   "subject": "modern_chinese",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个题目，题目是找出括号中词古今意义相同的一项。选项是A到D，每个选项都有一个括号里的词"
+  },
+  {
+   "id": "cmmlu-135",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问我国少数民族中人口最多的是哪一个选项，选项有A到D四个。首先，我需要回"
+  },
+  {
+   "id": "mmlu-56",
+   "source": "mmlu",
+   "subject": "philosophy",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "cmmlu-1",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个历史问题。题目是关于宋初采取的重要措施来扭转唐末五代中央集权削弱的局面。选项有四个："
+  },
+  {
+   "id": "mmlu-139",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about glucose metab"
+  },
+  {
+   "id": "mmlu-156",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about why RNA viral"
+  },
+  {
+   "id": "mmlu-45",
+   "source": "mmlu",
+   "subject": "management",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking about the te"
+  },
+  {
+   "id": "mmlu-185",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "cmmlu-47",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“人的认识的倾向性是哪一个选项？”选项有A. 兴趣，B. 需要，C. 理想，D"
+  },
+  {
+   "id": "mmlu-70",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "mmlu-181",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this multiple-choice question abo"
+  },
+  {
+   "id": "mmlu-43",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-76",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“世界市场形成的根本原因是哪一个选项？”选项是A到D四个选项。首先，我需要回忆"
+  },
+  {
+   "id": "cmmlu-153",
+   "source": "cmmlu",
+   "subject": "education",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于课程组织形式的问题。题目是问以学科为基础组织起来的各门学科的课程形态是什么，选项"
+  },
+  {
+   "id": "mmlu-109",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which plant "
+  },
+  {
+   "id": "mmlu-123",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about continuously "
+  },
+  {
+   "id": "mmlu-110",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-180",
+   "source": "cmmlu",
+   "subject": "marketing",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问保险公司属于市场营销渠道中的哪一个类型，选项有A到D四个选项。首先，我"
+  },
+  {
+   "id": "mmlu-97",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about an ideal gas "
+  },
+  {
+   "id": "cmmlu-53",
+   "source": "cmmlu",
+   "subject": "conceptual_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于点电荷、元电荷和检验电荷的选择题。题目是四个选项，我需要仔细分析每个选项是否正确"
+  },
+  {
+   "id": "cmmlu-16",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于社会主义法治理念的问题。题目是问哪个选项属于社会主义法治本质要求，选项有A到D四"
+  },
+  {
+   "id": "mmlu-37",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about comparing two"
+  },
+  {
+   "id": "mmlu-67",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-113",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于西方教育史的问题。题目是问哪位教育家提出了“泛智教育”和普及初等教育的主张，并对"
+  },
+  {
+   "id": "mmlu-65",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the types of "
+  },
+  {
+   "id": "mmlu-78",
+   "source": "mmlu",
+   "subject": "high_school_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about what Barry me"
+  },
+  {
+   "id": "mmlu-124",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, Dr."
+  },
+  {
+   "id": "cmmlu-197",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于张骞出使西域的问题。题目问的是张骞出使西域的功绩是什么，选项有四个：A、B、C、"
+  },
+  {
+   "id": "mmlu-150",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this legal question. S"
+  },
+  {
+   "id": "cmmlu-68",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于经济学中道德在市场机制中作用的问题。题目是四个选项，我需要仔细分析每个选项，然后"
+  },
+  {
+   "id": "mmlu-134",
+   "source": "mmlu",
+   "subject": "high_school_statistics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about finding the i"
+  },
+  {
+   "id": "cmmlu-29",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于三阶闭环调节系统的问题。题目是说在阶跃给定下，输入端加给定滤波器和不加给定滤波器"
+  },
+  {
+   "id": "mmlu-28",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the term leng"
+  },
+  {
+   "id": "cmmlu-190",
+   "source": "cmmlu",
+   "subject": "clinical_knowledge",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于免疫组织化学染色的问题。题目是说，肿瘤细胞呈HMB45阳性，首先考虑哪种疾病。选"
+  },
+  {
+   "id": "mmlu-81",
+   "source": "mmlu",
+   "subject": "abstract_algebra",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this problem step by step. The qu"
+  },
+  {
+   "id": "cmmlu-176",
+   "source": "cmmlu",
+   "subject": "professional_psychology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是古诗句“欢娱嫌夜短，寂寞恨更长”描写的心理现象是什么，选项有A到D四个。"
+  },
+  {
+   "id": "cmmlu-73",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个题目。题目是说，当政府用某些资源去修建大坝时，这些资源就不能用于修建高速公路。这说明"
+  },
+  {
+   "id": "cmmlu-118",
+   "source": "cmmlu",
+   "subject": "chinese_foreign_policy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国20世纪70年代外交特点的问题。题目是给出四个选项，每个选项都有三个标题，我"
+  },
+  {
+   "id": "mmlu-76",
+   "source": "mmlu",
+   "subject": "business_ethics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-83",
+   "source": "mmlu",
+   "subject": "human_sexuality",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about vasocongestio"
+  },
+  {
+   "id": "mmlu-15",
+   "source": "mmlu",
+   "subject": "high_school_physics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the gravitati"
+  },
+  {
+   "id": "cmmlu-7",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国共产党、中国政府和人民关系的问题。题目给出四个选项，我需要仔细分析每个选项是"
+  },
+  {
+   "id": "cmmlu-198",
+   "source": "cmmlu",
+   "subject": "chinese_literature",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于散文《髻》的问题。题目是问在散文中，谁最喜欢梳“螺丝髻儿”这个发型。选项有四个："
+  },
+  {
+   "id": "cmmlu-174",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是问针对企业营销活动的性质提出的交易中的基本信条是什么，选项有四个：A是公"
+  },
+  {
+   "id": "cmmlu-63",
+   "source": "cmmlu",
+   "subject": "sports_science",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于马步的，问的是两脚左右开空大约是本人脚长的多少倍。选项是A到D，分别"
+  },
+  {
+   "id": "cmmlu-54",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问交感缩血管纤维分布最密集的血管是哪一个选项。选项有A到D四个，分别是冠"
+  },
+  {
+   "id": "cmmlu-45",
+   "source": "cmmlu",
+   "subject": "economics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，企业通过卖出额外一单位产品所获得的收益叫做什么，选项有四个：A是分摊"
+  },
+  {
+   "id": "mmlu-94",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The que"
+  },
+  {
+   "id": "cmmlu-60",
+   "source": "cmmlu",
+   "subject": "world_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法国20世纪70年代中后期经济政策的问题。题目是说，法国的GDP年平均增长率从2"
+  },
+  {
+   "id": "cmmlu-17",
+   "source": "cmmlu",
+   "subject": "high_school_politics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国公有制经济的问题。题目是说，只有进一步增强公有制经济的活力，才能实现什么。选"
+  },
+  {
+   "id": "mmlu-93",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure this out. So the question "
+  },
+  {
+   "id": "cmmlu-52",
+   "source": "cmmlu",
+   "subject": "chinese_history",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个历史题。题目是关于南京国民政府推动国货运动，然后问这种做法有利于哪个选项。选项是A到"
+  },
+  {
+   "id": "cmmlu-83",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，用户问的是“驴打滚”是哪个地方的著名风味小吃，选项有山东、陕西、天津和北京。首先，我需要回忆一下“驴"
+  },
+  {
+   "id": "cmmlu-143",
+   "source": "cmmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于化学实验操作的问题。题目是四个选项，我需要判断哪个是正确的。让我仔细看一下每个选"
+  },
+  {
+   "id": "mmlu-178",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking what color P"
+  },
+  {
+   "id": "mmlu-34",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-94",
+   "source": "cmmlu",
+   "subject": "public_relations",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于公共关系功能的选择题。题目是说公共关系为市场销售服务的功能首先集中体现在哪个方面"
+  },
+  {
+   "id": "mmlu-116",
+   "source": "mmlu",
+   "subject": "professional_accounting",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-59",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about lactose. The "
+  },
+  {
+   "id": "mmlu-171",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure this out. The question is "
+  },
+  {
+   "id": "mmlu-115",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about a firm's mono"
+  },
+  {
+   "id": "mmlu-133",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "cmmlu-124",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于食管裂孔的问题。题目是四个选项，我需要仔细分析每个选项是否正确，然后选出正确的答"
+  },
+  {
+   "id": "mmlu-196",
+   "source": "mmlu",
+   "subject": "econometrics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about autoregressiv"
+  },
+  {
+   "id": "mmlu-41",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The problem is to convert the mixed"
+  },
+  {
+   "id": "cmmlu-8",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个几何题，题目是问和三角形三个顶点的距离相等的点是什么。选项有四个：A是三边中线的交点"
+  },
+  {
+   "id": "cmmlu-138",
+   "source": "cmmlu",
+   "subject": "sociology",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于社会预警系统的问题。题目是问，在社会预警系统中，对人们潜伏的心理和行为进行沟通、"
+  },
+  {
+   "id": "mmlu-161",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-125",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问“红娘”这个角色最早出现在哪部文学作品中，选项有四个：A是元稹的《莺莺"
+  },
+  {
+   "id": "cmmlu-194",
+   "source": "cmmlu",
+   "subject": "management",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于行政体制的问题。题目是问哪种行政体制具有机构简单、权力集中、命令统一、决策迅速、"
+  },
+  {
+   "id": "mmlu-35",
+   "source": "mmlu",
+   "subject": "machine_learning",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about modifying an "
+  },
+  {
+   "id": "cmmlu-66",
+   "source": "cmmlu",
+   "subject": "ethnology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于马克思主义民族团结的问题。题目是问马克思主义的民族团结具有特定的阶级内容，核心是"
+  },
+  {
+   "id": "cmmlu-19",
+   "source": "cmmlu",
+   "subject": "computer_security",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问在以下认证方式中，最常用的认证方式是什么。选项有四个：A是基于摘要算法"
+  },
+  {
+   "id": "mmlu-64",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to work through this problem step by"
+  },
+  {
+   "id": "mmlu-101",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is as"
+  },
+  {
+   "id": "cmmlu-57",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个医学问题。题目是关于一个60岁男性患者的病情变化，需要根据给定的血气分析结果来判断最"
+  },
+  {
+   "id": "cmmlu-39",
+   "source": "cmmlu",
+   "subject": "agronomy",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问相邻营养级之间的能量转化效率大约是多少，选项是A到D四个选项。首先，我"
+  },
+  {
+   "id": "mmlu-86",
+   "source": "mmlu",
+   "subject": "marketing",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about organizationa"
+  },
+  {
+   "id": "cmmlu-24",
+   "source": "cmmlu",
+   "subject": "college_medicine",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于脂肪酸氧化的题目。题目问的是脂肪酸氧化包括连续四步反应，反应顺序是哪一个选项。选"
+  },
+  {
+   "id": "mmlu-175",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "cmmlu-34",
+   "source": "cmmlu",
+   "subject": "professional_accounting",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于中国会计法规制度体系的问题。题目是问在我国会计法规制度体系中，属于最高层次地位的"
+  },
+  {
+   "id": "cmmlu-14",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问下面哪个选项不属于契约关系中公平理念的集中体现。选项有A到D四个选项，"
+  },
+  {
+   "id": "cmmlu-183",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于医患沟通的问题。题目是说一个22岁的女性患者因为急性淋巴细胞性白血病恶化再次入院"
+  },
+  {
+   "id": "cmmlu-175",
+   "source": "cmmlu",
+   "subject": "jurisprudence",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于法学和法理学的选择题。题目是四个选项，我需要仔细分析每个选项的正确性，然后选出正"
+  },
+  {
+   "id": "mmlu-91",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "B",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is asking which senten"
+  },
+  {
+   "id": "mmlu-13",
+   "source": "mmlu",
+   "subject": "professional_psychology",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. The question is ab"
+  },
+  {
+   "id": "cmmlu-127",
+   "source": "cmmlu",
+   "subject": "chinese_teacher_qualification",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于罗森塔尔效应的问题。题目是问罗森塔尔效应说明什么，选项是四个：A是教师的人格特点"
+  },
+  {
+   "id": "mmlu-104",
+   "source": "mmlu",
+   "subject": "high_school_european_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "mmlu-180",
+   "source": "mmlu",
+   "subject": "high_school_macroeconomics",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about how much aggr"
+  },
+  {
+   "id": "cmmlu-90",
+   "source": "cmmlu",
+   "subject": "anatomy",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于胃左动脉的问题。题目是问胃左动脉的来源和分布，选项有四个：A、B、C、D。我需要"
+  },
+  {
+   "id": "mmlu-47",
+   "source": "mmlu",
+   "subject": "clinical_knowledge",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about assessing arm"
+  },
+  {
+   "id": "mmlu-189",
+   "source": "mmlu",
+   "subject": "high_school_geography",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is asking which countr"
+  },
+  {
+   "id": "mmlu-160",
+   "source": "mmlu",
+   "subject": "high_school_biology",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about water potenti"
+  },
+  {
+   "id": "cmmlu-136",
+   "source": "cmmlu",
+   "subject": "journalism",
+   "pred": "C",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题：“新闻学的母体是哪一个？”选项有A. 心理学，B. 文学，C. 语言学，D. "
+  },
+  {
+   "id": "mmlu-130",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this legal question. S"
+  },
+  {
+   "id": "cmmlu-62",
+   "source": "cmmlu",
+   "subject": "legal_and_moral_basis",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问现阶段全体中国人民共同的理想信念是什么，选项有四个：A是发展社会主义市"
+  },
+  {
+   "id": "cmmlu-151",
+   "source": "cmmlu",
+   "subject": "elementary_mathematics",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个选择题，题目是问下面哪个说法是正确的。选项是A到D四个选项。让我仔细看看每个选项，然"
+  },
+  {
+   "id": "mmlu-24",
+   "source": "mmlu",
+   "subject": "sociology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "mmlu-4",
+   "source": "mmlu",
+   "subject": "public_relations",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about a public rela"
+  },
+  {
+   "id": "mmlu-26",
+   "source": "mmlu",
+   "subject": "high_school_world_history",
+   "pred": null,
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "cmmlu-103",
+   "source": "cmmlu",
+   "subject": "chinese_food_culture",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是说，到藏民家做客，主人会首先敬上具有当地民族特色的什么饮品，选项是A到D"
+  },
+  {
+   "id": "cmmlu-44",
+   "source": "cmmlu",
+   "subject": "electrical_engineering",
+   "pred": "B",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于避雷器与被保护设备的距离对保护效果的影响。选项有四个：A是越近越好，"
+  },
+  {
+   "id": "cmmlu-6",
+   "source": "cmmlu",
+   "subject": "high_school_geography",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题。题目是问2012年5月中国首座深水钻井平台在南海首钻成功，其重要意义不包括哪一"
+  },
+  {
+   "id": "cmmlu-104",
+   "source": "cmmlu",
+   "subject": "philosophy",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于哲学研究领域的问题。题目是问哲学所研究的一般规律适用于哪个选项。选项有四个：A是"
+  },
+  {
+   "id": "cmmlu-185",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问“阳春白雪”和“下里巴人”最初指的是什么，选项是乐曲、画作、文章、舞蹈"
+  },
+  {
+   "id": "cmmlu-72",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于生存函数和死亡力函数的问题。题目给出的是新生儿的生存函数S(x)=1 - x/1"
+  },
+  {
+   "id": "cmmlu-147",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问《石壕吏》属于哪一类诗歌，选项有抒情诗、叙事诗、散文诗和词。首先，我需"
+  },
+  {
+   "id": "mmlu-87",
+   "source": "mmlu",
+   "subject": "high_school_microeconomics",
+   "pred": "A",
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. So, the question i"
+  },
+  {
+   "id": "mmlu-162",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": "D",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "mmlu-98",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "D",
+   "correct": false,
+   "raw": "<think>\nOkay, let's see. The question is about the phrase \"Y"
+  },
+  {
+   "id": "mmlu-132",
+   "source": "mmlu",
+   "subject": "nutrition",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about which food co"
+  },
+  {
+   "id": "mmlu-129",
+   "source": "mmlu",
+   "subject": "college_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is about the limiting "
+  },
+  {
+   "id": "mmlu-48",
+   "source": "mmlu",
+   "subject": "elementary_mathematics",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "mmlu-50",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question about Egyptian hier"
+  },
+  {
+   "id": "cmmlu-111",
+   "source": "cmmlu",
+   "subject": "elementary_chinese",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪位诗人是“初唐四杰”之一，选项有A到D四个选项。首先，我需要回忆一下"
+  },
+  {
+   "id": "mmlu-187",
+   "source": "mmlu",
+   "subject": "global_facts",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking about the pe"
+  },
+  {
+   "id": "cmmlu-82",
+   "source": "cmmlu",
+   "subject": "global_facts",
+   "pred": "A",
+   "ref": "A",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个组织的宗旨是建立没有贸易壁垒的世界市场。选项有四个：A是世界贸易组"
+  },
+  {
+   "id": "mmlu-153",
+   "source": "mmlu",
+   "subject": "professional_law",
+   "pred": null,
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's try to figure out this question. So, the"
+  },
+  {
+   "id": "cmmlu-92",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": "C",
+   "ref": "A",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于道德和伦理的关系，选项有四个：A是整体和部分的关系，B是积极和消极的"
+  },
+  {
+   "id": "cmmlu-158",
+   "source": "cmmlu",
+   "subject": "business_ethics",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于企业整体道德责任的问题。题目给出四个选项，我需要判断哪些是正确的。首先，我得仔细"
+  },
+  {
+   "id": "mmlu-55",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-70",
+   "source": "cmmlu",
+   "subject": "high_school_biology",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问哪个过程不属于胞吐作用。选项是A到D四个选项。首先，我需要回忆一下胞吐"
+  },
+  {
+   "id": "mmlu-152",
+   "source": "mmlu",
+   "subject": "moral_scenarios",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question. So, the user is as"
+  },
+  {
+   "id": "cmmlu-50",
+   "source": "cmmlu",
+   "subject": "professional_medicine",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是关于肝功能不全病人在进行肠外营养时应该选用的药物。选项有四个：A是谷氨酰"
+  },
+  {
+   "id": "cmmlu-101",
+   "source": "cmmlu",
+   "subject": "professional_law",
+   "pred": "B",
+   "ref": "B",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个关于《侵权责任法》的问题。题目是问在多数人侵权形态中，无法确定具体侵权人的侵权形态是"
+  },
+  {
+   "id": "mmlu-33",
+   "source": "mmlu",
+   "subject": "high_school_chemistry",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's see. The question is asking which of the"
+  },
+  {
+   "id": "cmmlu-172",
+   "source": "cmmlu",
+   "subject": "arts",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\n嗯，我现在要解决这个问题，题目是问齐白石的中国画《蛙声十里出山泉》描写的是哪种青蛙。选项有A到D四个选项"
+  },
+  {
+   "id": "cmmlu-69",
+   "source": "cmmlu",
+   "subject": "college_actuarial_science",
+   "pred": null,
+   "ref": "C",
+   "correct": false,
+   "raw": "<think>\n嗯，我现在要解决这个关于生存分析的问题。题目是说，已知某个生存函数，比如可能是死亡概率或者生存概率，然后"
+  },
+  {
+   "id": "mmlu-170",
+   "source": "mmlu",
+   "subject": "miscellaneous",
+   "pred": "A",
+   "ref": "B",
+   "correct": false,
+   "raw": "<think>\nOkay, let's tackle this question. The user is asking"
+  },
+  {
+   "id": "mmlu-193",
+   "source": "mmlu",
+   "subject": "high_school_us_history",
+   "pred": "D",
+   "ref": "D",
+   "correct": true,
+   "raw": "<think>\nOkay, let's try to figure out this question. The use"
+  },
+  {
+   "id": "mmlu-1",
+   "source": "mmlu",
+   "subject": "prehistory",
+   "pred": "C",
+   "ref": "C",
+   "correct": true,
+   "raw": "<think>\nOkay, let's tackle this question about the differenc"
+  }
+ ]
+}

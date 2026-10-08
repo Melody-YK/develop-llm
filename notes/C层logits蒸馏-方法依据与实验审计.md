@@ -19,9 +19,9 @@
 - 两轮 `KL−CE` 都没有统计上可归因的净增益；停尾监督把截断率从 75% 降到 0%/1%，但没有改变准确率。
 - 原始 4B 直教与直教 8B 数学持平，通用卷 `+4.25pt, p=0.0331`；这是**C 层教师容量对照中的唯一显著教师间比较**，需换 seed 复核。
 - 串行工程版级联与原始 4B 直教数学完全打平、通用无显著差异；它使用同一批 460 条传递样本，因此不是独立传递集上的严格 TAKD 复现。
-- 新增分布文件：`logits_4b_hf.jsonl.gz`（原始 4B 的 Transformers 采集，已在远程执行记录中生成，当前 `main` checkout 未保留）和 `logits_4bta.jsonl.gz`（叠加 4B 助教后的分布，已入库）；HF/vLLM top-1 一致率 99.46%。
+- 新增分布文件：`logits_4b_hf.jsonl.gz`（原始 4B 的 Transformers 采集，已从 `kl-final-20261002.tar.gz` 恢复入库）和 `logits_4bta.jsonl.gz`（叠加 4B 助教后的分布，已入库）；HF/vLLM top-1 一致率 `99.46%`，平均绝对 logprob 差 `0.005315`。
 
-本文后面的“必须先跑/如果主实验跑通”均是**实验前判定标准和复现清单**，不是当前待办。4B-think 的 MCQ400 已在远端功能分支完成（`0.6325`），但对应 JSON 尚未合入当前 `main`；当前明确的工作是归档同步，而不是补跑 C 层实验。
+本文后面的“必须先跑/如果主实验跑通”均是**实验前判定标准和复现清单**，不是当前待办。4B-think 的 MCQ400 已从功能分支 `e1ed686` 归档入当前 `main`（`0.6325`）；原始 4B HF logits 也已从本地实验归档恢复并校验。当前没有待补的 C 层原始证据。
 
 
 
@@ -150,9 +150,9 @@ chat prompt + assistant 起始标记 + solution 文本
 
 - `logits_8b.jsonl.gz`：460 条；
 - `logits_4b.jsonl.gz`：460 条；
-- `logits_4b_hf.jsonl.gz`：原始 4B 的 Transformers/NPU 采集，用于原始 4B 直教；该原始文件已在远程执行记录中生成，但当前 `main` checkout 未保留；
+- `logits_4b_hf.jsonl.gz`：原始 4B 的 Transformers/NPU 采集，用于原始 4B 直教；已入库，SHA-256 为 `d347ec459e586cedd90142fe9352988eb9ef90903292ae2b1097bce88c66cc60`；
 - `logits_4bta.jsonl.gz`：叠加 `distill-4b-ta` 后的 4B 助教分布，用于串行工程版级联；
-- 当前 checkout 可直接核验的是 `logits_8b`、vLLM 版 `logits_4b` 和 `logits_4bta`；原始 4B 直教的结果摘要仍在，但不能用 `logits_4b.jsonl.gz` 静默替代缺失的 HF 文件；
+- 四份文件均对应 460 条、107753 个 solution token 位置、每位置 top-32；项目已做文本和 token 数逐题校验。
 
 #### 第二步：学生 teacher-forcing forward
 
