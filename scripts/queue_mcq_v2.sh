@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# 历史 CUDA/WSL2 队列脚本（2026-09-27）。不属于当前 NPU 冻结评测入口；
+# batch=12 是当时的旧配置，正式协议后来固定为 batch=8（见 notes/学习笔记.md P15）。
 # 排队任务：等考卷二 v2 落盘后，自动接跑考卷一 v2
 TARGET="/mnt/d/develop-llm/eval/前测-qwen3-1.7b-fp16-v2.json"
 echo "[queue] waiting for $TARGET"

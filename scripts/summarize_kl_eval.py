@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-"""C 层评测汇总：六份评测 JSON → 对照表 + 逐题配对检验。
+"""C 层评测汇总：七组评测 JSON → 对照表 + 逐题配对检验。
 
 用法：
     python3 summarize_kl_eval.py --eval-dir /data/develop-llm/eval
 
-读取同一目录内的三组 × 两张卷：
-    基线        前测-qwen3-1.7b-npu-<tag>.json
-    CE 控制组   后测-distill-kl-control-ce-<tag>.json
-    8B-KL 组    后测-distill-8b-kl-<tag>.json
+读取同一目录内的七组 × 两张卷：
+    基线、CE/KL 第一轮、CE/KL 停尾监督第二轮、4B 助教级联、原始 4B 直教
+    前测-qwen3-1.7b-npu-<tag>.json
+    后测-<adapter>-<tag>.json
 （<tag> = gsm8k300 或 mcq400）
 
 输出：各组准确率与附加指标；两两差值、配对 bootstrap 95% 区间、

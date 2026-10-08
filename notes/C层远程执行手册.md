@@ -1,6 +1,8 @@
-# C 层 logits 蒸馏：昇腾 910B 远程执行手册
+# C 层 logits 蒸馏：昇腾 910B 执行记录与复现手册
 
 > 目标：本地电脑不再承担训练或评测。老师 logits 已离线采集，远程训练阶段只加载 Qwen3-1.7B 学生。
+>
+> **状态说明**：本文的命令已经在 `develop-llm-npu` 中执行并验收。默认训练命令对应第二轮“停尾监督”口径；若要复现第一轮历史结果，必须显式加 `--no-stop-token`。最终结果和已完成的级联/原始 4B 对照见根目录 [项目总览.md](../项目总览.md)。
 
 ## 0. 文件传输路径：Mac 直接上传
 
@@ -76,11 +78,11 @@ npu-smi info
 
 ## 1. 方案边界
 
-采用**远程离线 KL**：已有 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。单份压缩文件约 16MB，解压后约 57MB；两份均为 460 条、top-32、逐 token 对齐。
+采用**远程离线 KL**：实验记录中的 `logits_8b.jsonl.gz` / `logits_4b.jsonl.gz` 是老师提前讲好的软标签，训练时不再加载 8B/4B 老师。主对照实际还使用了 `logits_4b_hf.jsonl.gz`（原始 4B 直教）和 `logits_4bta.jsonl.gz`（4B 助教级联）；前者已在远程执行记录中生成，但当前 `main` checkout 不含该原始文件，不能拿 vLLM 版 `logits_4b.jsonl.gz` 静默替代。实验记录中的四份归档口径均为 460 条、top-32、逐 token 对齐。
 
 不采用在线师生共驻作为本轮主方案。910B 显存理论上可同时容纳 8B 教师和 1.7B 学生，但在线方案要把 vLLM 推理栈改成 Transformers teacher forward，并在每个 batch 重算老师分布；它改变了计算路径和信号口径。已有离线 logits 时，这只会增加时间和故障面。若后续要研究全词表 KL，可另立实验。
 
-本轮现成数据支持的是三组**同文本软标签对照**：纯 CE、原始 8B logits→1.7B、原始 4B logits→1.7B。`logits_4b.jsonl.gz` 来自未经 8B 蒸馏的原始 Qwen3-4B，所以第三组不能写成 `8B→4B→1.7B` 真级联。真正的串行 logits 级联还需要先用 8B 训练 4B，再用这个“蒸馏后 4B”在另一批传递题上重新采 logits，最后训练 1.7B；中间训练题与出题题还应分离，避免同题复述造成假级联。
+本轮现成数据支持的是三组**同文本软标签对照**：纯 CE、原始 8B logits→1.7B、原始 4B logits→1.7B。`logits_4b.jsonl.gz` 来自未经 8B 蒸馏的原始 Qwen3-4B，所以第三组不能写成 `8B→4B→1.7B` 真级联。串行工程版级联后来已完成：先用 8B 训练 4B 助教，再用 `logits_4bta.jsonl.gz` 训练 1.7B；两级沿用同一批 460 条传递文本，因此不是独立传递集上的严格 TAKD 复现。
 
 ## 2. 远程前置检查
 
@@ -183,7 +185,7 @@ python3 -u scripts/kl_train_4b.py \
 mkdir -p "$BASE/logs" "$BASE/models" "$BASE/eval"
 ```
 
-## 4. 必跑两组：同循环控制实验
+## 4. 必跑两组：同循环控制实验（已完成）
 
 旧 v1 由 LLaMA-Factory 训练，新 KL 由自定义循环训练。若只拿 KL 结果直接对比旧 v1，训练器差异会成为混杂变量。因此远程至少跑两组：
 
@@ -192,7 +194,9 @@ mkdir -p "$BASE/logs" "$BASE/models" "$BASE/eval"
 
 两组使用同一学生基座、460 条文本、seed、LoRA、学习率、epoch、累积步数和 NPU。cutoff 保持 v1 的 1024；实测 460 条完整序列最长 759 token，因此不会因此丢样本。
 
-### 4.1 CE 控制组
+### 4.1 CE 控制组（第二轮正式口径；第一轮历史复现见下方）
+
+第二轮正式命令默认开启停尾监督：
 
 ```bash
 nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
@@ -208,9 +212,26 @@ nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
 printf 'PID=%s\n' "$!"
 ```
 
-### 4.2 8B KL 实验组
+第一轮无停尾监督历史复现（与上面命令二选一，使用独立输出目录）：
 
-控制组完成后再启动，不要让两组抢同一张 NPU：
+```bash
+nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
+  --device npu \
+  --base-model "$STUDENT" \
+  --base-data "$BASE/data/distill_train_v1.json" \
+  --teacher-logits "$BASE/data/logits_8b.jsonl.gz" \
+  --alpha 0 \
+  --no-stop-token \
+  --out "$BASE/models/distill-kl-control-ce-v1" \
+  --save-every-epoch \
+  > "$BASE/logs/train-kl-control-ce-v1.log" 2>&1 < /dev/null &
+
+printf 'PID=%s\n' "$!"
+```
+
+### 4.2 8B KL 实验组（第二轮正式口径；第一轮历史复现见下方）
+
+控制组完成后再启动，不要让两组抢同一张 NPU。第二轮正式命令如下：
 
 ```bash
 nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
@@ -227,13 +248,31 @@ nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
 printf 'PID=%s\n' "$!"
 ```
 
+第一轮无停尾监督历史复现（与上面命令二选一，使用独立输出目录）：
+
+```bash
+nohup python3 -u "$BASE/scripts/kl_train_4b.py" \
+  --device npu \
+  --base-model "$STUDENT" \
+  --base-data "$BASE/data/distill_train_v1.json" \
+  --teacher-logits "$BASE/data/logits_8b.jsonl.gz" \
+  --alpha 0.7 \
+  --temp 2.0 \
+  --no-stop-token \
+  --out "$BASE/models/distill-8b-kl-v1" \
+  --save-every-epoch \
+  > "$BASE/logs/train-8b-kl-v1.log" 2>&1 < /dev/null &
+
+printf 'PID=%s\n' "$!"
+```
+
 日志查看：
 
 ```bash
 tail -f "$BASE/logs/train-8b-kl.log"
 ```
 
-可选第三组是把 `teacher-logits` 换成 `logits_4b.jsonl.gz`、输出换成 `distill-4b-kl`。先完成控制组与 8B KL 双卷，不要并发铺开。
+可用的教师分布实验中，原始 4B 直教（**已完成**）使用 `teacher-logits` = `logits_4b_hf.jsonl.gz`，输出为 `distill-raw4b-kl`；级联臂使用 `logits_4bta.jsonl.gz`，训练流程和产物见 [项目总览.md](../项目总览.md)。
 
 ## 5. 远程后测
 
@@ -283,7 +322,9 @@ for NAME in distill-kl-control-ce distill-8b-kl; do
 done
 ```
 
-两场跑完后，再决定是否加跑可选的第三组 `distill-4b-kl`：把 `distill-4b-kl` 追加进循环的 `NAME` 列表即可。
+当前文档的两组命令默认输出第二轮停尾监督目录。第一轮历史结果对应 `distill-kl-control-ce-v1` / `distill-8b-kl-v1` 这类独立目录，并在命令中加 `--no-stop-token`；不要用旧命令覆盖第二轮产物。
+
+两组正式命令跑完后，原始 4B 直教和级联臂不再是待办：它们需要各自准备远程归档的 `logits_4b_hf.jsonl.gz` / `logits_4bta.jsonl.gz`，具体产物和已完成结果见 [项目总览.md](../项目总览.md)。
 
 ## 6. 结果判读
 
